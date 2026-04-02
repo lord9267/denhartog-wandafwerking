@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://denhartog-wandafwerking.nl/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -52,7 +52,7 @@
 
   <url>
     <loc>https://denhartog-wandafwerking.nl/blog/</loc>
-    <lastmod>2026-04-01</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -66,6 +66,20 @@
 
   <url>
     <loc>https://denhartog-wandafwerking.nl/blog/renovlies-dordrecht/</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/blog/renovlies-vs-stucwerk/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/blog/lente-muurkleuren-2026/</loc>
     <lastmod>2026-04-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
