@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovlies Behang | Alles over renovlies - Den Hartog Wandafwerking</title>
+    <meta name="description" content="Wat is renovlies behang? Ontdek de voordelen van deze naadloze wandafwerking. Stootvast, krasvast en 30% voordeliger. Vanaf €13,00/m².">
+    <link rel="canonical" href="https://denhartog-wandafwerking.nl/renovlies-behang/">
+    <meta property="og:title" content="Renovlies Behang | Alles over renovlies - Den Hartog Wandafwerking">
+    <meta property="og:description" content="Wat is renovlies behang? Ontdek de voordelen van deze naadloze wandafwerking. Stootvast, krasvast en 30% voordeliger. Vanaf €13,00/m².">
+    <meta property="og:url" content="https://denhartog-wandafwerking.nl/renovlies-behang/">
+    <meta property="og:type" content="website">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+        :root {
+            --primary: #CD7F32;
+            --primary-dark: #b36b28;
+            --text: #1f2937;
+            --text-light: #6b7280;
+            --bg: #fff;
+            --bg-light: #f9fafb;
+            --bg-dark: #0d0d1a;
+            --bg-dark2: #1a1a2e;
+            --border: #e5e7eb;
+            --success: #10b981;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; font-size: 16px; }
+
+        /* NAVBAR */
+        .navbar { background: rgba(13,13,26,0.97); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+        .navbar-brand { color: #fff; font-size: 1.25rem; font-weight: 800; text-decoration: none; }
+        .navbar-brand span { color: var(--primary); }
+        .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+        .nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+        .nav-links a:hover { color: #fff; }
+        .nav-cta { background: var(--primary) !important; color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 700 !important; }
+
+        /* BREADCRUMB */
+        .breadcrumb { background: var(--bg-light); padding: 0.7rem 2rem; font-size: 0.85rem; color: var(--text-light); border-bottom: 1px solid var(--border); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #1a2a1a 100%); color: #fff; padding: 4rem 2rem; text-align: center; }
+        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+        .hero h1 span { color: var(--primary); }
+        .hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; opacity: 0.85; line-height: 1.7; }
+        .hero-badges { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+        .hero-badge { background: rgba(255,255,255,.08); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
+
+        /* SECTIONS */
+        .section { padding: 3.5rem 2rem; max-width: 900px; margin: 0 auto; }
+        .section-wide { padding: 3.5rem 2rem; max-width: 1100px; margin: 0 auto; }
+        .section-alt { background: var(--bg-light); }
+        h2 { font-size: 1.9rem; font-weight: 800; color: var(--text); margin-bottom: 1rem; margin-top: 2.5rem; }
+        h2:first-child { margin-top: 0; }
+        h3 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; margin-top: 1.5rem; }
+        p { margin-bottom: 1rem; color: var(--text); }
+
+        .article-content ul { margin: 1rem 0 1.5rem 0; padding: 0; list-style: none; }
+        .article-content li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; }
+        .article-content li::before { content: "\2713"; color: var(--success); font-weight: 700; position: absolute; left: 0; }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box { background: linear-gradient(135deg, rgba(205,127,50,.08), rgba(205,127,50,.04)); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; }
+        .highlight-box strong { color: var(--primary-dark); }
+
+        /* VOORDELEN */
+        .voordelen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .voordeel-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; text-align: center; transition: transform .2s, box-shadow .2s; }
+        .voordeel-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,.06); }
+        .voordeel-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+        .voordeel-card h4 { font-weight: 700; margin-bottom: 0.5rem; font-size: 1.05rem; }
+        .voordeel-card p { font-size: 0.95rem; color: var(--text-light); margin: 0; }
+
+        /* PAKKETTEN */
+        .pakketten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-top: 2rem; }
+        .pakket-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #fff; transition: box-shadow .2s; }
+        .pakket-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,.08); }
+        .pakket-card.featured { border: 2px solid var(--primary); }
+        .pakket-header { background: var(--bg-dark); color: #fff; padding: 1.5rem; text-align: center; }
+        .pakket-card.featured .pakket-header { background: linear-gradient(135deg, #0d0d1a, #1a1a2e); }
+        .pakket-header h3 { color: #fff; margin: 0; font-size: 1.15rem; }
+        .pakket-prijs { font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0; color: var(--primary); }
+        .pakket-prijs small { font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,.6); }
+        .pakket-body { padding: 1.5rem; }
+        .pakket-body ul { list-style: none; padding: 0; margin: 0; }
+        .pakket-body li { padding: 0.45rem 0; border-bottom: 1px solid #f3f4f6; font-size: 0.9rem; }
+        .pakket-body li::before { content: "\2713  "; color: var(--success); font-weight: 700; }
+        .pakket-cta { display: block; text-align: center; background: var(--primary); color: #fff; padding: 0.85rem; text-decoration: none; font-weight: 700; font-size: 1rem; margin: 1rem 1.5rem 1.5rem; border-radius: 8px; transition: background .2s; }
+        .pakket-cta:hover { background: var(--primary-dark); }
+
+        /* WERKGEBIED */
+        .werkgebied-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.3rem; margin-top: 1rem; }
+        .werkgebied-list span { padding: 0.35rem 0; font-size: 0.95rem; }
+        .werkgebied-list span::before { content: "\1F4CD "; }
+
+        /* FAQ */
+        .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.7rem; overflow: hidden; }
+        .faq-question { padding: 1rem 1.2rem; background: #fff; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
+        .faq-question:hover { background: var(--bg-light); }
+        .faq-answer { padding: 0 1.2rem 1rem; display: none; color: var(--text-light); font-size: 0.95rem; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-arrow { transition: transform .2s; font-size: 0.8rem; }
+        .faq-item.open .faq-arrow { transform: rotate(180deg); }
+
+        /* CTA BANNER */
+        .cta-banner { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #1a2a1a 100%); color: #fff; padding: 3.5rem 2rem; text-align: center; }
+        .cta-banner h2 { color: #fff; margin-top: 0; }
+        .cta-banner p { color: rgba(255,255,255,.8); max-width: 550px; margin: 0 auto 1.5rem; }
+        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .btn-primary { background: var(--primary); color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background .2s; }
+        .btn-primary:hover { background: var(--primary-dark); }
+        .btn-outline { background: transparent; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,.25); transition: background .2s; }
+        .btn-outline:hover { background: rgba(255,255,255,.08); }
+
+        /* KEYWORD FOOTER */
+        .keyword-footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 3rem 2rem; border-top: 1px solid rgba(255,255,255,.08); }
+        .keyword-footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .keyword-footer h4 { font-size: 1.1rem; margin-bottom: 1rem; color: #fff; font-weight: 700; }
+        .keyword-footer ul { list-style: none; padding: 0; }
+        .keyword-footer li { padding: 0.25rem 0; }
+        .keyword-footer a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+        .keyword-footer a:hover { color: var(--primary); }
+
+        /* MAIN FOOTER */
+        .footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 2rem 2rem; border-top: 1px solid rgba(255,255,255,.06); }
+        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; }
+        .footer a { color: rgba(255,255,255,.5); text-decoration: none; }
+        .footer a:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; }
+            .keyword-footer-inner { grid-template-columns: 1fr; }
+            .pakketten-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="https://denhartog-wandafwerking.nl" class="navbar-brand">Den Hartog <span>Wandafwerking</span></a>
+    <ul class="nav-links">
+        <li><a href="https://denhartog-wandafwerking.nl">Home</a></li>
+        <li><a href="https://denhartog-wandafwerking.nl/#diensten">Diensten</a></li>
+        <li><a href="https://denhartog-wandafwerking.nl/#projecten">Projecten</a></li>
+        <li><a href="https://denhartog-wandafwerking.nl/#over-ons">Over ons</a></li>
+        <li><a href="https://denhartog-wandafwerking.nl/#contact" class="nav-cta">Gratis Offerte</a></li>
+    </ul>
+</nav>
+
+<div class="breadcrumb">
+    <a href="https://denhartog-wandafwerking.nl">Home</a> &rsaquo; <strong>Renovlies Behang</strong>
+</div>
+<section class="hero">
+    <h1>Renovlies <span>Behang</span></h1>
+    <p>De slimste keuze voor strakke, naadloze wanden. Ontdek waarom steeds meer mensen kiezen voor renovlies behang.</p>
+    <div class="hero-badges">
+        <span class="hero-badge">10+ jaar ervaring</span>
+        <span class="hero-badge">Offerte binnen 24 uur</span>
+        <span class="hero-badge">Vanaf &euro;13,00/m&sup2;</span>
+        <span class="hero-badge">Geen aanbetaling</span>
+    </div>
+</section>
+
+<div class="section article-content">
+    <h2>Wat is renovlies behang?</h2>
+    <p>Renovlies behang &mdash; ook bekend als glasvliesbehang of glasvezelbehang &mdash; is een hoogwaardig wandbekledingsmateriaal dat zorgt voor een volledig gladde, naadloze wand. Het materiaal is gemaakt van glasvezels die tot een stevig vlies zijn geperst. Na het aanbrengen wordt het gesausd in de kleur van uw keuze, waardoor u een prachtig strak resultaat krijgt.</p>
+    <p>Steeds meer woningeigenaren en aannemers kiezen voor renovlies behang vanwege de vele voordelen: het is stootvast, krasvast, brandveilig, scheuroverbruggend en sneller aangebracht dan traditionele wandafwerkingen. Bovendien is het aanzienlijk voordeliger.</p>
+    <div class="highlight-box">
+        <strong>Wist u dat?</strong> Een complete woning kan binnen 1 werkweek volledig worden afgewerkt met renovlies behang. Het resultaat is een strakke, egale wand die jarenlang mooi blijft &mdash; en eenvoudig in een andere kleur overschilderd kan worden.
+    </div>
+    <h2>De voordelen van renovlies behang</h2>
+    <ul>
+        <li><strong>Volledig naadloos:</strong> De overgangen tussen banen zijn na het sauzen onzichtbaar. Een perfect egale wand.</li>
+        <li><strong>Stootvast en krasvast:</strong> Ideaal voor gezinnen met kinderen en huisdieren. Geen zorgen over beschadigingen.</li>
+        <li><strong>Scheuroverbruggend:</strong> Overbrugt haarscheuren in de muur. Bijzonder waardevol bij nieuwbouw waar muren nog kunnen werken.</li>
+        <li><strong>Brandveilig:</strong> Glasvezelbehang is brandvertragend en voldoet aan de strengste veiligheidsnormen.</li>
+        <li><strong>Elke kleur mogelijk:</strong> Wordt gesausd in de kleur van uw keuze en kan later eenvoudig worden overgeschilderd.</li>
+        <li><strong>Snelle oplevering:</strong> Een gemiddelde woning is binnen 1 werkweek volledig klaar.</li>
+        <li><strong>Voordeliger:</strong> Gemiddeld 30% voordeliger dan traditionele wandafwerkingen bij hetzelfde strakke resultaat.</li>
+        <li><strong>Krimpvrij:</strong> Ons renovlies op glasvezelbasis krimpt niet, waardoor naden altijd onzichtbaar blijven.</li>
+    </ul>
+    <h2>Glasvezelbasis: de beste kwaliteit</h2>
+    <p>Bij Den Hartog Wandafwerking werken wij uitsluitend met renovlies op glasvezelbasis. Dit is de beste keuze omdat glasvezel niet krimpt en niet uitzet. Hierdoor blijven de naden altijd onzichtbaar en behoudt u jarenlang een strak resultaat. Wij brengen standaard 150 grams glasvlies aan &mdash; de perfecte balans tussen kwaliteit, dekking en prijs.</p>
+    <p>Na het aanbrengen wordt het renovlies gesausd met schrobklasse 1 muurverf. Dit is een hoogwaardige, afwasbare verf die geen glimplekken achterlaat als u erlangs strijkt. Het resultaat is een professionele uitstraling die u jarenlang plezier geeft.</p>
+    <h2>Voor welke ruimtes is renovlies behang geschikt?</h2>
+    <p>Renovlies behang is geschikt voor vrijwel elke ruimte: woonkamer, slaapkamer, hal, overloop, kantoor, kinderkamer en trappenhuizen. Overal waar u een strakke, sterke en mooie wand wilt. Het is de perfecte keuze voor zowel nieuwbouw als bestaande woningen.</p>
+    <h2>Hoe werkt het?</h2>
+    <p>Bij Den Hartog Wandafwerking verzorgen wij het complete traject. Wij schuren de wanden, brengen het renovlies aan, kitten alle naden en kieren, en sauzen de wanden dekkend in uw gewenste kleur. U hoeft zich nergens zorgen over te maken. Wij ruimen alles netjes op en leveren pas op als u volledig tevreden bent.</p>
+</div>
+
+
+<div class="section-alt">
+    <div class="section-wide">
+        <h2>Onze pakketten</h2>
+        <p>Transparante, vaste prijzen. Inclusief materiaal, arbeid en opruimen. Geen aanbetaling nodig.</p>
+        <div class="pakketten-grid">
+            <div class="pakket-card featured">
+                <div class="pakket-header">
+                    <h3>Alles-in-een Pakket</h3>
+                    <div class="pakket-prijs">&euro;13,00 <small>/m&sup2; excl. BTW</small></div>
+                    <small style="color:rgba(255,255,255,.5)">Vanaf 100m&sup2;</small>
+                </div>
+                <div class="pakket-body">
+                    <ul>
+                        <li>Wanden professioneel schuren</li>
+                        <li>Aanbrengen van 150 grams renovlies</li>
+                        <li>Alle naden en kieren professioneel gekit</li>
+                        <li>Dekkend schilderen in 2 kleuren naar keuze</li>
+                        <li>Inclusief materiaal: renovlies + lijm + kit + muurverf</li>
+                        <li>Bouwafval netjes afgevoerd</li>
+                        <li>Geen verborgen kosten (incl. voorrij- en parkeerkosten)</li>
+                        <li>Geen aanbetaling</li>
+                        <li>12 maanden garantie</li>
+                    </ul>
+                    <a href="https://denhartog-wandafwerking.nl/#contact" class="pakket-cta">Offerte aanvragen &rarr;</a>
+                </div>
+            </div>
+            <div class="pakket-card">
+                <div class="pakket-header">
+                    <h3>Premium Plus Pakket</h3>
+                    <div class="pakket-prijs">&euro;15,50 <small>/m&sup2; excl. BTW</small></div>
+                    <small style="color:rgba(255,255,255,.5)">Vanaf 100m&sup2;</small>
+                </div>
+                <div class="pakket-body">
+                    <ul>
+                        <li>Wanden professioneel schuren</li>
+                        <li>Aanbrengen van 150 grams renovlies</li>
+                        <li>Alle naden en kieren professioneel gekit</li>
+                        <li>Dekkend schilderen in alle kleuren naar uw wens</li>
+                        <li>Inclusief materiaal: renovlies + lijm + kit + muurverf</li>
+                        <li>Bouwafval netjes afgevoerd</li>
+                        <li>Geen verborgen kosten (incl. voorrij- en parkeerkosten)</li>
+                        <li>Geen aanbetaling</li>
+                        <li>12 maanden garantie</li>
+                    </ul>
+                    <a href="https://denhartog-wandafwerking.nl/#contact" class="pakket-cta">Offerte aanvragen &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<section class="cta-banner">
+    <h2>Klaar voor strakke muren?</h2>
+    <p>Vraag vandaag nog een gratis, vrijblijvende offerte aan. Wij nemen binnen 24 uur contact op.</p>
+    <div class="cta-buttons">
+        <a href="tel:0640837590" class="btn-primary">Bel 06 408 37 590</a>
+        <a href="https://wa.me/31640837590" class="btn-outline">WhatsApp ons</a>
+        <a href="https://denhartog-wandafwerking.nl/#contact" class="btn-outline">Offerte aanvragen</a>
+    </div>
+</section>
+
+
+<div class="keyword-footer">
+    <div class="keyword-footer-inner">
+        <div>
+            <h4>Je vindt ons onder:</h4>
+            <ul>
+                <li><a href="/renovlies-behang/">Renovlies behang</a></li>
+                <li><a href="/glasvezelbehanger/">Glasvezelbehanger</a></li>
+                <li><a href="/wandafwerking-specialist/">Wandafwerking specialist</a></li>
+                <li><a href="/renovlies-aanbrengen/">Renovlies aanbrengen</a></li>
+                <li><a href="/glasvezel-behang/">Glasvezel behang</a></li>
+                <li><a href="/nieuwbouw-behangen/">Nieuwbouw behangen</a></li>
+                <li><a href="/goedkoop-renovlies/">Goedkoop renovlies</a></li>
+                <li><a href="/voordelen-renovlies/">Voordelen renovlies</a></li>
+                <li><a href="/wandafwerking-nieuwbouw/">Wandafwerking nieuwbouw</a></li>
+                <li><a href="/renovlies-behangservice/">Renovlies behangservice</a></li>
+                <li><a href="/scanbehang/">Scanbehang</a></li>
+                <li><a href="/glasvliesbehang/">Glasvliesbehang</a></li>
+                <li><a href="/renovlies-prijs-per-m2/">Renovlies prijs per m2</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>In de regio:</h4>
+            <ul>
+                <li><a href="/renovlies-utrecht/">Renovlies Utrecht</a></li>
+                <li><a href="/renovlies-rotterdam/">Renovlies Rotterdam</a></li>
+                <li><a href="/renovlies-den-haag/">Renovlies Den Haag</a></li>
+                <li><a href="/renovlies-breda/">Renovlies Breda</a></li>
+                <li><a href="/renovlies-dordrecht/">Renovlies Dordrecht</a></li>
+                <li><a href="/renovlies-leiden/">Renovlies Leiden</a></li>
+                <li><a href="/renovlies-delft/">Renovlies Delft</a></li>
+                <li><a href="/renovlies-gouda/">Renovlies Gouda</a></li>
+                <li><a href="/renovlies-zoetermeer/">Renovlies Zoetermeer</a></li>
+                <li><a href="/renovlies-gorinchem/">Renovlies Gorinchem</a></li>
+                <li><a href="/renovlies-houten/">Renovlies Houten</a></li>
+                <li><a href="/renovlies-nieuwegein/">Renovlies Nieuwegein</a></li>
+                <li><a href="/renovlies-woerden/">Renovlies Woerden</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Meer over Den Hartog:</h4>
+            <ul>
+                <li><a href="/renovlies-of-stucen/">Renovlies of stucen</a></li>
+                <li><a href="/wat-kost-renovlies/">Wat kost renovlies?</a></li>
+                <li><a href="/renovlies-nieuwbouw/">Renovlies nieuwbouw</a></li>
+                <li><a href="/glasvezelbehang-nieuwbouw/">Glasvezelbehang nieuwbouw</a></li>
+                <li><a href="/nieuwbouw-muren-afwerken/">Nieuwbouw muren afwerken</a></li>
+                <li><a href="/renovlies-vs-stucwerk/">Renovlies vs stucwerk</a></li>
+                <li><a href="/renovlies-ervaringen/">Renovlies ervaringen</a></li>
+                <li><a href="/nadelen-renovlies/">Nadelen renovlies</a></li>
+                <li><a href="/renovlies-behang-prijs/">Renovlies behang prijs</a></li>
+                <li><a href="/nieuwbouwwoning-behangklaar/">Nieuwbouwwoning behangklaar</a></li>
+                <li><a href="/renovlies-op-plafond/">Renovlies op plafond</a></li>
+                <li><a href="/sauzen-na-renovlies/">Sauzen na renovlies</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div>&copy; 2026 Den Hartog Wandafwerking | <a href="tel:0640837590">06 408 37 590</a> | <a href="mailto:lucd.hartog@gmail.com">lucd.hartog@gmail.com</a></div>
+        <div><a href="#">Privacybeleid</a> | <a href="#">Algemene voorwaarden</a></div>
+    </div>
+</footer>
+
+<script>function toggleFaq(el){el.parentElement.classList.toggle("open");}</script>
+</body>
+</html>
