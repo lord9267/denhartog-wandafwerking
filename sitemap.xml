@@ -1,95 +1,231 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
   <url>
     <loc>https://denhartog-wandafwerking.nl/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
-    <loc>https://denhartog-wandafwerking.nl/renovlies-behangen/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/renovlies-dordrecht/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/renovlies-zwijndrecht/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/renovlies-alblasserdam/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/renovlies-papendrecht/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/renovlies-sliedrecht/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/blog/</loc>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-amersfoort/</loc>
     <lastmod>2026-04-02</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://denhartog-wandafwerking.nl/blog/waarom-renovlies/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/blog/renovlies-dordrecht/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/blog/renovlies-vs-stucwerk/</loc>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-den-haag/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://denhartog-wandafwerking.nl/blog/lente-muurkleuren-2026/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://denhartog-wandafwerking.nl/blog/renovlies-utrecht/</loc>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-dordrecht/</loc>
     <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-gorinchem/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-gouda/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-houten/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-leiden/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-nieuwegein/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-rotterdam/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-utrecht/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-woerden/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-ijsselstein/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-zoetermeer/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/goedkoop-renovlies/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-behangservice/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-prijs-per-m2/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/scanbehang/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/voordelen-renovlies/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/wandafwerking-nieuwbouw/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-op-plafond/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-vs-stucwerk/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/sauzen-na-renovlies/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/wat-kost-renovlies/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/glasvliesbehang/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/latex-spuiten/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/nieuwbouw-muren-afwerken/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-aanbrengen/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-schilderen/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-zelf-doen/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/sausklaar-opleveren/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/stucwerk-kosten/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/meer-over-renovlies/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/meer-over-glasvlies/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/meer-over-latex-spuiten/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/meer-over-wandafwerking/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/meer-over-sauzen/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/meer-over-stucwerk/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
