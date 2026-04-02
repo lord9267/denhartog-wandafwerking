@@ -6,7 +6,7 @@
   <title>Blog | Renovlies & Wandafwerking Tips – Den Hartog</title>
   <meta name="description" content="Lees onze blogs over renovlies behangen, wandafwerking tips, nieuwbouw en meer. Alles over professionele wandafwerking van Den Hartog.">
   <link rel="canonical" href="https://denhartog-wandafwerking.nl/blog">
-  <link rel="preconnect" href="https://fonts.googleaps.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
@@ -30,7 +30,7 @@
     .blog-hero h1 span{color:var(--primary);}
     .blog-hero p{font-size:17px;color:rgba(255,255,255,.7);max-width:600px;line-height:1.8;}
     .blog-section{padding:72px 0;}
-    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;margin-top:40px;}
+    .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;}
     .blog-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;}
     .blog-card:hover{transform:translateY(-4px);box-shadow:0 10px 40px rgba(0,0,0,.12);}
     .blog-card-label{background:var(--primary);color:#fff;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;}
@@ -43,6 +43,8 @@
     .coming-soon{opacity:.55;pointer-events:none;}
     .coming-soon .blog-card-label{background:var(--text-light);}
     .soon-badge{display:inline-block;background:var(--bg-gray);border:1px solid var(--border);color:var(--text-light);font-size:11px;font-weight:600;padding:4px 10px;border-radius:6px;margin-top:14px;}
+    .blog-card-tags{display:flex;gap:6px;margin-top:14px;}
+    .blog-card-tags .tag{background:var(--bg-gray);border:1px solid var(--border);color:var(--text-light);font-size:11px;font-weight:500;padding:3px 10px;border-radius:6px;}
     .cta-banner{background:linear-gradient(135deg,var(--primary),var(--primary-dark));padding:60px 0;text-align:center;}
     .cta-banner h2{font-size:clamp(22px,3vw,34px);font-weight:800;color:#fff;margin-bottom:12px;}
     .cta-banner p{font-size:16px;color:rgba(255,255,255,.8);margin-bottom:32px;}
@@ -59,6 +61,8 @@
     .whatsapp-fab:hover{transform:scale(1.1);}
     .whatsapp-fab svg{width:30px;height:30px;fill:#fff;}
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4WKSG3S5MW"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4WKSG3S5MW');</script>
 </head>
 <body>
   <nav id="navbar">
@@ -74,6 +78,7 @@
       </ul>
     </div>
   </nav>
+
   <section class="blog-hero">
     <div class="container">
       <p class="breadcrumb"><a href="/">Home</a> › Blog</p>
@@ -81,9 +86,12 @@
       <p>Praktische tips, vakkennis en lokale informatie over renovlies, wandafwerking en nieuwbouw — geschreven door de specialisten van Den Hartog.</p>
     </div>
   </section>
+
   <section class="blog-section">
     <div class="container">
       <div class="blog-grid">
+
+        <!-- Kaart 1: Renovlies Dordrecht -->
         <a href="/blog/renovlies-dordrecht" class="blog-card">
           <div class="blog-card-label">Lokaal · Dordrecht</div>
           <div class="blog-card-body">
@@ -93,6 +101,8 @@
             <span class="blog-card-link">Lees artikel →</span>
           </div>
         </a>
+
+        <!-- Kaart 2: Glasvezel (coming soon) -->
         <div class="blog-card coming-soon">
           <div class="blog-card-label">Kennisbank</div>
           <div class="blog-card-body">
@@ -102,15 +112,19 @@
             <span class="soon-badge">Binnenkort beschikbaar</span>
           </div>
         </div>
+
+        <!-- Kaart 3: Renovlies Utrecht -->
         <a href="/blog/renovlies-utrecht" class="blog-card">
-        <div class="blog-card-label">Lokaal · Utrecht</div>
-        <div class="blog-card-body">
-          <div class="blog-card-meta">📅 April 2026 ⏱️ 6 min lezen</div>
-          <h3>Renovlies Behangen in Utrecht: Specialist & Offerte</h3>
-          <p>Den Hartog werkt aan tientallen nieuwbouwprojecten per jaar in Utrecht en omgeving. Ontdek wat wij voor u kunnen betekenen.</p>
-        </div>
-        <div class="blog-card-link">Lees artikel →</div>
-      </a>
+          <div class="blog-card-label">Lokaal · Utrecht</div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta"><span>📅 April 2026</span><span>⏱️ 6 min lezen</span></div>
+            <h2>Renovlies Behangen in Utrecht: Specialist & Offerte</h2>
+            <p>Den Hartog werkt aan tientallen nieuwbouwprojecten per jaar in Utrecht en omgeving. Ontdek wat wij voor u kunnen betekenen.</p>
+            <span class="blog-card-link">Lees artikel →</span>
+          </div>
+        </a>
+
+        <!-- Kaart 4: Wandafwerking Nieuwbouw (coming soon) -->
         <div class="blog-card coming-soon">
           <div class="blog-card-label">Kennisbank</div>
           <div class="blog-card-body">
@@ -120,43 +134,45 @@
             <span class="soon-badge">Binnenkort beschikbaar</span>
           </div>
         </div>
-      
-      <a href="/blog/waarom-renovlies" class="blog-card">
-        <div class="blog-card-label">Gids &#x2022; Renovlies</div>
-        <div class="blog-card-body">
-          <div class="blog-card-meta">
-            <span>&#x2714;&#xFE0F; Den Hartog Wandafwerking</span>
-            <span>&#x1F4C5; Maart 2026</span>
+
+        <!-- Kaart 5: Waarom Renovlies -->
+        <a href="/blog/waarom-renovlies" class="blog-card">
+          <div class="blog-card-label">Gids · Renovlies</div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta"><span>📅 Maart 2026</span><span>⏱️ 6 min lezen</span></div>
+            <h2>Waarom Renovlies? Voordelen &amp; Vergelijking met Stucwerk</h2>
+            <p>Renovlies is uitgegroeid tot de meest gekozen wandafwerking bij nieuwbouw &eacute;n renovatie. Ontdek de voordelen en hoe het zich verhoudt tot stucwerk.</p>
+            <span class="blog-card-link">Lees artikel →</span>
+            <div class="blog-card-tags"><span class="tag">Renovlies</span><span class="tag">Nieuwbouw</span></div>
           </div>
-          <h2>Waarom Renovlies? Voordelen &amp; Vergelijking met Stucwerk</h2>
-          <p class="blog-card-excerpt">Renovlies is uitgegroeid tot de meest gekozen wandafwerking bij nieuwbouw &#233;n renovatie. Ontdek de voordelen en hoe het zich verhoudt tot stucwerk.</p>
-          <div class="blog-card-footer">
-            <span class="blog-card-read">Lees artikel &#x2192;</span>
-            <span class="blog-card-tags"><span class="tag">Renovlies</span><span class="tag">Nieuwbouw</span></span>
+        </a>
+
+        <!-- Kaart 6: Muurkleuren Lente 2026 -->
+        <a href="/blog/lente-muurkleuren-2026/" class="blog-card">
+          <div class="blog-card-label">Interieur · Verftrends</div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta"><span>📅 April 2026</span><span>⏱️ 5 min lezen</span></div>
+            <h2>Trendy Muurkleuren Lente 2026: De 5 Kleuren die Nu Scoren</h2>
+            <p>Van Cloud Dancer tot Ocean Teal — ontdek de populairste muurkleuren van lente 2026 en hoe u ze toepast in uw interieur.</p>
+            <span class="blog-card-link">Lees artikel →</span>
           </div>
-        </div>
-      </a>
-      <a href="/blog/lente-muurkleuren-2026/" class="blog-card">
-                <div class="blog-card-label">Interieur · Verftrends</div>
-                <div class="blog-card-body">
-                  <div class="blog-card-meta"><span>📅 April 2026</span><span>⏱️ 5 min lezen</span></div>
-                  <h2>Trendy Muurkleuren Lente 2026: De 5 Kleuren die Nu Scoren</h2>
-                  <p>Van Cloud Dancer tot Ocean Teal — ontdek de populairste muurkleuren van lente 2026 en hoe u ze toepast in uw interieur.</p>
-                  <span class="blog-card-link">Lees artikel →</span>
-                </div>
-              </a>
-      <a href="/blog/renovlies-vs-stucwerk/" class="blog-card">
-                <div class="blog-card-label">Kennisbank · Vergelijking</div>
-                <div class="blog-card-body">
-                  <div class="blog-card-meta"><span>📅 April 2026</span><span>⏱️ 7 min lezen</span></div>
-                  <h2>Renovlies vs Stucwerk: Complete Vergelijking 2026</h2>
-                  <p>Twijfelt u nog tussen renovlies en stucwerk? Vergelijk kosten, voordelen, nadelen, duurzaamheid en onderhoud in deze uitgebreide gids.</p>
-                  <span class="blog-card-link">Lees artikel →</span>
-                </div>
-              </a>
-    </div>
+        </a>
+
+        <!-- Kaart 7: Renovlies vs Stucwerk -->
+        <a href="/blog/renovlies-vs-stucwerk/" class="blog-card">
+          <div class="blog-card-label">Kennisbank · Vergelijking</div>
+          <div class="blog-card-body">
+            <div class="blog-card-meta"><span>📅 April 2026</span><span>⏱️ 7 min lezen</span></div>
+            <h2>Renovlies vs Stucwerk: Complete Vergelijking 2026</h2>
+            <p>Twijfelt u nog tussen renovlies en stucwerk? Vergelijk kosten, voordelen, nadelen, duurzaamheid en onderhoud in deze uitgebreide gids.</p>
+            <span class="blog-card-link">Lees artikel →</span>
+          </div>
+        </a>
+
+      </div>
     </div>
   </section>
+
   <section class="cta-banner">
     <div class="container">
       <h2>Klaar voor strakke muren zonder gedoe?</h2>
@@ -167,6 +183,7 @@
       </div>
     </div>
   </section>
+
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -179,9 +196,97 @@
       <div class="footer-bottom">© 2026 Den Hartog Wandafwerking · Planetenlaan 406, Dordrecht · 06 408 37 590</div>
     </div>
   </footer>
+
   <a class="whatsapp-fab" href="https://wa.me/31640837590" target="_blank" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
   </a>
+
   <script>window.addEventListener('scroll',function(){var nav=document.getElementById('navbar');if(nav)nav.style.boxShadow=window.scrollY>50?'0 4px 30px rgba(0,0,0,.3)':'none';});</script>
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        if(typeof gtag !== 'undefined') {
+          gtag('event', 'telefoon_klik', { event_category: 'conversie', event_label: this.href });
+        }
+      });
+    });
+    document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        if(typeof gtag !== 'undefined') {
+          gtag('event', 'email_klik', { event_category: 'conversie', event_label: this.href });
+        }
+      });
+    });
+    document.querySelectorAll('button').forEach(function(btn) {
+      if(btn.textContent.includes('Verstuur') || btn.textContent.includes('aanvraag')) {
+        btn.addEventListener('click', function() {
+          if(typeof gtag !== 'undefined') {
+            gtag('event', 'offerte_aanvraag', { event_category: 'conversie', event_label: 'formulier_submit' });
+          }
+        });
+      }
+    });
+    document.querySelectorAll('a[href*="#contact"]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        if(typeof gtag !== 'undefined') {
+          gtag('event', 'offerte_klik', { event_category: 'conversie', event_label: el.textContent.trim() });
+        }
+      });
+    });
+  });
+  </script>
+  <script>
+  (function() {
+    var faqItems = document.querySelectorAll('.faq-item');
+    if (faqItems.length > 0) {
+      var questions = [];
+      faqItems.forEach(function(item) {
+        var q = item.querySelector('.faq-question');
+        var a = item.querySelector('.faq-answer');
+        if (q && a) {
+          questions.push({
+            "@type": "Question",
+            "name": q.textContent.replace(/[\u25BC\u25B2]/g, '').trim(),
+            "acceptedAnswer": { "@type": "Answer", "text": a.textContent.trim() }
+          });
+        }
+      });
+      if (questions.length > 0) {
+        var el = document.createElement('script');
+        el.type = 'application/ld+json';
+        el.textContent = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":questions});
+        document.head.appendChild(el);
+      }
+    }
+    var hasLB = [].slice.call(document.querySelectorAll('script[type="application/ld+json"]')).some(function(s) {
+      try { return JSON.parse(s.textContent)['@type'] === 'LocalBusiness'; } catch(e) { return false; }
+    });
+    if (!hasLB) {
+      var m = window.location.pathname.match(/\/renovlies-([^\/]+)\//);
+      if (m) {
+        var city = m[1].replace(/-/g,' ');
+        city = city.charAt(0).toUpperCase() + city.slice(1);
+        var el2 = document.createElement('script');
+        el2.type = 'application/ld+json';
+        el2.textContent = JSON.stringify({
+          "@context":"https://schema.org",
+          "@type":"LocalBusiness",
+          "name":"Den Hartog Wandafwerking",
+          "image":"https://dhwandafwerking.nl/Images/Untitled%20design%20(7).png",
+          "description":"Specialist in renovlies aanbrengen en wandafwerking in " + city + " en omgeving.",
+          "address":{"@type":"PostalAddress","streetAddress":"Planetenlaan 406","addressLocality":"Dordrecht","postalCode":"3317 GE","addressCountry":"NL"},
+          "telephone":"+31640837590",
+          "email":"lucd.hartog@gmail.com",
+          "priceRange":"€13,00 - €15,50",
+          "areaServed":{"@type":"City","name":city},
+          "url":"https://denhartog-wandafwerking.nl" + window.location.pathname,
+          "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}
+        });
+        document.head.appendChild(el2);
+      }
+    }
+  })();
+  </script>
 </body>
 </html>
