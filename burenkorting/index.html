@@ -5,3 +5,325 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burenkorting | 5% korting op de factuur - Den Hartog Wandafwerking</title>
   <meta name="description" content="Profiteer van onze burenkorting: verwijs uw buren, vrienden of familie door en ontvang allebei 5% korting direct op de factuur. Samen voordeliger bij Den Hartog Wandafwerking.">
+  <link rel="canonical" href="https://denhartog-wandafwerking.nl/burenkorting/">
+  <meta property="og:title" content="Burenkorting | 5% korting op de factuur - Den Hartog Wandafwerking">
+  <meta property="og:description" content="Verwijs uw buren door en ontvang allebei 5% korting direct op de factuur. Samen voordeliger bij Den Hartog Wandafwerking.">
+  <meta property="og:url" content="https://denhartog-wandafwerking.nl/burenkorting/">
+  <meta property="og:type" content="website">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    :root {
+      --primary: #CD7F32;
+      --primary-dark: #b36b28;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #fff;
+      --bg-light: #f9fafb;
+      --bg-dark: #0d0d1a;
+      --bg-dark2: #1a1a2e;
+      --border: #e5e7eb;
+      --success: #10b981;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; font-size: 16px; }
+
+    /* NAVBAR */
+    .navbar { background: rgba(13,13,26,0.97); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+    .navbar-brand { color: #fff; font-size: 1.25rem; font-weight: 800; text-decoration: none; }
+    .navbar-brand span { color: var(--primary); }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+    .nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--primary) !important; color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 700 !important; }
+
+    /* BREADCRUMB */
+    .breadcrumb { background: var(--bg-light); padding: 0.7rem 2rem; font-size: 0.85rem; color: var(--text-light); border-bottom: 1px solid var(--border); }
+    .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
+
+    /* HERO */
+    .hero { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #16213e 100%); color: #fff; padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 50%, rgba(205,127,50,0.08) 0%, transparent 50%); }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 1rem; line-height: 1.15; position: relative; }
+    .hero h1 span { color: var(--primary); }
+    .hero p { font-size: 1.1rem; max-width: 620px; margin: 0 auto 2rem; opacity: 0.85; line-height: 1.7; position: relative; }
+    .hero-discount { display: inline-flex; align-items: center; gap: 12px; background: rgba(205,127,50,0.15); border: 2px solid var(--primary); border-radius: 12px; padding: 1rem 2rem; font-size: 1.6rem; font-weight: 800; color: var(--primary); position: relative; }
+
+    /* SECTIONS */
+    .section { padding: 3.5rem 2rem; max-width: 900px; margin: 0 auto; }
+    .section-alt { background: var(--bg-light); }
+    .section-title { text-align: center; font-size: 1.9rem; font-weight: 800; margin-bottom: 0.6rem; color: var(--text); }
+    .section-subtitle { text-align: center; color: var(--text-light); font-size: 1rem; margin-bottom: 2.5rem; }
+
+    /* STEPS */
+    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; }
+    .step { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 2rem 1.5rem; text-align: center; transition: transform .2s, box-shadow .2s; }
+    .step:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,.06); }
+    .step-number { width: 48px; height: 48px; background: linear-gradient(135deg, var(--primary), var(--primary-dark)); color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 1.2rem; font-weight: 800; margin-bottom: 1rem; }
+    .step h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .step p { color: var(--text-light); font-size: 0.95rem; margin: 0; }
+
+    /* BENEFITS */
+    .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+    .benefit { display: flex; gap: 1rem; align-items: flex-start; background: #fff; border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); }
+    .benefit-icon { flex-shrink: 0; width: 40px; height: 40px; background: rgba(205,127,50,0.1); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+    .benefit h4 { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.25rem; }
+    .benefit p { font-size: 0.9rem; color: var(--text-light); margin: 0; }
+
+    /* CALC BOX */
+    .calc-box { background: linear-gradient(135deg, var(--bg-dark), var(--bg-dark2)); border-radius: 16px; padding: 2.5rem; color: #fff; max-width: 700px; margin: 0 auto; }
+    .calc-box h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem; }
+    .calc-row:last-child { border-bottom: none; }
+    .calc-row .label { color: rgba(255,255,255,0.7); }
+    .calc-row .value { font-weight: 700; }
+    .calc-row.highlight { background: rgba(205,127,50,0.15); border-radius: 8px; padding: 0.75rem 1rem; margin-top: 0.5rem; border: 1px solid rgba(205,127,50,0.3); }
+    .calc-row.highlight .label { color: var(--primary); font-weight: 600; }
+    .calc-row.highlight .value { color: var(--primary); font-size: 1.2rem; }
+
+    /* CONDITIONS */
+    .conditions h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; }
+    .conditions ul { list-style: none; padding: 0; }
+    .conditions li { position: relative; padding: 0.5rem 0 0.5rem 1.5rem; color: var(--text-light); font-size: 0.95rem; }
+    .conditions li::before { content: ''; position: absolute; left: 0; top: 0.9rem; width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
+
+    /* CTA BANNER */
+    .cta-banner { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #16213e 100%); color: #fff; padding: 3.5rem 2rem; text-align: center; }
+    .cta-banner h2 { color: #fff; font-size: 1.7rem; font-weight: 800; margin-bottom: 0.6rem; }
+    .cta-banner h2 span { color: var(--primary); }
+    .cta-banner p { color: rgba(255,255,255,.8); max-width: 550px; margin: 0 auto 1.5rem; }
+    .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary { background: var(--primary); color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background .2s; }
+    .btn-primary:hover { background: var(--primary-dark); }
+    .btn-outline { background: transparent; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,.25); transition: background .2s; }
+    .btn-outline:hover { background: rgba(255,255,255,.08); }
+
+    /* KEYWORD FOOTER */
+    .keyword-footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 3rem 2rem; border-top: 1px solid rgba(255,255,255,.08); }
+    .keyword-footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .keyword-footer h4 { font-size: 1.1rem; margin-bottom: 1rem; color: #fff; font-weight: 700; }
+    .keyword-footer ul { list-style: none; padding: 0; }
+    .keyword-footer li { padding: 0.25rem 0; }
+    .keyword-footer a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+    .keyword-footer a:hover { color: var(--primary); }
+
+    /* MAIN FOOTER */
+    .footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 2rem 2rem; border-top: 1px solid rgba(255,255,255,.06); }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; }
+    .footer a { color: rgba(255,255,255,.5); text-decoration: none; }
+    .footer a:hover { color: var(--primary); }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .nav-links { display: none; }
+      .keyword-footer-inner { grid-template-columns: 1fr; }
+      .benefit-grid { grid-template-columns: 1fr; }
+      .calc-row { flex-direction: column; gap: 0.25rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="https://denhartog-wandafwerking.nl" class="navbar-brand">Den Hartog <span>Wandafwerking</span></a>
+  <ul class="nav-links">
+    <li><a href="https://denhartog-wandafwerking.nl">Home</a></li>
+    <li><a href="https://denhartog-wandafwerking.nl/#diensten">Diensten</a></li>
+    <li><a href="https://denhartog-wandafwerking.nl/#projecten">Projecten</a></li>
+    <li><a href="https://denhartog-wandafwerking.nl/#over-ons">Over ons</a></li>
+    <li><a href="https://denhartog-wandafwerking.nl/#contact" class="nav-cta">Gratis Offerte</a></li>
+  </ul>
+</nav>
+
+<div class="breadcrumb">
+  <a href="https://denhartog-wandafwerking.nl">Home</a> &rsaquo; <strong>Burenkorting</strong>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Burenkorting bij<br><span>Den Hartog Wandafwerking</span></h1>
+  <p>Beveel ons aan bij uw buren, vrienden of familie en ontvang allebei 5% korting direct op de factuur.</p>
+  <div class="hero-discount">5% korting op de factuur</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<div class="section">
+  <h2 class="section-title">Hoe werkt het?</h2>
+  <p class="section-subtitle">In drie eenvoudige stappen profiteren u en uw buren van onze burenkorting</p>
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>U bent tevreden</h3>
+      <p>U bent blij met het resultaat van ons renovlies- of behangwerk en wilt dit delen met anderen.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Verwijs door</h3>
+      <p>Vertel uw buren, vrienden of familie over ons. Zij nemen contact op en noemen uw naam.</p>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Beiden 5% korting</h3>
+      <p>Bij akkoord krijgen zowel de nieuwe klant als u 5% korting direct op de factuur. Geen bonnen, geen gedoe.</p>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<div class="section-alt">
+  <div class="section">
+    <h2 class="section-title">Voordelen voor iedereen</h2>
+    <p class="section-subtitle">Een win-win situatie voor u, uw buren &eacute;n ons</p>
+    <div class="benefit-grid">
+      <div class="benefit">
+        <div class="benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CD7F32" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div>
+          <h4>Direct voordeel op uw factuur</h4>
+          <p>5% korting wordt direct verrekend op de factuur. Geen bonnen of tegoedbonnen, gewoon minder betalen.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CD7F32" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div>
+          <h4>Geen limiet op verwijzingen</h4>
+          <p>Hoe meer buren of kennissen u doorverwijst, hoe vaker u 5% factuurkorting ontvangt.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CD7F32" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <div>
+          <h4>Handig bij projecten in de buurt</h4>
+          <p>Werken we al in uw straat? Dan kan uw buurman/vrouw direct meeprofiteren.</p>
+        </div>
+      </div>
+      <div class="benefit">
+        <div class="benefit-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CD7F32" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div>
+          <h4>Geldt voor het complete pakket</h4>
+          <p>De 5% korting geldt op het volledige Alles-in-een pakket, inclusief materiaal en arbeid.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EXAMPLE CALCULATION -->
+<div class="section">
+  <h2 class="section-title">Rekenvoorbeeld</h2>
+  <p class="section-subtitle">Zo ziet de burenkorting er in de praktijk uit</p>
+  <div class="calc-box">
+    <h3>Uw buurman laat een gemiddelde woning (270m&sup2;) doen</h3>
+    <div class="calc-row">
+      <span class="label">Normaal tarief (Alles-in-een pakket, excl. BTW)</span>
+      <span class="value">270m&sup2; &times; &euro;15,50 = &euro;4.185,-</span>
+    </div>
+    <div class="calc-row">
+      <span class="label">Burenkorting 5%</span>
+      <span class="value">- &euro;209,25</span>
+    </div>
+    <div class="calc-row highlight">
+      <span class="label">Uw buurman betaalt (excl. BTW)</span>
+      <span class="value">&euro;3.975,75</span>
+    </div>
+    <div class="calc-row" style="margin-top:1rem; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1rem;">
+      <span class="label">En u ontvangt bij uw volgende project ook</span>
+      <span class="value" style="color: var(--primary);">5% factuurkorting</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONDITIONS -->
+<div class="section-alt">
+  <div class="section conditions">
+    <h3>Voorwaarden</h3>
+    <ul>
+      <li>De burenkorting geldt voor nieuwe klanten die nog geen offerte hebben aangevraagd</li>
+      <li>De nieuwe klant noemt bij het eerste contact de naam van de verwijzer</li>
+      <li>5% korting wordt direct verrekend op de factuur &mdash; geen tegoedbonnen</li>
+      <li>Korting geldt op het complete Alles-in-een pakket (renovlies, glasvezelbehang en behangwerk, minimaal 40m&sup2;)</li>
+      <li>Alle genoemde prijzen zijn exclusief BTW</li>
+      <li>De burenkorting is niet te combineren met andere acties of kortingen</li>
+      <li>Niet alleen voor buren: ook vrienden, familie en collega&rsquo;s mogen meedoen</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2>Tevreden klant? <span>Deel het voordeel!</span></h2>
+  <p>Neem contact met ons op of stuur dit programma door naar uw buren.</p>
+  <div class="cta-buttons">
+    <a href="tel:0640837590" class="btn-primary">Bel 06 408 37 590</a>
+    <a href="https://wa.me/31640837590" class="btn-outline">WhatsApp ons</a>
+    <a href="https://denhartog-wandafwerking.nl/#contact" class="btn-outline">Offerte aanvragen</a>
+  </div>
+</section>
+
+<!-- KEYWORD FOOTER -->
+<div class="keyword-footer">
+  <div class="keyword-footer-inner">
+    <div>
+      <h4>Je vindt ons onder:</h4>
+      <ul>
+        <li><a href="/renovlies-behang/">Renovlies behang</a></li>
+        <li><a href="/glasvezelbehanger/">Glasvezelbehanger</a></li>
+        <li><a href="/wandafwerking-specialist/">Wandafwerking specialist</a></li>
+        <li><a href="/renovlies-aanbrengen/">Renovlies aanbrengen</a></li>
+        <li><a href="/glasvezel-behang/">Glasvezel behang</a></li>
+        <li><a href="/nieuwbouw-behangen/">Nieuwbouw behangen</a></li>
+        <li><a href="/goedkoop-renovlies/">Goedkoop renovlies</a></li>
+        <li><a href="/voordelen-renovlies/">Voordelen renovlies</a></li>
+        <li><a href="/wandafwerking-nieuwbouw/">Wandafwerking nieuwbouw</a></li>
+        <li><a href="/renovlies-behangservice/">Renovlies behangservice</a></li>
+        <li><a href="/scanbehang/">Scanbehang</a></li>
+        <li><a href="/glasvliesbehang/">Glasvliesbehang</a></li>
+        <li><a href="/renovlies-prijs-per-m2/">Renovlies prijs per m2</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>In de regio:</h4>
+      <ul>
+        <li><a href="/renovlies-utrecht/">Renovlies Utrecht</a></li>
+        <li><a href="/renovlies-rotterdam/">Renovlies Rotterdam</a></li>
+        <li><a href="/renovlies-den-haag/">Renovlies Den Haag</a></li>
+        <li><a href="/renovlies-breda/">Renovlies Breda</a></li>
+        <li><a href="/renovlies-dordrecht/">Renovlies Dordrecht</a></li>
+        <li><a href="/renovlies-leiden/">Renovlies Leiden</a></li>
+        <li><a href="/renovlies-delft/">Renovlies Delft</a></li>
+        <li><a href="/renovlies-gouda/">Renovlies Gouda</a></li>
+        <li><a href="/renovlies-zoetermeer/">Renovlies Zoetermeer</a></li>
+        <li><a href="/renovlies-gorinchem/">Renovlies Gorinchem</a></li>
+        <li><a href="/renovlies-houten/">Renovlies Houten</a></li>
+        <li><a href="/renovlies-nieuwegein/">Renovlies Nieuwegein</a></li>
+        <li><a href="/renovlies-woerden/">Renovlies Woerden</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Meer over Den Hartog:</h4>
+      <ul>
+        <li><a href="/renovlies-of-stucen/">Renovlies of stucen</a></li>
+        <li><a href="/wat-kost-renovlies/">Wat kost renovlies?</a></li>
+        <li><a href="/renovlies-nieuwbouw/">Renovlies nieuwbouw</a></li>
+        <li><a href="/glasvezelbehang-nieuwbouw/">Glasvezelbehang nieuwbouw</a></li>
+        <li><a href="/nieuwbouw-muren-afwerken/">Nieuwbouw muren afwerken</a></li>
+        <li><a href="/renovlies-vs-stucwerk/">Renovlies vs stucwerk</a></li>
+        <li><a href="/renovlies-ervaringen/">Renovlies ervaringen</a></li>
+        <li><a href="/nadelen-renovlies/">Nadelen renovlies</a></li>
+        <li><a href="/renovlies-behang-prijs/">Renovlies behang prijs</a></li>
+        <li><a href="/nieuwbouwwoning-behangklaar/">Nieuwbouwwoning behangklaar</a></li>
+        <li><a href="/renovlies-op-plafond/">Renovlies op plafond</a></li>
+        <li><a href="/sauzen-na-renovlies/">Sauzen na renovlies</a></li>
+        <li><a href="/burenkorting/">Burenkorting</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div>&copy; 2026 Den Hartog Wandafwerking | <a href="tel:0640837590">06 408 37 590</a> | <a href="mailto:lucd.hartog@gmail.com">lucd.hartog@gmail.com</a></div>
+    <div><a href="#">Privacybeleid</a> | <a href="#">Algemene voorwaarden</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
