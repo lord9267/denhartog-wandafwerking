@@ -1,0 +1,6 @@
+# 301 Redirect: old .com domain -> new .nl domain
+https://denhartogwandafwerking.com/* https://denhartog-wandafwerking.nl/:splat 301!
+https://www.denhartogwandafwerking.com/* https://denhartog-wandafwerking.nl/:splat 301!
+
+# Redirect www.denhartog-wandafwerking.nl to non-www
+https://www.denhartog-wandafwerking.nl/* https://denhartog-wandafwerking.nl/:splat 301!
