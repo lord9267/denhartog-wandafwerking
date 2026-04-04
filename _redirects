@@ -4,3 +4,28 @@ https://www.denhartogwandafwerking.com/* https://denhartog-wandafwerking.nl/:spl
 
 # Redirect www.denhartog-wandafwerking.nl to non-www
 https://www.denhartog-wandafwerking.nl/* https://denhartog-wandafwerking.nl/:splat 301!
+
+# Trailing slash normalization - fix duplicate content issues
+# Blog pages (found as duplicates in Google Search Console)
+/blog/renovlies-dordrecht  /blog/renovlies-dordrecht/  301!
+/blog/waarom-renovlies  /blog/waarom-renovlies/  301!
+/blog/lente-muurkleuren-2026  /blog/lente-muurkleuren-2026/  301!
+/renovlies-behangen  /renovlies-behangen/  301!
+
+# Location pages - enforce trailing slash
+/renovlies-dordrecht  /renovlies-dordrecht/  301!
+/renovlies-zwijndrecht  /renovlies-zwijndrecht/  301!
+/renovlies-alblasserdam  /renovlies-alblasserdam/  301!
+/renovlies-papendrecht  /renovlies-papendrecht/  301!
+/renovlies-sliedrecht  /renovlies-sliedrecht/  301!
+
+# Other important pages - enforce trailing slash
+/glasvezel-behang  /glasvezel-behang/  301!
+/glasvezelbehang-nieuwbouw  /glasvezelbehang-nieuwbouw/  301!
+/glasvezelbehanger  /glasvezelbehanger/  301!
+/glasvliesbehang  /glasvliesbehang/  301!
+/goedkoop-renovlies  /goedkoop-renovlies/  301!
+/nieuwbouw-behangen  /nieuwbouw-behangen/  301!
+/nieuwbouw-muren-afwerken  /nieuwbouw-muren-afwerken/  301!
+/burenkorting  /burenkorting/  301!
+/blog  /blog/  301!
