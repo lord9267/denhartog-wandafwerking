@@ -1,0 +1,19 @@
+# Netlify configuration for denhartog-wandafwerking.nl
+# Forces trailing slashes on all URLs for SEO consistency
+
+[build]
+  publish = "."
+
+  # Force trailing slashes - prevents duplicate content issues
+  [build.processing]
+    skip_processing = false
+
+    [build.processing.html]
+      pretty_urls = false
+
+      # Custom headers for SEO
+      [[headers]]
+        for = "/*"
+          [headers.values]
+              X-Content-Type-Options = "nosniff"
+                  X-Frame-Options = "SAMEORIGIN"
