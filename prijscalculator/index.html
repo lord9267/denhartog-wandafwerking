@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Prijscalculator | Den Hartog Wandafwerking</title>
+<meta name="description" content="Bereken direct een richtprijs voor renovlies en wandafwerking. Kies uw pakket, voer het aantal mÂ² in en ontvang een prijsindicatie.">
+<link rel="icon" href="/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#CD7F32;
+  --primary-dark:#b36b28;
+  --primary-light:rgba(205,127,50,0.1);
+  --dark:#1a1a2e;
+  --darker:#0d0d1a;
+  --text:#1f2937;
+  --text-light:#6b7280;
+  --bg:#fff;
+  --bg-gray:#f9fafb;
+  --bg-dark:#111827;
+  --border:#e5e7eb;
+  --success:#10b981;
+  --radius:12px;
+  --shadow:0 4px 20px rgba(0,0,0,.08);
+  --shadow-lg:0 10px 40px rgba(0,0,0,.15);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+
+/* Header - matches site */
+header{background:var(--darker);padding:1rem 2rem;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.05)}
+.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+.logo img{height:40px}
+.logo span{font-size:1.1rem;font-weight:700;color:#fff}
+nav{display:flex;gap:1.25rem;align-items:center}
+nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.3s}
+nav a:hover{color:var(--primary)}
+nav a.active{color:var(--primary);font-weight:600}
+.nav-cta{background:var(--primary);color:#fff!important;padding:0.5rem 1.2rem;border-radius:8px;font-weight:600;transition:background 0.3s}
+.nav-cta:hover{background:var(--primary-dark)}
+
+/* Mobile menu */
+.mobile-menu-btn{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+@media(max-width:768px){
+  .mobile-menu-btn{display:block}
+  nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--darker);flex-direction:column;padding:1rem 2rem;gap:1rem;border-top:1px solid rgba(255,255,255,0.05)}
+  nav.open{display:flex}
+  .nav-cta{text-align:center}
+}
+
+/* Hero */
+.hero{padding:7rem 2rem 3rem;text-align:center;background:linear-gradient(135deg,var(--darker) 0%,var(--dark) 100%);color:#fff}
+.hero-badge{display:inline-block;background:var(--primary-light);color:var(--primary);padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:1rem;border:1px solid rgba(205,127,50,0.2)}
+.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:0.75rem}
+.hero p{color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:550px;margin:0 auto}
+@media(max-width:768px){.hero h1{font-size:1.8rem}.hero{padding:6.5rem 1.5rem 2rem}}
+
+/* Calculator */
+.calc-container{max-width:920px;margin:-2rem auto 0;padding:0 2rem 4rem;position:relative;z-index:1}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
+@media(max-width:768px){.calc-grid{grid-template-columns:1fr}.calc-container{margin-top:-1rem;padding:0 1rem 3rem}}
+
+/* Left panel */
+.calc-inputs{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow)}
+.input-group{margin-bottom:1.5rem}
+.input-group:last-child{margin-bottom:0}
+.input-group>label{display:block;font-weight:600;margin-bottom:0.5rem;font-size:0.95rem;color:var(--text)}
+.input-group .hint{color:var(--text-light);font-size:0.8rem;margin-top:0.3rem}
+
+/* Package cards */
+.package-options{display:flex;flex-direction:column;gap:0.75rem}
+.package-card{border:2px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;cursor:pointer;transition:all 0.3s;position:relative;background:var(--bg)}
+.package-card:hover{border-color:var(--primary);box-shadow:0 2px 12px rgba(205,127,50,0.12)}
+.package-card.selected{border-color:var(--primary);background:rgba(205,127,50,0.03)}
+.package-card.selected::after{content:'â';position:absolute;top:0.75rem;right:0.75rem;width:24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700}
+.pkg-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem}
+.pkg-name{font-weight:700;font-size:1rem}
+.pkg-price{font-weight:700;color:var(--primary);font-size:1.1rem}
+.pkg-desc{color:var(--text-light);font-size:0.8rem;line-height:1.5}
+.pkg-badge{display:inline-block;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;font-size:0.7rem;padding:0.15rem 0.6rem;border-radius:4px;font-weight:700;margin-bottom:0.4rem;letter-spacing:0.5px}
+
+/* Area input */
+.area-input-wrap{display:flex;align-items:center;border:2px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color 0.3s}
+.area-input-wrap:focus-within{border-color:var(--primary)}
+.area-btn{width:46px;height:46px;border:none;background:var(--bg-gray);cursor:pointer;font-size:1.3rem;font-weight:700;color:var(--text);transition:background 0.2s;display:flex;align-items:center;justify-content:center}
+.area-btn:hover{background:var(--border)}
+.area-input{flex:1;border:none;text-align:center;font-size:1.1rem;font-weight:600;padding:0.5rem;outline:none;background:transparent;font-family:inherit;-moz-appearance:textfield}
+.area-input::-webkit-outer-spin-button,.area-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.area-unit{color:var(--text-light);font-size:0.9rem;padding-right:0.75rem;font-weight:500}
+
+/* Minimum warning */
+.area-warning{color:#dc2626;font-size:0.8rem;margin-top:0.3rem;display:none}
+.area-warning.visible{display:block}
+
+/* Radio options */
+.radio-options{display:flex;gap:0.75rem;flex-wrap:wrap}
+.radio-opt{flex:1;min-width:90px}
+.radio-opt input{display:none}
+.radio-opt label{display:block;text-align:center;padding:0.65rem 0.5rem;border:2px solid var(--border);border-radius:var(--radius);cursor:pointer;font-size:0.85rem;font-weight:500;transition:all 0.3s;background:var(--bg)}
+.radio-opt input:checked+label{border-color:var(--primary);background:rgba(205,127,50,0.05);color:var(--primary-dark);font-weight:600}
+
+/* Right panel */
+.calc-result{position:sticky;top:5.5rem}
+.result-card{background:linear-gradient(135deg,var(--darker),var(--dark));color:#fff;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow-lg)}
+.result-label{font-size:0.85rem;color:rgba(255,255,255,0.5);margin-bottom:0.25rem}
+.result-price{font-size:2.8rem;font-weight:800;margin-bottom:0.2rem;line-height:1.1;color:var(--primary)}
+.result-sub{font-size:0.85rem;color:rgba(255,255,255,0.4);margin-bottom:1.5rem}
+.result-breakdown{border-top:1px solid rgba(255,255,255,0.08);padding-top:1rem;margin-bottom:1.5rem}
+.breakdown-row{display:flex;justify-content:space-between;padding:0.35rem 0;font-size:0.88rem}
+.breakdown-row .label{color:rgba(255,255,255,0.5)}
+.breakdown-row .value{font-weight:600;color:rgba(255,255,255,0.9)}
+.breakdown-row.total{border-top:1px solid rgba(255,255,255,0.08);padding-top:0.6rem;margin-top:0.3rem}
+.breakdown-row.total .label{color:#fff;font-weight:600}
+.breakdown-row.total .value{font-size:1.05rem}
+.breakdown-row.total-incl .label{color:var(--primary);font-weight:600}
+.breakdown-row.total-incl .value{color:var(--primary);font-size:1.05rem}
+
+.result-disclaimer{background:rgba(255,255,255,0.06);border-radius:8px;padding:0.75rem;font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:1.5rem;line-height:1.5}
+
+.result-cta{display:block;width:100%;padding:0.85rem;border:none;border-radius:var(--radius);background:var(--primary);color:#fff;font-size:1rem;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;transition:background 0.3s;font-family:inherit}
+.result-cta:hover{background:var(--primary-dark)}
+.result-cta-secondary{display:block;width:100%;padding:0.7rem;border:2px solid rgba(255,255,255,0.15);border-radius:var(--radius);background:transparent;color:rgba(255,255,255,0.8);font-size:0.9rem;font-weight:600;cursor:pointer;text-align:center;text-decoration:none;margin-top:0.75rem;transition:all 0.3s}
+.result-cta-secondary:hover{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05);color:#fff}
+
+@media(max-width:768px){
+  .result-price{font-size:2.2rem}
+  .calc-inputs,.result-card{padding:1.5rem}
+}
+
+/* Features */
+.features{max-width:920px;margin:0 auto;padding:2rem 2rem 4rem}
+.features h2{text-align:center;font-size:1.8rem;font-weight:700;margin-bottom:0.5rem}
+.features>p{text-align:center;color:var(--text-light);margin-bottom:2rem}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+@media(max-width:768px){.features-grid{grid-template-columns:1fr}}
+.feature-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;transition:box-shadow 0.3s}
+.feature-card:hover{box-shadow:var(--shadow)}
+.feature-icon{width:48px;height:48px;margin:0 auto 0.75rem;background:var(--primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.feature-card h3{font-size:0.95rem;margin-bottom:0.3rem;font-weight:600}
+.feature-card p{color:var(--text-light);font-size:0.83rem;line-height:1.5}
+
+/* FAQ */
+.faq{max-width:700px;margin:0 auto;padding:0 2rem 4rem}
+.faq h2{text-align:center;font-size:1.8rem;font-weight:700;margin-bottom:1.5rem}
+.faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.75rem;overflow:hidden}
+.faq-q{width:100%;padding:1rem 1.25rem;background:var(--bg);border:none;cursor:pointer;font-size:0.93rem;font-weight:600;text-align:left;display:flex;justify-content:space-between;align-items:center;color:var(--text);transition:background 0.2s;font-family:inherit}
+.faq-q:hover{background:var(--bg-gray)}
+.faq-q .arrow{transition:transform 0.3s;font-size:0.75rem;color:var(--text-light)}
+.faq-q.open .arrow{transform:rotate(180deg)}
+.faq-q.open{color:var(--primary-dark)}
+.faq-a{padding:0 1.25rem;max-height:0;overflow:hidden;transition:all 0.3s ease;color:var(--text-light);font-size:0.88rem;line-height:1.7}
+.faq-a.open{padding:0.75rem 1.25rem 1rem;max-height:200px}
+
+/* Footer - matches site */
+footer{background:var(--darker);color:rgba(255,255,255,0.5);padding:2rem;text-align:center;font-size:0.85rem}
+footer a{color:var(--primary);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+/* Animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.calc-inputs{animation:fadeUp 0.5s ease}
+.result-card{animation:fadeUp 0.5s ease 0.1s both}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-content">
+<a href="/" class="logo">
+<img src="https://dhwandafwerking.nl/Images/Untitled%20design%20(7).png" alt="Den Hartog Wandafwerking">
+</a>
+<button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">â°</button>
+<nav>
+<a href="/#home">Home</a>
+<a href="/#diensten">Diensten</a>
+<a href="/#projecten">Projecten</a>
+<a href="/#over-ons">Over ons</a>
+<a href="/burenkorting/">Burenkorting</a>
+<a href="/prijscalculator/" class="active">Prijscalculator</a>
+<a href="/#contact" class="nav-cta">Gratis Offerte</a>
+</nav>
+</div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+<span class="hero-badge">Vrijblijvende prijsindicatie</span>
+<h1>Bereken uw richtprijs</h1>
+<p>Kies uw pakket, voer het aantal mÂ² in en ontvang direct een prijsindicatie voor uw project.</p>
+</section>
+
+<!-- Calculator -->
+<section class="calc-container">
+<div class="calc-grid">
+
+<!-- Left: Inputs -->
+<div class="calc-inputs">
+
+<div class="input-group">
+<label>Kies uw pakket</label>
+<div class="package-options">
+
+<div class="package-card selected" data-package="alles" data-price="13.00" onclick="selectPackage(this)">
+<div class="pkg-header">
+<span class="pkg-name">Alles-in-Ã©Ã©n Pakket</span>
+<span class="pkg-price">&euro;13,00/m&sup2;</span>
+</div>
+<div class="pkg-desc">Renovlies + schuren + kitten + schilderen in 1 of 2 kleuren. Inclusief materiaal, 12 mnd garantie.</div>
+</div>
+
+<div class="package-card" data-package="premium" data-price="15.50" onclick="selectPackage(this)">
+<div class="pkg-badge">POPULAIR</div>
+<div class="pkg-header">
+<span class="pkg-name">Premium Plus</span>
+<span class="pkg-price">&euro;15,50/m&sup2;</span>
+</div>
+<div class="pkg-desc">Premium afwerking met schilderwerk in 1 tot 3 kleuren naar wens. Perfect voor nieuwbouw met maximale uitstraling.</div>
+</div>
+
+</div>
+<p class="hint">Excl. BTW | Vanaf 100 m&sup2;</p>
+</div>
+
+<div class="input-group">
+<label>Oppervlakte (m&sup2;)</label>
+<div class="area-input-wrap">
+<button class="area-btn" type="button" onclick="changeArea(-10)">&minus;</button>
+<input type="number" class="area-input" id="areaInput" value="" min="10" max="2000" placeholder="bijv. 150" oninput="calculate()">
+<span class="area-unit">m&sup2;</span>
+<button class="area-btn" type="button" onclick="changeArea(10)">+</button>
+</div>
+<p class="hint">Gemiddelde nieuwbouwwoning: 120&ndash;200 m&sup2;</p>
+<p class="area-warning" id="areaWarning">Onze pakketten zijn vanaf 100 m&sup2;. Neem contact op voor een maatwerkofferte.</p>
+</div>
+
+<div class="input-group" id="kleurGroup">
+<label>Aantal kleuren</label>
+<div class="radio-options" id="kleurOptions">
+<div class="radio-opt">
+<input type="radio" name="kleur" id="kleur1" value="1" checked onchange="calculate()">
+<label for="kleur1">1 kleur</label>
+</div>
+<div class="radio-opt">
+<input type="radio" name="kleur" id="kleur2" value="2" onchange="calculate()">
+<label for="kleur2">2 kleuren</label>
+</div>
+</div>
+<p class="hint" id="kleurHint">Meer kleuren nodig? Kies het Premium Plus pakket voor tot 3 kleuren.</p>
+</div>
+
+</div>
+
+<!-- Right: Result -->
+<div class="calc-result">
+<div class="result-card">
+
+<div class="result-label">Geschatte richtprijs</div>
+<div class="result-price" id="totalPrice">&mdash;</div>
+<div class="result-sub">excl. BTW &bull; inclusief materiaal</div>
+
+<div class="result-breakdown">
+<div class="breakdown-row">
+<span class="label">Pakket</span>
+<span class="value" id="pkgName">Alles-in-een</span>
+</div>
+<div class="breakdown-row">
+<span class="label">Prijs per m&sup2;</span>
+<span class="value" id="pkgPrice">&euro;13,00</span>
+</div>
+<div class="breakdown-row">
+<span class="label">Oppervlakte</span>
+<span class="value" id="pkgArea">&mdash;</span>
+</div>
+<div class="breakdown-row">
+<span class="label">Kleuren</span>
+<span class="value" id="pkgKleuren">1 kleur</span>
+</div>
+<div class="breakdown-row total">
+<span class="label">Totaal excl. BTW</span>
+<span class="value" id="pkgTotal">&mdash;</span>
+</div>
+<div class="breakdown-row">
+<span class="label">BTW (21%)</span>
+<span class="value" id="pkgBTW">&mdash;</span>
+</div>
+<div class="breakdown-row total-incl">
+<span class="label">Totaal incl. BTW</span>
+<span class="value" id="pkgTotalBTW">&mdash;</span>
+</div>
+</div>
+
+<div class="result-disclaimer">
+Dit is een vrijblijvende richtprijs. De definitieve prijs wordt bepaald na een gratis inmeting en adviesgesprek op locatie. Geen verborgen kosten, geen aanbetaling.
+</div>
+
+<a href="https://wa.me/31638531012?text=Hallo%2C%20ik%20heb%20de%20prijscalculator%20gebruikt%20en%20wil%20graag%20een%20offerte%20aanvragen." class="result-cta" id="whatsappLink" target="_blank">
+WhatsApp voor offerte
+</a>
+<a href="/#contact" class="result-cta-secondary">
+Offerte aanvragen via mail
+</a>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- Features -->
+<section class="features">
+<h2>Wat zit er in de prijs?</h2>
+<p>Bij beide pakketten krijgt u een complete wandafwerking zonder verrassingen.</p>
+<div class="features-grid">
+<div class="feature-card">
+<div class="feature-icon">ð ï¸</div>
+<h3>Inclusief materiaal</h3>
+<p>Renovlies, lijm, kit en schrobklasse 1 muurverf â alles inbegrepen.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">ð</div>
+<h3>Geen voorrijkosten</h3>
+<p>Werkzaam door heel Nederland, zonder verborgen kosten.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">ð¡ï¸</div>
+<h3>12 maanden garantie</h3>
+<p>Op al het geleverde werk. Geen aanbetaling â betaling na oplevering.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">ðï¸</div>
+<h3>Professioneel schuren</h3>
+<p>Wanden machinaal geschuurd voor een perfect gladde ondergrond.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">ð¨</div>
+<h3>Dekkend schilderwerk</h3>
+<p>Strak schilderwerk door professionele schilders met hoogwaardige verf.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">â»ï¸</div>
+<h3>Bouwafval afgevoerd</h3>
+<p>Wij laten uw woning netjes achter. Bouwafval wordt meegenomen.</p>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+<h2>Veelgestelde vragen</h2>
+
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is de prijsindicatie vrijblijvend?<span class="arrow">â¼</span></button>
+<div class="faq-a">Ja, de calculator geeft een vrijblijvende richtprijs. Na een gratis inmeting op locatie ontvangt u een definitieve offerte zonder verplichtingen.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Wat is het verschil tussen de twee pakketten?<span class="arrow">â¼</span></button>
+<div class="faq-a">Het Alles-in-Ã©Ã©n pakket bevat schilderwerk in 1 of 2 kleuren naar keuze. Het Premium Plus pakket biedt schilderwerk in 1 tot 3 kleuren naar uw wens, ideaal voor wie meer kleurvariatie wil.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Wat als mijn woning minder dan 100 mÂ² heeft?<span class="arrow">â¼</span></button>
+<div class="faq-a">Voor projecten onder de 100 mÂ² hanteren wij een minimumtarief. Neem contact op voor een maatwerkofferte â we denken graag mee.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Hoe snel kunnen jullie starten?<span class="arrow">â¼</span></button>
+<div class="faq-a">Na akkoord kunnen wij doorgaans binnen 1-2 weken starten. Bij spoedprojecten overleggen wij graag over de mogelijkheden.</div>
+</div>
+
+<div class="faq-item">
+<button class="faq-q" onclick="toggleFaq(this)">Is er aanbetaling nodig?<span class="arrow">â¼</span></button>
+<div class="faq-a">Nee, wij vragen geen aanbetaling. U betaalt pas na oplevering wanneer u tevreden bent met het resultaat.</div>
+</div>
+
+</section>
+
+<footer>
+<p>&copy; <script>document.write(new Date().getFullYear())</script> Den Hartog Wandafwerking. Alle rechten voorbehouden. | <a href="/#contact">Contact</a></p>
+</footer>
+
+<script>
+let selectedPrice = 13.00;
+let selectedName = 'Alles-in-Ã©Ã©n';
+let selectedPackage = 'alles';
+
+function selectPackage(el) {
+  document.querySelectorAll('.package-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  selectedPrice = parseFloat(el.dataset.price);
+  selectedPackage = el.dataset.package;
+  selectedName = selectedPackage === 'alles' ? 'Alles-in-Ã©Ã©n' : 'Premium Plus';
+  updateColorOptions(selectedPackage);
+  calculate();
+}
+
+function updateColorOptions(pkg) {
+  const container = document.getElementById('kleurOptions');
+  const hint = document.getElementById('kleurHint');
+
+  if (pkg === 'premium') {
+    container.innerHTML =
+      '<div class="radio-opt">' +
+        '<input type="radio" name="kleur" id="kleur1" value="1" checked onchange="calculate()">' +
+        '<label for="kleur1">1 kleur</label>' +
+      '</div>' +
+      '<div class="radio-opt">' +
+        '<input type="radio" name="kleur" id="kleur2" value="2" onchange="calculate()">' +
+        '<label for="kleur2">2 kleuren</label>' +
+      '</div>' +
+      '<div class="radio-opt">' +
+        '<input type="radio" name="kleur" id="kleur3" value="3" onchange="calculate()">' +
+        '<label for="kleur3">3 kleuren</label>' +
+      '</div>';
+    hint.textContent = 'Premium Plus: kies tot 3 kleuren naar uw wens.';
+  } else {
+    container.innerHTML =
+      '<div class="radio-opt">' +
+        '<input type="radio" name="kleur" id="kleur1" value="1" checked onchange="calculate()">' +
+        '<label for="kleur1">1 kleur</label>' +
+      '</div>' +
+      '<div class="radio-opt">' +
+        '<input type="radio" name="kleur" id="kleur2" value="2" onchange="calculate()">' +
+        '<label for="kleur2">2 kleuren</label>' +
+      '</div>';
+    hint.textContent = 'Meer kleuren nodig? Kies het Premium Plus pakket voor tot 3 kleuren.';
+  }
+}
+
+function changeArea(delta) {
+  const input = document.getElementById('areaInput');
+  let val = parseInt(input.value) || 0;
+  val = Math.max(10, Math.min(2000, val + delta));
+  input.value = val;
+  calculate();
+}
+
+function calculate() {
+  const area = parseInt(document.getElementById('areaInput').value) || 0;
+  const kleurRadio = document.querySelector('input[name="kleur"]:checked');
+  const aantalKleuren = kleurRadio ? kleurRadio.value : '1';
+
+  // Show warning for < 100mÂ²
+  const warning = document.getElementById('areaWarning');
+  if (area > 0 && area < 100) {
+    warning.classList.add('visible');
+  } else {
+    warning.classList.remove('visible');
+  }
+
+  const total = area * selectedPrice;
+  const btw = total * 0.21;
+  const totalBTW = total + btw;
+
+  // Update display
+  document.getElementById('pkgName').textContent = selectedName;
+  document.getElementById('pkgPrice').textContent = '\u20AC' + selectedPrice.toFixed(2).replace('.', ',');
+  document.getElementById('pkgKleuren').textContent = aantalKleuren === '1' ? '1 kleur' : aantalKleuren + ' kleuren';
+
+  if (area > 0) {
+    document.getElementById('totalPrice').textContent = formatCurrency(total);
+    document.getElementById('pkgArea').textContent = area + ' m\u00B2';
+    document.getElementById('pkgTotal').textContent = formatCurrency(total);
+    document.getElementById('pkgBTW').textContent = formatCurrency(btw);
+    document.getElementById('pkgTotalBTW').textContent = formatCurrency(totalBTW);
+  } else {
+    document.getElementById('totalPrice').textContent = '\u2014';
+    document.getElementById('pkgArea').textContent = '\u2014';
+    document.getElementById('pkgTotal').textContent = '\u2014';
+    document.getElementById('pkgBTW').textContent = '\u2014';
+    document.getElementById('pkgTotalBTW').textContent = '\u2014';
+  }
+
+  // Update WhatsApp link
+  if (area > 0) {
+    var kleurTekst = aantalKleuren === '1' ? '1 kleur' : aantalKleuren + ' kleuren';
+    var msg = encodeURIComponent(
+      'Hallo, ik heb de prijscalculator gebruikt.\n\n' +
+      'Pakket: ' + selectedName + '\n' +
+      'Oppervlakte: ' + area + ' m\u00B2\n' +
+      'Aantal kleuren: ' + kleurTekst + '\n' +
+      'Richtprijs: ' + formatCurrency(total) + ' excl. BTW\n\n' +
+      'Ik ontvang graag een offerte.'
+    );
+    document.getElementById('whatsappLink').href = 'https://wa.me/31638531012?text=' + msg;
+  }
+}
+
+function formatCurrency(amount) {
+  var parts = amount.toFixed(2).split('.');
+  var intPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+  return '\u20AC ' + intPart + ',' + parts[1];
+}
+
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
+  document.querySelectorAll('.faq-q').forEach(function(q) { q.classList.remove('open'); });
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+// Initial state - empty, waiting for user input
+calculate();
+</script>
+
+</body>
+</html>
