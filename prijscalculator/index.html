@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Prijscalculator | Den Hartog Wandafwerking</title>
-<meta name="description" content="Bereken direct een richtprijs voor renovlies en wandafwerking. Kies uw pakket, voer het aantal mÂ² in en ontvang een prijsindicatie.">
+<meta name="description" content="Bereken direct een richtprijs voor renovlies en wandafwerking. Kies uw pakket, voer het aantal m² in en ontvang een prijsindicatie.">
 <link rel="icon" href="/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -74,7 +74,7 @@ nav a.active{color:var(--primary);font-weight:600}
 .package-card{border:2px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;cursor:pointer;transition:all 0.3s;position:relative;background:var(--bg)}
 .package-card:hover{border-color:var(--primary);box-shadow:0 2px 12px rgba(205,127,50,0.12)}
 .package-card.selected{border-color:var(--primary);background:rgba(205,127,50,0.03)}
-.package-card.selected::after{content:'â';position:absolute;top:0.75rem;right:0.75rem;width:24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700}
+.package-card.selected::after{content:'✓';position:absolute;top:0.75rem;right:0.75rem;width:24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700}
 .pkg-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem}
 .pkg-name{font-weight:700;font-size:1rem}
 .pkg-price{font-weight:700;color:var(--primary);font-size:1.1rem}
@@ -171,7 +171,7 @@ footer a:hover{text-decoration:underline}
 <a href="/" class="logo">
 <img src="https://dhwandafwerking.nl/Images/Untitled%20design%20(7).png" alt="Den Hartog Wandafwerking">
 </a>
-<button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">â°</button>
+<button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
 <nav>
 <a href="/#home">Home</a>
 <a href="/#diensten">Diensten</a>
@@ -188,7 +188,7 @@ footer a:hover{text-decoration:underline}
 <section class="hero">
 <span class="hero-badge">Vrijblijvende prijsindicatie</span>
 <h1>Bereken uw richtprijs</h1>
-<p>Kies uw pakket, voer het aantal mÂ² in en ontvang direct een prijsindicatie voor uw project.</p>
+<p>Kies uw pakket, voer het aantal m² in en ontvang direct een prijsindicatie voor uw project.</p>
 </section>
 
 <!-- Calculator -->
@@ -204,7 +204,7 @@ footer a:hover{text-decoration:underline}
 
 <div class="package-card selected" data-package="alles" data-price="13.00" onclick="selectPackage(this)">
 <div class="pkg-header">
-<span class="pkg-name">Alles-in-Ã©Ã©n Pakket</span>
+<span class="pkg-name">Alles-in-één Pakket</span>
 <span class="pkg-price">&euro;13,00/m&sup2;</span>
 </div>
 <div class="pkg-desc">Renovlies + schuren + kitten + schilderen in 1 of 2 kleuren. Inclusief materiaal, 12 mnd garantie.</div>
@@ -314,32 +314,32 @@ Offerte aanvragen via mail
 <p>Bij beide pakketten krijgt u een complete wandafwerking zonder verrassingen.</p>
 <div class="features-grid">
 <div class="feature-card">
-<div class="feature-icon">ð ï¸</div>
+<div class="feature-icon">🛠️</div>
 <h3>Inclusief materiaal</h3>
-<p>Renovlies, lijm, kit en schrobklasse 1 muurverf â alles inbegrepen.</p>
+<p>Renovlies, lijm, kit en schrobklasse 1 muurverf — alles inbegrepen.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">ð</div>
+<div class="feature-icon">🚗</div>
 <h3>Geen voorrijkosten</h3>
 <p>Werkzaam door heel Nederland, zonder verborgen kosten.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">ð¡ï¸</div>
+<div class="feature-icon">🛡️</div>
 <h3>12 maanden garantie</h3>
-<p>Op al het geleverde werk. Geen aanbetaling â betaling na oplevering.</p>
+<p>Op al het geleverde werk. Geen aanbetaling — betaling na oplevering.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">ðï¸</div>
+<div class="feature-icon">🏗️</div>
 <h3>Professioneel schuren</h3>
 <p>Wanden machinaal geschuurd voor een perfect gladde ondergrond.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">ð¨</div>
+<div class="feature-icon">🎨</div>
 <h3>Dekkend schilderwerk</h3>
 <p>Strak schilderwerk door professionele schilders met hoogwaardige verf.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">â»ï¸</div>
+<div class="feature-icon">♻️</div>
 <h3>Bouwafval afgevoerd</h3>
 <p>Wij laten uw woning netjes achter. Bouwafval wordt meegenomen.</p>
 </div>
@@ -351,27 +351,27 @@ Offerte aanvragen via mail
 <h2>Veelgestelde vragen</h2>
 
 <div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Is de prijsindicatie vrijblijvend?<span class="arrow">â¼</span></button>
+<button class="faq-q" onclick="toggleFaq(this)">Is de prijsindicatie vrijblijvend?<span class="arrow">▼</span></button>
 <div class="faq-a">Ja, de calculator geeft een vrijblijvende richtprijs. Na een gratis inmeting op locatie ontvangt u een definitieve offerte zonder verplichtingen.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Wat is het verschil tussen de twee pakketten?<span class="arrow">â¼</span></button>
-<div class="faq-a">Het Alles-in-Ã©Ã©n pakket bevat schilderwerk in 1 of 2 kleuren naar keuze. Het Premium Plus pakket biedt schilderwerk in 1 tot 3 kleuren naar uw wens, ideaal voor wie meer kleurvariatie wil.</div>
+<button class="faq-q" onclick="toggleFaq(this)">Wat is het verschil tussen de twee pakketten?<span class="arrow">▼</span></button>
+<div class="faq-a">Het Alles-in-één pakket bevat schilderwerk in 1 of 2 kleuren naar keuze. Het Premium Plus pakket biedt schilderwerk in 1 tot 3 kleuren naar uw wens, ideaal voor wie meer kleurvariatie wil.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Wat als mijn woning minder dan 100 mÂ² heeft?<span class="arrow">â¼</span></button>
-<div class="faq-a">Voor projecten onder de 100 mÂ² hanteren wij een minimumtarief. Neem contact op voor een maatwerkofferte â we denken graag mee.</div>
+<button class="faq-q" onclick="toggleFaq(this)">Wat als mijn woning minder dan 100 m² heeft?<span class="arrow">▼</span></button>
+<div class="faq-a">Voor projecten onder de 100 m² hanteren wij een minimumtarief. Neem contact op voor een maatwerkofferte — we denken graag mee.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Hoe snel kunnen jullie starten?<span class="arrow">â¼</span></button>
+<button class="faq-q" onclick="toggleFaq(this)">Hoe snel kunnen jullie starten?<span class="arrow">▼</span></button>
 <div class="faq-a">Na akkoord kunnen wij doorgaans binnen 1-2 weken starten. Bij spoedprojecten overleggen wij graag over de mogelijkheden.</div>
 </div>
 
 <div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Is er aanbetaling nodig?<span class="arrow">â¼</span></button>
+<button class="faq-q" onclick="toggleFaq(this)">Is er aanbetaling nodig?<span class="arrow">▼</span></button>
 <div class="faq-a">Nee, wij vragen geen aanbetaling. U betaalt pas na oplevering wanneer u tevreden bent met het resultaat.</div>
 </div>
 
@@ -383,7 +383,7 @@ Offerte aanvragen via mail
 
 <script>
 let selectedPrice = 13.00;
-let selectedName = 'Alles-in-Ã©Ã©n';
+let selectedName = 'Alles-in-één';
 let selectedPackage = 'alles';
 
 function selectPackage(el) {
@@ -391,7 +391,7 @@ function selectPackage(el) {
   el.classList.add('selected');
   selectedPrice = parseFloat(el.dataset.price);
   selectedPackage = el.dataset.package;
-  selectedName = selectedPackage === 'alles' ? 'Alles-in-Ã©Ã©n' : 'Premium Plus';
+  selectedName = selectedPackage === 'alles' ? 'Alles-in-één' : 'Premium Plus';
   updateColorOptions(selectedPackage);
   calculate();
 }
@@ -442,7 +442,7 @@ function calculate() {
   const kleurRadio = document.querySelector('input[name="kleur"]:checked');
   const aantalKleuren = kleurRadio ? kleurRadio.value : '1';
 
-  // Show warning for < 100mÂ²
+  // Show warning for < 100m²
   const warning = document.getElementById('areaWarning');
   if (area > 0 && area < 100) {
     warning.classList.add('visible');
