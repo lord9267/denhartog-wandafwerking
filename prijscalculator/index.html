@@ -221,6 +221,14 @@ footer a:hover{text-decoration:underline}
 
 </div>
 <p class="hint">Excl. BTW | Vanaf 100 m&sup2;</p>
+<div class="package-card" data-package="glasvlies" data-price="17.50" onclick="selectPackage(this)">
+<div class="pkg-header">
+<span class="pkg-name">Glasvlies Premium</span>
+<span class="pkg-price">&euro;17,50/m&sup2;</span>
+</div>
+<div class="pkg-desc">200 grams glasvlies + schuren + kitten + 2x latex muurverf in 3 kleuren. Inclusief materiaal, 15 mnd garantie.</div>
+</div>
+
 </div>
 
 <div class="input-group">
@@ -391,7 +399,7 @@ function selectPackage(el) {
   el.classList.add('selected');
   selectedPrice = parseFloat(el.dataset.price);
   selectedPackage = el.dataset.package;
-  selectedName = selectedPackage === 'alles' ? 'Alles-in-één' : 'Premium Plus';
+  selectedName = selectedPackage === 'alles' ? 'Alles-in-één' : (selectedPackage === 'glasvlies' ? 'Glasvlies Premium' : 'Premium Plus');
   updateColorOptions(selectedPackage);
   calculate();
 }
@@ -400,7 +408,7 @@ function updateColorOptions(pkg) {
   const container = document.getElementById('kleurOptions');
   const hint = document.getElementById('kleurHint');
 
-  if (pkg === 'premium') {
+  if (pkg === 'premium' || pkg === 'glasvlies') {
     container.innerHTML =
       '<div class="radio-opt">' +
         '<input type="radio" name="kleur" id="kleur1" value="1" checked onchange="calculate()">' +
