@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Alles over professionele wandafwerking: renovlies, glasvlies, stucwerk, latex spuiten en sauzen. 10+ jaar ervaring. Gratis advies - bel 06 408 37 590.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Den Hartog Wandafwerking">
+  <meta property="og:title" content="Wandafwerking: Alles Wat U Moet Weten | Den Hartog">
+  <meta property="og:description" content="Professionele wandafwerking in Nederland. Lees alles over renovlies, glasvlies, stucwerk, latex spuiten en sauzen. 10+ jaar expertise.">
+  <meta property="og:url" content="https://denhartog-wandafwerking.nl/meer-over-wandafwerking/">
+  <meta property="og:type" content="article">
+  <link rel="canonical" href="https://denhartog-wandafwerking.nl/meer-over-wandafwerking/">
+  <title>Wandafwerking: Alles Wat U Moet Weten | Den Hartog</title>
+  <style>
+    :root {
+      --primary: #CD7F32;
+      --primary-dark: #b36b28;
+      --dark: #1a1a2e;
+      --darker: #0d0d1a;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #fff;
+      --bg-gray: #f9fafb;
+      --bg-dark: #111827;
+      --border: #e5e7eb;
+      --success: #10b981;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0,0,0,.08);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(13,13,26,.97); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(205,127,50,.2);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px; max-width: 1200px; margin: 0 auto;
+    }
+    .nav-logo { color: var(--primary); font-size: 20px; font-weight: 800; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,.85); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary); color: #fff !important; padding: 10px 22px;
+      border-radius: 8px; font-weight: 600 !important;
+    }
+
+    /* HERO ARTIKEL */
+    .article-hero {
+      background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+      padding: 120px 0 60px; margin-top: 64px;
+    }
+    .article-hero .breadcrumb {
+      font-size: 13px; color: rgba(255,255,255,.5); margin-bottom: 18px;
+    }
+    .article-hero .breadcrumb a { color: var(--primary); }
+    .article-hero h1 {
+      font-size: clamp(28px, 4vw, 52px); font-weight: 800;
+      color: #fff; line-height: 1.2; margin-bottom: 18px; max-width: 780px;
+    }
+    .article-hero h1 span { color: var(--primary); }
+    .article-hero .intro {
+      font-size: 17px; color: rgba(255,255,255,.7);
+      max-width: 680px; line-height: 1.8; margin-bottom: 28px;
+    }
+    .article-meta {
+      display: flex; gap: 24px; flex-wrap: wrap;
+      font-size: 13px; color: rgba(255,255,255,.45);
+    }
+    .article-meta span { display: flex; align-items: center; gap: 6px; }
+
+    /* INHOUDSOPGAVE */
+    .toc {
+      background: var(--bg-gray); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px 32px; margin: 48px 0 40px;
+    }
+    .toc h2 { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+    .toc ol { padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+    .toc ol li a { color: var(--primary); font-size: 14px; font-weight: 500; }
+    .toc ol li a:hover { text-decoration: underline; }
+
+    /* ARTIKEL LAYOUT */
+    .article-body { padding: 0 0 80px; }
+    .article-content { max-width: 800px; }
+    .article-content h2 {
+      font-size: clamp(22px, 3vw, 32px); font-weight: 800;
+      margin: 52px 0 18px; color: var(--text);
+      border-left: 4px solid var(--primary); padding-left: 16px;
+    }
+    .article-content h3 {
+      font-size: 20px; font-weight: 700; margin: 32px 0 12px; color: var(--text);
+    }
+    .article-content p {
+      font-size: 15px; line-height: 1.85; color: #374151; margin-bottom: 18px;
+    }
+    .article-content strong { color: var(--text); }
+
+    /* INFO BLOKKEN */
+    .info-box {
+      background: rgba(205,127,50,.08); border: 1px solid rgba(205,127,50,.25);
+      border-radius: var(--radius); padding: 22px 26px; margin: 28px 0;
+    }
+    .info-box .info-title {
+      font-size: 14px; font-weight: 700; color: var(--primary);
+      margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+    }
+    .info-box p { font-size: 14px; color: var(--text); margin-bottom: 0; }
+
+    .tip-box {
+      background: rgba(16,185,129,.08); border: 1px solid rgba(16,185,129,.25);
+      border-radius: var(--radius); padding: 22px 26px; margin: 28px 0;
+    }
+    .tip-box .tip-title {
+      font-size: 14px; font-weight: 700; color: var(--success);
+      margin-bottom: 10px;
+    }
+    .tip-box p { font-size: 14px; color: var(--text); margin-bottom: 0; }
+
+    /* STAPPEN */
+    .steps { display: flex; flex-direction: column; gap: 20px; margin: 28px 0; }
+    .step {
+      display: flex; gap: 18px; align-items: flex-start;
+      background: var(--bg-gray); border-radius: var(--radius);
+      padding: 20px 22px;
+    }
+    .step-num {
+      width: 40px; height: 40px; min-width: 40px;
+      background: var(--primary); color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 16px;
+    }
+    .step h4 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
+    .step p { font-size: 13px; color: var(--text-light); margin-bottom: 0; }
+
+    /* SOORTEN GRID */
+    .types-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 32px 0;
+    }
+    .type-card {
+      background: var(--bg-gray); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px; transition: all .3s;
+    }
+    .type-card:hover {
+      box-shadow: var(--shadow); border-color: var(--primary);
+    }
+    .type-card h3 {
+      font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--text);
+    }
+    .type-card p {
+      font-size: 14px; line-height: 1.7; color: var(--text-light); margin-bottom: 14px;
+    }
+    .type-card a {
+      font-size: 13px; font-weight: 600; color: var(--primary);
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .type-card a:hover { text-decoration: underline; }
+
+    /* FAQ */
+    .faq-section { padding: 60px 0; background: var(--bg-gray); }
+    .faq-section h2 {
+      font-size: clamp(22px, 3vw, 34px); font-weight: 800;
+      text-align: center; margin-bottom: 8px;
+    }
+    .faq-section .sub {
+      text-align: center; color: var(--text-light); margin-bottom: 40px; font-size: 15px;
+    }
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+    .faq-item {
+      background: #fff; border-radius: var(--radius);
+      border: 1px solid var(--border); overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 22px; font-size: 15px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center;
+      justify-content: space-between; user-select: none;
+    }
+    .faq-arrow { font-size: 16px; color: var(--primary); transition: transform .3s; }
+    .faq-answer {
+      display: none; padding: 0 22px 18px;
+      font-size: 14px; color: var(--text-light); line-height: 1.7;
+    }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      padding: 60px 0; text-align: center;
+    }
+    .cta-banner h2 { font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 12px; }
+    .cta-banner p { font-size: 16px; color: rgba(255,255,255,.85); margin-bottom: 28px; }
+    .cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-white {
+      background: #fff; color: var(--primary);
+      padding: 14px 30px; border-radius: 10px; font-weight: 700; font-size: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.15); transition: all .2s;
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,.2); }
+    .btn-outline-white {
+      background: transparent; color: #fff;
+      border: 2px solid rgba(255,255,255,.6);
+      padding: 14px 30px; border-radius: 10px; font-weight: 600; font-size: 15px;
+      transition: all .2s;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+
+    /* RELATED LINKS */
+    .related-section {
+      background: var(--bg-gray); padding: 60px 0; margin-top: 60px;
+    }
+    .related-section h2 {
+      font-size: clamp(22px, 3vw, 32px); font-weight: 800; margin-bottom: 32px;
+    }
+    .related-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;
+    }
+    .related-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px; transition: all .3s;
+    }
+    .related-card:hover {
+      box-shadow: var(--shadow); transform: translateY(-4px);
+    }
+    .related-card h3 {
+      font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(--text);
+    }
+    .related-card p {
+      font-size: 13px; color: var(--text-light); margin-bottom: 14px;
+    }
+    .related-card a {
+      font-size: 13px; font-weight: 600; color: var(--primary);
+      display: inline-flex; align-items: center; gap: 5px;
+    }
+    .related-card a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer { background: var(--darker); color: rgba(255,255,255,.6); padding: 40px 0 24px; }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 24px; margin-bottom: 28px;
+    }
+    .footer-brand { font-size: 22px; font-weight: 800; color: var(--primary); }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; }
+    .footer-links a:hover { color: var(--primary); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 18px; font-size: 12px; color: rgba(255,255,255,.35);
+      text-align: center;
+    }
+
+    @media(max-width: 768px) {
+      .nav-links { display: none; }
+      .article-hero { padding: 100px 0 50px; }
+      .types-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Wandafwerking: Alles Wat U Moet Weten","description":"Alles over professionele wandafwerking: renovlies, glasvlies, stucwerk, latex spuiten en sauzen. 10+ jaar ervaring.","author":{"@type":"Organization","name":"Den Hartog Wandafwerking"},"publisher":{"@type":"Organization","name":"Den Hartog Wandafwerking","url":"https://denhartog-wandafwerking.nl"},"url":"https://denhartog-wandafwerking.nl/meer-over-wandafwerking/","datePublished":"2026-04-11","dateModified":"2026-04-11"}</script>
+</head>
+<body>
+
+<!-- NAVIGATIE -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Den Hartog Wandafwerking</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/meer-over-wandafwerking/">Over Ons</a></li>
+      <li><a href="/latex-spuiten/">Latex Spuiten</a></li>
+      <li><a href="/meer-over-renovlies/">Renovlies</a></li>
+      <li><a href="/meer-over-glasvlies/">Glasvlies</a></li>
+      <li><a href="/meer-over-sauzen/">Sauzen</a></li>
+      <li><a href="/meer-over-stucwerk/">Stucwerk</a></li>
+      <li><a href="/contact/" class="nav-cta">ð Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="article-hero">
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="/">Home</a> &rsaquo; Over Ons
+    </p>
+    <h1>Professionele Wandafwerking:<br><span>Het Complete Overzicht</span></h1>
+    <p class="intro">
+      Wandafwerking is veel meer dan alleen schilderen. In dit artikel ontdekken u welke opties
+      beschikbaar zijn, wat de voor- en nadelen zijn, en wat Den Hartog Wandafwerking voor u kan betekenen.
+      Van renovlies tot stucwerk, van glasvlies tot latex spuiten â wij kennen alle soorten en helpen u
+      de juiste keuze maken.
+    </p>
+    <div class="article-meta">
+      <span>âï¸ Den Hartog Wandafwerking</span>
+      <span>ð Bijgewerkt: april 2026</span>
+      <span>â±ï¸ Leestijd: ca. 10 minuten</span>
+    </div>
+  </div>
+</section>
+
+<!-- ARTIKEL BODY -->
+<div class="article-body">
+  <div class="container">
+
+    <!-- INHOUDSOPGAVE -->
+    <div class="toc">
+      <h2>ð Inhoudsopgave</h2>
+      <ol>
+        <li><a href="#wat-is">Wat is wandafwerking?</a></li>
+        <li><a href="#soorten">Alle soorten wandafwerking</a></li>
+        <li><a href="#over-ons">Over Den Hartog Wandafwerking</a></li>
+        <li><a href="#werkgebied">Ons werkgebied</a></li>
+        <li><a href="#waarom-professioneel">Waarom professionele wandafwerking?</a></li>
+        <li><a href="#proces">Het proces: van advies tot oplevering</a></li>
+        <li><a href="#faq">Veelgestelde vragen</a></li>
+      </ol>
+    </div>
+
+    <div class="article-content">
+
+      <!-- 1. WAT IS WANDAFWERKING -->
+      <h2 id="wat-is">1. Wat is wandafwerking?</h2>
+      <p>
+        Wandafwerking is het proces waarbij muren en plafonds worden voorbereid en afgewerkt
+        met diverse materialen en technieken. Dit gaat veel verder dan alleen verf: het gaat over
+        het creÃ«ren van een duurzame, mooie en onderhoudsvriendelijke muuroppervlakte.
+      </p>
+      <p>
+        Een professionele wandafwerking begint met voorbereiding: inspectie van het muurwerk,
+        reparatie van beschadigingen, schuren en egaliseren. Vervolgens volgt de afwerking zelf
+        â dit kan renovlies, glasvlies, stucwerk, latex spuiten of ander materiaal zijn.
+        Tot slot wordt alles geschilderd en gefinaliseerd.
+      </p>
+      <p>
+        De keuze van wandafwerking bepaalt in grote mate de kwaliteit, duurzaamheid en uitstraling
+        van uw interieur. Daarbij speelt budget, onderhoud en persoonlijke voorkeur een rol.
+      </p>
+
+      <div class="info-box">
+        <div class="info-title">ð¡ Professioneel verschilt van DIY</div>
+        <p>
+          Een amateurpoging kan grote problemen veroorzaken: oneffenheden, scheurmatiering,
+          vochtproblemen en vroegtijdige verval. Professionele wandafwerking borgt kwaliteit
+          en levensduur.
+        </p>
+      </div>
+
+      <!-- 2. SOORTEN WANDAFWERKING -->
+      <h2 id="soorten">2. Soorten wandafwerking</h2>
+      <p>
+        Er zijn verschillende typen wandafwerking, elk met eigen voordelen en toepassingen.
+        Hieronder vindt u een overzicht:
+      </p>
+
+      <div class="types-grid">
+        <div class="type-card">
+          <h3>ð  Renovlies</h3>
+          <p>
+            Renovlies (glasvezelbehang) is de populairste keuze voor nieuwbouw en renovatie.
+            Het overbrugt scheuren, is duurzaam en kan eindeloos worden overschilderd.
+          </p>
+          <a href="/meer-over-renovlies/">Meer over renovlies â</a>
+        </div>
+
+        <div class="type-card">
+          <h3>ð¨ Glasvlies</h3>
+          <p>
+            Glasvlies is sterker dan renovlies en geschikt voor gechallengde omgevingen.
+            Ideaal voor bedrijven, kelders en vochtgevoelige ruimten.
+          </p>
+          <a href="/meer-over-glasvlies/">Meer over glasvlies â</a>
+        </div>
+
+        <div class="type-card">
+          <h3>â¨ Stucwerk</h3>
+          <p>
+            Traditioneel stucwerk biedt een klassieke, gladde afwerking. Geschikt voor
+            decoratieve toepassingen en klassieke interieurs.
+          </p>
+          <a href="/meer-over-stucwerk/">Meer over stucwerk â</a>
+        </div>
+
+        <div class="type-card">
+          <h3>ð¨ Latex Spuiten</h3>
+          <p>
+            Latex spuiten is een moderne techniek voor een gladde, elastische afwerking.
+            Perfect voor eigentijdse interieurs met minimale naden.
+          </p>
+          <a href="/latex-spuiten/">Meer over latex spuiten â</a>
+        </div>
+
+        <div class="type-card">
+          <h3>ð§´ Sauzen</h3>
+          <p>
+            Sauzen zijn vullingen en grondlagen die de voorbereiding vervolledigen.
+            Essentieel voor een perfecte eindafwerking.
+          </p>
+          <a href="/meer-over-sauzen/">Meer over sauzen â</a>
+        </div>
+
+        <div class="type-card">
+          <h3>ð¯ Verf & Coating</h3>
+          <p>
+            Na de wandafwerking volgt het schilderen. Wij gebruiken alleen hoogwaardige
+            verfproducten voor duurzaam resultaat.
+          </p>
+          <a href="/contact/">Advies aanvragen â</a>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-title">â Kies de juiste soort</div>
+        <p>
+          Niet alle wandafwerkingen zijn geschikt voor elke situatie. Nieuwbouw vereist
+          scheuroverbrugging (renovlies/glasvlies). Een vochtkelder vraagt om robuuste
+          materialen (glasvlies). Ons team adviseert u graag over de beste keuze.
+        </p>
+      </div>
+
+      <!-- 3. OVER DEN HARTOG -->
+      <h2 id="over-ons">3. Over Den Hartog Wandafwerking</h2>
+      <p>
+        Den Hartog Wandafwerking is gespecialiseerd in professionele wandafwerking in heel Nederland.
+        Met meer dan 10 jaar ervaring en 150+ voltooide projecten hebben wij een uitstekende
+        reputatie opgebouwd bij particulieren, aannemers en projectontwikkelaars.
+      </p>
+
+      <h3>Onze expertise</h3>
+      <p>
+        Ons team bestaat uit ervaren vakspecialisten die alle soorten wandafwerking perfect beheersen.
+        Wij werken met de beste materialen, gebruiken moderne technieken, en leveren garantie op ons werk.
+        Wat u ook nodig heeft â van een eenvoudige renovatie tot complexe nieuwbouwprojecten â
+        wij staan voor u klaar.
+      </p>
+
+      <h3>Ons belofte</h3>
+      <ul style="margin-bottom: 18px; padding-left: 24px;">
+        <li style="margin-bottom: 10px;">
+          <strong>Vakmanschap:</strong> Alleen de beste materialen en technieken.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>Betrouwbaarheid:</strong> Op tijd, op budget, met kwaliteit.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>Advies:</strong> Gratis consult om de beste oplossing te vinden.
+        </li>
+        <li style="margin-bottom: 10px;">
+          <strong>Garantie:</strong> Wij garanderen ons werk.
+        </li>
+        <li>
+          <strong>Service:</strong> Vriendelijk, professioneel, zonder verborgen kosten.
+        </li>
+      </ul>
+
+      <div class="info-box">
+        <div class="info-title">ð Waarom kiezen voor Den Hartog?</div>
+        <p>
+          Omdat wij niet alleen arbeid leveren, maar ook advies. Ons team analyseert uw situatie,
+          stelt een maatwerk-oplossing voor, en voert deze uit met aandacht voor detail.
+          U krijgt niet alleen mooie wanden, maar ook vrede van geest.
+        </p>
+      </div>
+
+      <!-- 4. WERKGEBIED -->
+      <h2 id="werkgebied">4. Ons werkgebied</h2>
+      <p>
+        Wij werken in heel Nederland. Ons voornaamste werkgebied is:
+      </p>
+      <ul style="margin-bottom: 18px; padding-left: 24px;">
+        <li>Utrecht en omgeving</li>
+        <li>Amsterdam en regio Amsterdam</li>
+        <li>Rotterdam en Randstad</li>
+        <li>Den Haag en omstreken</li>
+        <li>Breda en Noord-Brabant</li>
+        <li>Overige Nederland (op aanvraag)</li>
+      </ul>
+      <p>
+        Voor grotere projecten verzenden wij ons team ook naar andere regio's in Nederland.
+        Neem contact op voor mogelijkheden in uw gebied.
+      </p>
+
+      <!-- 5. WAAROM PROFESSIONEEL -->
+      <h2 id="waarom-professioneel">5. Waarom professionele wandafwerking?</h2>
+
+      <h3>Duurzaamheid</h3>
+      <p>
+        Professioneel aangebrachte wandafwerking gaat 20+ jaar mee. Amateurwerk vertoont
+        vaak al na enkele jaren problemen: scheuren, losse naden, vochtdamage.
+      </p>
+
+      <h3>Kwaliteit & Perfectie</h3>
+      <p>
+        Onze vakspecialisten hebben jarenlange opleiding en ervaring. Zij kennen alle nuances:
+        ondergrondvoorbereiding, kleefmiddelen, tempo, vochtigheid, temperatuur. Dit resulteert
+        in perfecte afwerking.
+      </p>
+
+      <h3>Spaart tijd & geld</h3>
+      <p>
+        Eerst laten repareren en later opnieuw doen is kostbaar. Professioneel werk van het begin
+        af aan spaart geld op lange termijn. Bovendien bent u sneller klaar en kunt u intrekken.
+      </p>
+
+      <h3>Garantie & Aansprakelijkheid</h3>
+      <p>
+        Professionele bedrijven geven garantie op hun werk. Gaat er iets mis, wij maken het gratis.
+        Als particulier kunt u op ons aansprakelijk stellen.
+      </p>
+
+      <h3>Advies & Maatwerk</h3>
+      <p>
+        Wij bieden gratis advies. Wij analyseren uw situatie, stellen voor, en voeren uit.
+        Dit is veel beter dan standaardoplossingen.
+      </p>
+
+      <!-- 6. PROCES -->
+      <h2 id="proces">6. Het proces: van advies tot oplevering</h2>
+      <p>
+        Zo werken wij altijd met dezelfde hoge standaard:
+      </p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <h4>Gratis inspectie & advies</h4>
+            <p>
+              Wij komen langs, kijken naar uw muren en situatie, en geven advies op maat.
+              Geen verplichtingen.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <h4>Offerte & planning</h4>
+            <p>
+              U ontvangt een duidelijke offerte zonder verborgen kosten. Samen bepalen we
+              een geschikt moment voor aanvang.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <h4>Voorbereiding</h4>
+            <p>
+              Wij prepareren het muurwerk: schuren, egaliseren, vervangen beschadigde delen,
+              en maken alles schoon.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <h4>Afwerking</h4>
+            <p>
+              Wij brengen renovlies, glasvlies, stucwerk of ander materiaal aan volgens
+              professionele standaard.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">5</div>
+          <div>
+            <h4>Drogen & naden</h4>
+            <p>
+              Materiaal droogt volledig. Naden worden finaal gekittet en geslepen
+              voor perfect resultaat.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">6</div>
+          <div>
+            <h4>Schilderen</h4>
+            <p>
+              Wij schilderen in uw gekozen kleur(en), meestal 2 lagen voor optimaal resultaat
+              en duurzaamheid.
+            </p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">7</div>
+          <div>
+            <h4>Oplevering & nazorg</h4>
+            <p>
+              Oplevering gebeurt met goedkeuring. Wij geven tips voor onderhoud en blijven
+              beschikbaar voor vervolgwerk.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. FAQ -->
+      <h2 id="faq">7. Veelgestelde vragen</h2>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- FAQ SECTIE -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Veel gestelde vragen</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Hoe lang duurt wandafwerking voor een gemiddeld huis?</span>
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Dit hangt af van de omvang en voorbereiding. Voor een woonhuis (150-200 mÂ²) duurt het
+          meestal 1-2 weken. Voorbereiding kan langer duren dan de afwerking zelf, vooral
+          in renovaties. Wij geven bij inspectie een realistische planning.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Wat is het verschil tussen renovlies en glasvlies?</span>
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Renovlies is lichter (120-150 gram) en geschikt voor normale situaties. Glasvlies is
+          zwaarder (200+ gram) en sterker, ideaal voor vochtgevoelige omgevingen en bedrijven.
+          Voor normale woonhuizen is renovlies meestal voldoende en goedkoper.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Kunt u scheuren in mijn muren repareren?</span>
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Ja, dat is onderdeel van voorbereiding. Kleine scheuren repareren wij met gips en sauzwerk.
+          Grote structurele scheuren vragen mogelijk advies van een bouwkundige. In ieder geval:
+          renovlies of glasvlies overbrugt scheuren en voorkomt verder voorkomen.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Hoeveel kost wandafwerking?</span>
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Prijzen variÃ«: alleen renovlies komt op â¬6-10/mÂ², met schilderen â¬12-18/mÂ².
+          Stucwerk kan â¬5-15/mÂ² kosten. Glasvlies en latex spuiten zijn duurder. Bel ons voor
+          een gratis inspectie en maatwerk-offerte: 06 408 37 590.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Geeft u garantie op uw werk?</span>
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Ja, wij geven volledige garantie op materiaal en vakmanschap. Gaat er binnen
+          een jaar iets mis, wij repareren gratis. Dit geeft u volledige zekerheid.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Klaar voor professionele wandafwerking?</h2>
+    <p>Bel ons vandaag nog voor gratis inspectie en advies zonder verplichtingen.</p>
+    <div class="cta-buttons">
+      <a href="/contact/" class="btn-white">Gratis inspectie aanvragen</a>
+      <a href="tel:0640837590" class="btn-outline-white">ð Bel ons: 06 408 37 590</a>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED LINKS -->
+<section class="related-section">
+  <div class="container">
+    <h2>Lees ook</h2>
+    <div class="related-grid">
+      <div class="related-card">
+        <h3>Renovlies behangen</h3>
+        <p>Alles over renovlies: voordelen, kosten en werkwijze.</p>
+        <a href="/meer-over-renovlies/">Lees meer â</a>
+      </div>
+      <div class="related-card">
+        <h3>Glasvlies</h3>
+        <p>Sterker dan renovlies: wanneer kiest u voor glasvlies?</p>
+        <a href="/meer-over-glasvlies/">Lees meer â</a>
+      </div>
+      <div class="related-card">
+        <h3>Stucwerk</h3>
+        <p>Traditionele en decoratieve stucwerk opties.</p>
+        <a href="/meer-over-stucwerk/">Lees meer â</a>
+      </div>
+      <div class="related-card">
+        <h3>Latex Spuiten</h3>
+        <p>Moderne techniek voor gladde, elastische afwerking.</p>
+        <a href="/latex-spuiten/">Lees meer â</a>
+      </div>
+      <div class="related-card">
+        <h3>Sauzen & Primers</h3>
+        <p>De voorbereiding: waarom sauzen belangrijk zijn.</p>
+        <a href="/meer-over-sauzen/">Lees meer â</a>
+      </div>
+      <div class="related-card">
+        <h3>Stucwerk vs Behangen</h3>
+        <p>Welke wandafwerking past het beste bij u?</p>
+        <a href="/stucwerk-of-behangen/">Lees meer â</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Den Hartog Wandafwerking</div>
+      <div class="footer-links">
+        <a href="/contact/">Contact</a>
+        <a href="tel:0640837590">06 408 37 590</a>
+        <a href="/">Home</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Den Hartog Wandafwerking. Alle rechten voorbehouden.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => {
+    q.parentElement.classList.toggle('open');
+  });
+});
+</script>
+
+</body>
+</html>
