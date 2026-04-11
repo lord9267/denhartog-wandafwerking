@@ -1,0 +1,62 @@
+name: Dagelijkse Formspree Test
+
+on:
+  schedule:
+    # Elke dag om 07:00 UTC (= 08:00 of 09:00 Nederlandse tijd)
+    - cron: '0 7 * * *'
+  workflow_dispatch: # Handmatig starten mogelijk
+
+jobs:
+  test-formspree:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test Formspree contactformulier
+        id: formtest
+        run: |
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST https://formspree.io/f/meepebkk \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -H "Accept: application/json" \
+            -d "naam=Automatische+Test" \
+            -d "telefoon=0600000000" \
+            -d "email=test@denhartog-wandafwerking.nl" \
+            -d "regio=Systeemtest" \
+            -d "werkzaamheden=Dagelijkse+check" \
+            -d "oppervlakte=0" \
+            -d "bericht=Automatische+dagelijkse+test+van+het+contactformulier.+Datum:+$(date '+%Y-%m-%d+%H:%M').+Dit+bericht+kan+genegeerd+worden.")
+
+          echo "HTTP Status: $RESPONSE"
+
+          if [ "$RESPONSE" -ge 200 ] && [ "$RESPONSE" -lt 400 ]; then
+            echo "Formspree formulier werkt correct!"
+            echo "status=success" >> $GITHUB_OUTPUT
+          else
+            echo "FOUT: Formspree formulier geeft status $RESPONSE terug!"
+            echo "status=failed" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+
+      - name: Stuur waarschuwingsmail bij fout
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "LET OP - Contactformulier denhartog-wandafwerking.nl werkt NIET"
+          to: lucd.hartog@gmail.com
+          from: Formspree Monitor <lucd.hartog@gmail.com>
+          body: |
+            Het dagelijkse contactformulier-test is MISLUKT.
+
+            Dit betekent dat het contactformulier op denhartog-wandafwerking.nl
+            mogelijk niet werkt en je leads kunt mislopen.
+
+            Controleer zo snel mogelijk:
+            1. Ga naar https://denhartog-wandafwerking.nl en test het formulier handmatig
+            2. Check https://formspree.io/forms voor de status van je formulier
+            3. Bekijk de GitHub Actions log: https://github.com/lord9267/denhartog-wandafwerking/actions
+
+            Dit is een automatisch bericht van je GitHub Actions monitoring.
