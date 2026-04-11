@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Renovlies specialist in Amersfoort. Strakke, naadloze wanden voor nieuwbouw en renovatie. Vanaf â¬13,00/mÂ². Gratis offerte binnen 24 uur. 10+ jaar ervaring.">
+  <meta name="keywords" content="renovlies Amersfoort, wandafwerking Amersfoort, strakke wanden, renovlies specialist, nieuwbouw Amersfoort, renovatie wanden, Vathorst, Nieuwland, Kattenbroek, Schothorst, scheuroverbrugging, renovlies behangen">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Den Hartog Wandafwerking">
+  <meta property="og:title" content="Renovlies Amersfoort | Specialist Wandafwerking - Den Hartog">
+  <meta property="og:description" content="Renovlies in Amersfoort: strakke, naadloze wanden voor nieuwbouw en renovatie. Snelle oplevering, scheuroverbrugging, gratis offerte.">
+  <meta property="og:url" content="https://denhartog-wandafwerking.nl/renovlies-amersfoort/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://denhartog-wandafwerking.nl/renovlies-amersfoort/">
+  <title>Renovlies Amersfoort | Specialist Wandafwerking - Den Hartog</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #CD7F32;
+      --primary-dark: #b36b28;
+      --dark: #1a1a2e;
+      --darker: #0d0d1a;
+      --text: #1f2937;
+      --text-light: #6b7280;
+      --bg: #fff;
+      --bg-gray: #f9fafb;
+      --bg-dark: #111827;
+      --border: #e5e7eb;
+      --success: #10b981;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0,0,0,.08);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,.15);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; height: auto; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(13,13,26,.97); backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(205,127,50,.2);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 16px 24px; max-width: 1200px; margin: 0 auto;
+    }
+    .nav-logo { color: var(--primary); font-size: 20px; font-weight: 800; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,.85); font-size: 14px; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta {
+      background: var(--primary); color: #fff !important; padding: 10px 22px;
+      border-radius: 8px; font-weight: 600 !important;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+      padding: 140px 0 80px;
+      margin-top: 60px;
+    }
+    .hero .breadcrumb {
+      font-size: 13px; color: rgba(255,255,255,.5); margin-bottom: 18px;
+    }
+    .hero .breadcrumb a { color: var(--primary); }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 56px); font-weight: 800;
+      color: #fff; line-height: 1.2; margin-bottom: 18px; max-width: 800px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero .intro {
+      font-size: 17px; color: rgba(255,255,255,.75);
+      max-width: 720px; line-height: 1.8; margin-bottom: 28px;
+    }
+    .badges {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(205,127,50,.2); border: 1px solid rgba(205,127,50,.4);
+      color: #fff; padding: 8px 16px; border-radius: 8px;
+      font-size: 13px; font-weight: 600;
+    }
+
+    /* VOORDELEN GRID */
+    .voordelen-section {
+      padding: 80px 0; background: var(--bg-gray);
+    }
+    .section-label {
+      font-size: 12px; font-weight: 700; color: var(--primary);
+      text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(24px, 3vw, 38px); font-weight: 800;
+      margin-bottom: 14px;
+    }
+    .section-intro {
+      font-size: 15px; color: var(--text-light); margin-bottom: 44px; max-width: 680px;
+    }
+    .voordelen-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+    .voordeel-card {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 32px 26px;
+      transition: all .3s;
+    }
+    .voordeel-card:hover {
+      border-color: var(--primary); box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+    .voordeel-icon {
+      font-size: 32px; margin-bottom: 16px;
+    }
+    .voordeel-card h3 {
+      font-size: 17px; font-weight: 700; margin-bottom: 10px;
+    }
+    .voordeel-card p {
+      font-size: 14px; color: var(--text-light); line-height: 1.7;
+    }
+
+    /* PAKKETTEN SECTION */
+    .pakketten-section {
+      padding: 80px 0;
+    }
+    .pakketten-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+      margin-top: 40px;
+    }
+    .pakket-card {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      border-radius: var(--radius); padding: 40px; color: #fff;
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .pakket-name {
+      font-size: 20px; font-weight: 700; margin-bottom: 8px;
+    }
+    .pakket-price {
+      font-size: 32px; font-weight: 800; margin-bottom: 16px;
+    }
+    .pakket-price .unit {
+      font-size: 16px; color: rgba(255,255,255,.8);
+    }
+    .pakket-includes {
+      font-size: 14px; color: rgba(255,255,255,.85); line-height: 1.8;
+      margin-bottom: 24px;
+    }
+    .pakket-includes strong {
+      display: block; color: #fff; margin-bottom: 8px; margin-top: 12px;
+    }
+    .cta-btn {
+      background: #fff; color: var(--primary);
+      padding: 12px 28px; border-radius: 8px; font-weight: 700;
+      font-size: 14px; display: inline-block;
+      transition: all .2s;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.2);
+    }
+
+    /* WERKGEBIED SECTION */
+    .werkgebied-section {
+      padding: 80px 0; background: var(--bg-gray);
+    }
+    .werkgebied-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+      margin-top: 40px;
+    }
+    .werkgebied-box {
+      background: #fff; border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+    }
+    .werkgebied-box h3 {
+      font-size: 18px; font-weight: 700; margin-bottom: 12px; color: var(--primary);
+    }
+    .werkgebied-list {
+      list-style: none; display: flex; flex-direction: column; gap: 8px;
+    }
+    .werkgebied-list li {
+      font-size: 14px; color: var(--text); padding-left: 20px;
+      position: relative;
+    }
+    .werkgebied-list li:before {
+      content: "â"; position: absolute; left: 0; color: var(--success);
+      font-weight: 800;
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding: 80px 0;
+    }
+    .faq-section h2 {
+      font-size: clamp(22px, 3vw, 34px); font-weight: 800;
+      text-align: center; margin-bottom: 8px;
+    }
+    .faq-section .sub {
+      text-align: center; color: var(--text-light); margin-bottom: 40px; font-size: 15px;
+    }
+    .faq-list {
+      max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px;
+    }
+    .faq-item {
+      background: #fff; border-radius: var(--radius);
+      border: 1px solid var(--border); overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 22px; font-size: 15px; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center;
+      justify-content: space-between; user-select: none;
+    }
+    .faq-arrow {
+      font-size: 16px; color: var(--primary); transition: transform .3s;
+    }
+    .faq-answer {
+      display: none; padding: 0 22px 18px;
+      font-size: 14px; color: var(--text-light); line-height: 1.7;
+    }
+    .faq-item.open .faq-arrow {
+      transform: rotate(180deg);
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* CTA BANNER */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      padding: 60px 0; text-align: center;
+    }
+    .cta-banner h2 {
+      font-size: 32px; font-weight: 800; color: #fff; margin-bottom: 12px;
+    }
+    .cta-banner p {
+      font-size: 16px; color: rgba(255,255,255,.85); margin-bottom: 28px;
+    }
+    .cta-buttons {
+      display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
+    }
+    .btn-white {
+      background: #fff; color: var(--primary);
+      padding: 14px 30px; border-radius: 10px; font-weight: 700; font-size: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.15); transition: all .2s;
+    }
+    .btn-white:hover {
+      transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,.2);
+    }
+    .btn-outline-white {
+      background: transparent; color: #fff;
+      border: 2px solid rgba(255,255,255,.6);
+      padding: 14px 30px; border-radius: 10px; font-weight: 600; font-size: 15px;
+      transition: all .2s;
+    }
+    .btn-outline-white:hover {
+      background: rgba(255,255,255,.1); border-color: #fff;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--darker); color: rgba(255,255,255,.6); padding: 40px 0 24px;
+    }
+    .footer-inner {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 24px; margin-bottom: 28px;
+    }
+    .footer-brand {
+      font-size: 22px; font-weight: 800; color: var(--primary);
+    }
+    .footer-links {
+      display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px;
+    }
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding-top: 18px; font-size: 12px; color: rgba(255,255,255,.35);
+      text-align: center;
+    }
+
+    /* WHATSAPP FAB */
+    .whatsapp-fab {
+      position: fixed; bottom: 26px; right: 26px; z-index: 9999;
+      width: 58px; height: 58px; background: #25d366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,.5); transition: transform .3s;
+    }
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-fab svg {
+      width: 30px; height: 30px; fill: #fff;
+    }
+
+    /* INTRO SECTION */
+    .intro-section {
+      padding: 80px 0;
+    }
+    .intro-section h2 {
+      font-size: clamp(22px, 3vw, 32px); font-weight: 800;
+      margin-bottom: 24px; color: var(--text);
+    }
+    .intro-section p {
+      font-size: 15px; line-height: 1.85; color: #374151; margin-bottom: 18px;
+    }
+
+    @media(max-width: 768px) {
+      .voordelen-grid { grid-template-columns: 1fr; }
+      .pakketten-grid { grid-template-columns: 1fr; }
+      .werkgebied-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero { padding: 120px 0 60px; margin-top: 60px; }
+    }
+  </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Den Hartog Wandafwerking - Renovlies Amersfoort","description":"Renovlies specialist in Amersfoort voor strakke, naadloze wanden in nieuwbouw en renovatie","address":{"@type":"PostalAddress","streetAddress":"Planetenlaan 406","addressLocality":"Dordrecht","addressRegion":"Nederland","postalCode":"3317 LP","addressCountry":"NL"},"url":"https://denhartog-wandafwerking.nl/renovlies-amersfoort/","telephone":"+31640837590","areaServed":"Amersfoort","priceRange":"â¬13-â¬15,50"}</script></head>
+<body>
+
+<!-- NAVIGATIE -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-logo">Den Hartog Wandafwerking</a>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/index.html#diensten">Diensten</a></li>
+      <li><a href="/index.html#projecten">Projecten</a></li>
+      <li><a href="/index.html#over-ons">Over ons</a></li>
+      <li><a href="/index.html#burenkorting">Burenkorting</a></li>
+      <li><a href="/index.html#contact" class="nav-cta">ð Gratis Offerte</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="/index.html">Home</a> &rsaquo; Renovlies Amersfoort
+    </p>
+    <h1>Renovlies in <span>Amersfoort</span></h1>
+    <p class="intro">
+      Strakke, naadloze wanden voor uw nieuwbouw of renovatie. Den Hartog Wandafwerking brengt
+      professioneel renovlies aan in Amersfoort en omgeving. Scheurvrij, snel en scherp geprijsd.
+    </p>
+    <div class="badges">
+      <span class="badge">â Vanaf â¬13,00/mÂ²</span>
+      <span class="badge">â Gratis offerte</span>
+      <span class="badge">â 10+ jaar ervaring</span>
+      <span class="badge">â Snelle oplevering</span>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO CONTENT -->
+<section class="intro-section">
+  <div class="container">
+    <h2>Renovlies specialist voor Amersfoort en omgeving</h2>
+    <p>
+      Amersfoort groeit snel. Met moderne wijken als Vathorst, Nieuwland, Kattenbroek en Schothorst
+      is er constant vraag naar kwaliteit wandafwerking in nieuwbouwprojecten. Den Hartog Wandafwerking
+      is uw betrouwbare partner voor professioneel renovlies behangen in Amersfoort.
+    </p>
+    <p>
+      We werken voor particulieren, aannemers en projectontwikkelaars. Of het gaat om een compleet
+      nieuwbouwhuis, een gerenoveerde woning of een kantoorpand â wij leveren altijd strak,
+      scheurvrij werk af. Met meer dan tien jaar ervaring en duizenden vierkante meters afgewerkt
+      renovlies in heel Nederland weten we precies hoe het moet.
+    </p>
+    <p>
+      Kies voor renovlies en u kiest voor duurzaamheid, scheuroverbrugging en een perfect glad
+      oppervlak. Veel goedkoper dan stucwerk, sneller afgewerkt, en jarenlang mooi.
+    </p>
+  </div>
+</section>
+
+<!-- VOORDELEN -->
+<section class="voordelen-section">
+  <div class="container">
+    <p class="section-label">Waarom renovlies?</p>
+    <h2 class="section-title">De voordelen van renovlies</h2>
+    <p class="section-intro">
+      Renovlies is de meest gekozen wandafwerking voor nieuwbouw. Hier zijn de belangrijkste voordelen:
+    </p>
+    <div class="voordelen-grid">
+      <div class="voordeel-card">
+        <div class="voordeel-icon">â¡</div>
+        <h3>Snelle oplevering</h3>
+        <p>
+          Renovlies is tot drie keer sneller aangebracht dan stucwerk. U kunt al na 24 uur
+          overschilderen. Ideaal voor strakke bouwschema's.
+        </p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">ð¡ï¸</div>
+        <h3>Stoot- en krasvast</h3>
+        <p>
+          Dankzij de vezels in het materiaal is renovlies aanzienlijk sterker dan gewone muurverf.
+          Het is bestand tegen kleine stoten en krassen.
+        </p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">ð°</div>
+        <h3>Scherpe vaste prijs</h3>
+        <p>
+          Geen onverwachte meerkosten. U weet van tevoren wat het kost. Compleet pakket
+          inclusief schilderen: â¬13,00-â¬15,50 per mÂ².
+        </p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">ð¨</div>
+        <h3>Elke kleur mogelijk</h3>
+        <p>
+          Wij schilderen uw wanden in elke RAL-kleur of merknaam naar keuze. Van wit tot
+          donkergrijs â alles is mogelijk.
+        </p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">ð¥</div>
+        <h3>Brandveilig</h3>
+        <p>
+          Renovlies is brandklasse B-s1,d0. Voldoet aan alle veiligheidseisen en normen
+          voor woningbouw en kantoren.
+        </p>
+      </div>
+      <div class="voordeel-card">
+        <div class="voordeel-icon">â</div>
+        <h3>Scheuroverbruggend</h3>
+        <p>
+          Nieuwe huizen krimpen in de eerste jaren. Renovlies buigt mee en voorkomt zichtbare
+          scheuren. Garantie op scheurvrij werk.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAKKETTEN -->
+<section class="pakketten-section">
+  <div class="container">
+    <p class="section-label">Keuze uit pakketten</p>
+    <h2 class="section-title">Eenvoudig kiezen uit twee pakketten</h2>
+    <div class="pakketten-grid">
+      <div class="pakket-card">
+        <div class="pakket-name">Alles-in-Ã©Ã©n</div>
+        <div class="pakket-price">â¬13,00 <span class="unit">/mÂ²</span></div>
+        <div class="pakket-includes">
+          <strong>Inbegrepen:</strong>
+          Renovlies aanbrengen â¢ Naden kitten â¢ Dekkend schilderen â¢ 2 kleuren materiaal â¢
+          Schuren en voorbereiding
+        </div>
+        <a href="/index.html#contact" class="cta-btn">Offerte aanvragen</a>
+      </div>
+      <div class="pakket-card">
+        <div class="pakket-name">Premium Plus</div>
+        <div class="pakket-price">â¬15,50 <span class="unit">/mÂ²</span></div>
+        <div class="pakket-includes">
+          <strong>Inbegrepen:</strong>
+          Renovlies aanbrengen â¢ Naden kitten â¢ Schilderen in alle kleuren â¢ Premium muurverf
+          klasse 1 â¢ Schuren en voorbereiding
+        </div>
+        <a href="/index.html#contact" class="cta-btn">Offerte aanvragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WERKGEBIED -->
+<section class="werkgebied-section">
+  <div class="container">
+    <p class="section-label">Ons werkgebied</p>
+    <h2 class="section-title">Amersfoort en omliggende plaatsen</h2>
+    <p class="section-intro">
+      Wij werken in Amersfoort en in een groot gebied rondom de stad. Geen reistoeslag voor
+      locaties in ons werkgebied.
+    </p>
+    <div class="werkgebied-grid">
+      <div class="werkgebied-box">
+        <h3>Amersfoort wijken</h3>
+        <ul class="werkgebied-list">
+          <li>Vathorst</li>
+          <li>Nieuwland</li>
+          <li>Kattenbroek</li>
+          <li>Schothorst</li>
+          <li>Hoogland</li>
+          <li>Soest</li>
+          <li>Baarn</li>
+          <li>Bunschoten-Spakenburg</li>
+        </ul>
+      </div>
+      <div class="werkgebied-box">
+        <h3>Omliggende regio's</h3>
+        <ul class="werkgebied-list">
+          <li>Utrecht</li>
+          <li>Leusden</li>
+          <li>Veenendaal</li>
+          <li>De Bilt</li>
+          <li>Zeist</li>
+          <li>Woudenberg</li>
+          <li>Renswoude</li>
+          <li>Andere gemeenten op aanvraag</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <h2>Veelgestelde vragen over renovlies in Amersfoort</h2>
+    <p class="sub">De antwoorden op uw vragen over renovlies, kosten en werkwijze.</p>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Hoeveel kost renovlies in Amersfoort?
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Een compleet pakket renovlies inclusief schilderen kost bij ons â¬13,00 tot â¬15,50 per mÂ²
+          (exclusief BTW). Dit is veel goedkoper dan traditioneel stucwerk (â¬20-â¬35/mÂ²).
+          Voor een precieze offerte op maat dient u ons even in te meten. Wij doen dit gratis
+          en vrijblijvend, ook voor particulieren.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Is renovlies geschikt voor nieuwbouw in Amersfoort?
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Ja, renovlies is de ideale keuze voor nieuwbouw. Nieuwe huizen krimpen in de eerste jaren
+          â renovlies buigt mee en voorkomt scheuren. In moderne wijken als Vathorst en Nieuwland
+          gebruiken bouwbedrijven daarom haast altijd renovlies. Wij leveren standaard scheurvrij werk af.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Hoe snel kan het renovlies afgewerkt zijn?
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Voor een gemiddelde woning (80-120 mÂ² wanden) zijn wij doorgaans 1-2 dagen bezig met
+          het aanbrengen van renovlies. Inclusief schilderwerk rekenen we op 2-3 werkdagen totaal.
+          Droogtijd tussen renovlies en schilderen is minimaal 24 uur.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          Kunnen we ook over bestaand renovlies heen schilderen?
+          <span class="faq-arrow">â¼</span>
+        </div>
+        <div class="faq-answer">
+          Ja! Dat is juist een voordeel van renovlies. Na een paar jaar kunt u gewoon een nieuwe kleur
+          over het bestaande renovlies schilderen, zonder het opnieuw aan te laten brengen. Renovlies
+          is jarenlang overschilderbaar en blijft intact.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Renovlies in Amersfoort? Vraag een gratis offerte aan</h2>
+    <p>Wij nemen binnen 24 uur contact op. Geen verplichtingen, geen kosten.</p>
+    <div class="cta-buttons">
+      <a href="tel:+31640837590" class="btn-white">ð 06 408 37 590</a>
+      <a href="https://wa.me/31640837590" class="btn-outline-white">ð¬ WhatsApp</a>
+      <a href="/index.html#contact" class="btn-white">âï¸ Offerte aanvragen</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">Den Hartog Wandafwerking</div>
+      <div class="footer-links">
+        <a href="/index.html">Home</a>
+        <a href="/index.html#diensten">Diensten</a>
+        <a href="/index.html#projecten">Projecten</a>
+        <a href="/index.html#over-ons">Over ons</a>
+        <a href="/renovlies-behangen.html">Renovlies Behangen</a>
+        <a href="/index.html#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Â© 2026 Den Hartog Wandafwerking â Planetenlaan 406, Dordrecht &nbsp;|&nbsp;
+      Werkzaam in: Amersfoort â¢ Utrecht â¢ Rotterdam â¢ Den Haag â¢ Breda â¢ Dordrecht â¢ en meer
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a href="https://wa.me/31640837590" class="whatsapp-fab" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.118 1.528 5.855L.057 23.943l6.235-1.635A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.894 9.894 0 01-5.048-1.383l-.361-.215-3.742.981.999-3.648-.235-.374A9.86 9.86 0 012.106 12C2.106 6.58 6.58 2.106 12 2.106c5.419 0 9.894 4.474 9.894 9.894 0 5.419-4.475 9.894-9.894 9.894z"/>
+  </svg>
+</a>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const n = document.getElementById('navbar');
+    n.style.boxShadow = window.scrollY > 50 ? '0 2px 20px rgba(0,0,0,0.3)' : 'none';
+  });
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+  });
+</script>
+
+</body>
+</html>
