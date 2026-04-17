@@ -5,7 +5,7 @@
 (function () {
 
   var ONTVANGERSEMAIL    = 'lucd.hartog@gmail.com';
-  var POPUP_VERTRAGING   = 10;
+  var POPUP_VERTRAGING   = 5;
   var NIET_OPNIEUW_DAGEN = 7;
   var KEY                = 'dhw_popup_v2';
 
