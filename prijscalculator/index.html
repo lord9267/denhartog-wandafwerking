@@ -42,7 +42,7 @@ body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg)
 
 /* Header - matches site */
 header{background:var(--darker);padding:1rem 2rem;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.05)}
-.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start}
 .logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
 .logo img{height:40px}
 .logo span{font-size:1.1rem;font-weight:700;color:#fff}
@@ -87,9 +87,9 @@ nav a.active{color:var(--primary);font-weight:600}
 .package-card:hover{border-color:var(--primary);box-shadow:0 2px 12px rgba(205,127,50,0.12)}
 .package-card.selected{border-color:var(--primary);background:rgba(205,127,50,0.03)}
 .package-card.selected::after{content:'✓';position:absolute;top:0.75rem;right:0.75rem;width:24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700}
-.pkg-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem}
+.pkg-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.3rem}
 .pkg-name{font-weight:700;font-size:1rem}
-.pkg-price{font-weight:700;color:var(--primary);font-size:1.1rem}
+.pkg-price{font-weight:700;color:var(--primary);font-size:1.1rem}.pkg-btw{display:block;font-size:0.7rem;color:var(--text-light);font-weight:400;margin-top:0.1rem}
 .pkg-desc{color:var(--text-light);font-size:0.8rem;line-height:1.5}
 .pkg-badge{display:inline-block;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;font-size:0.7rem;padding:0.15rem 0.6rem;border-radius:4px;font-weight:700;margin-bottom:0.4rem;letter-spacing:0.5px}
 
@@ -157,7 +157,7 @@ nav a.active{color:var(--primary);font-weight:600}
 .faq{max-width:700px;margin:0 auto;padding:0 2rem 4rem}
 .faq h2{text-align:center;font-size:1.8rem;font-weight:700;margin-bottom:1.5rem}
 .faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.75rem;overflow:hidden}
-.faq-q{width:100%;padding:1rem 1.25rem;background:var(--bg);border:none;cursor:pointer;font-size:0.93rem;font-weight:600;text-align:left;display:flex;justify-content:space-between;align-items:center;color:var(--text);transition:background 0.2s;font-family:inherit}
+.faq-q{width:100%;padding:1rem 1.25rem;background:var(--bg);border:none;cursor:pointer;font-size:0.93rem;font-weight:600;text-align:left;display:flex;justify-content:space-between;align-items:flex-start;color:var(--text);transition:background 0.2s;font-family:inherit}
 .faq-q:hover{background:var(--bg-gray)}
 .faq-q .arrow{transition:transform 0.3s;font-size:0.75rem;color:var(--text-light)}
 .faq-q.open .arrow{transform:rotate(180deg)}
@@ -217,7 +217,7 @@ footer a:hover{text-decoration:underline}
 <div class="package-card selected" data-package="alles" data-price="13.00" onclick="selectPackage(this)">
 <div class="pkg-header">
 <span class="pkg-name">Alles-in-één Pakket</span>
-<span class="pkg-price">&euro;15,00/m&sup2;</span>
+<span class="pkg-price">&euro;15,00/m&sup2;</span><span class="pkg-btw">incl. BTW</span>
 </div>
 <div class="pkg-desc">Renovlies + schuren + kitten + schilderen in 1 of 2 kleuren. Inclusief materiaal, 12 mnd garantie.</div>
 </div>
@@ -226,7 +226,7 @@ footer a:hover{text-decoration:underline}
 <div class="pkg-badge">POPULAIR</div>
 <div class="pkg-header">
 <span class="pkg-name">Premium Plus</span>
-<span class="pkg-price">&euro;17,50/m&sup2;</span>
+<span class="pkg-price">&euro;17,50/m&sup2;</span><span class="pkg-btw">incl. BTW</span>
 </div>
 <div class="pkg-desc">Premium afwerking met schilderwerk in 1 tot 3 kleuren naar wens. Perfect voor nieuwbouw met maximale uitstraling.</div>
 </div>
@@ -236,7 +236,7 @@ footer a:hover{text-decoration:underline}
 <div class="package-card" data-package="glasvlies" data-price="17.50" onclick="selectPackage(this)">
 <div class="pkg-header">
 <span class="pkg-name">Glasvlies Premium</span>
-<span class="pkg-price">&euro;19,50/m&sup2;</span>
+<span class="pkg-price">&euro;19,50/m&sup2;</span><span class="pkg-btw">incl. BTW</span>
 </div>
 <div class="pkg-desc">200 grams glasvlies + schuren + kitten + 2x latex muurverf in 3 kleuren. Inclusief materiaal, 15 mnd garantie.</div>
 </div>
