@@ -7,15 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Apply patch and push branch
+      - name: Apply fixes and push branch
         run: |
-          set -e
-          base64 -d .github/site-fixes.patch.b64 | gunzip > /tmp/fixes.patch
           git checkout -b site-fixes
-          git apply --whitespace=nowarn /tmp/fixes.patch
-          git rm -q .github/site-fixes.patch.b64 .github/workflows/apply-site-fixes.yml
+          bash .github/fixscript.sh
+          git rm -q .github/fixscript.sh .github/workflows/apply-site-fixes.yml
           git config user.name "site-fixes-bot"
           git config user.email "actions@github.com"
           git add -A
-          git commit -m "Sitewide fixes: prijzen incl. BTW, WhatsApp-nummer, typo's, encoding, privacybeleid + algemene voorwaarden"
+          git commit -m "Sitewide fixes: prijzen incl. BTW, WhatsApp-nummer, typos, encoding, footerlinks"
           git push origin site-fixes --force
