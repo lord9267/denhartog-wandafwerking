@@ -1,0 +1,21 @@
+name: Apply site fixes
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply patch and push branch
+        run: |
+          set -e
+          base64 -d .github/site-fixes.patch.b64 | gunzip > /tmp/fixes.patch
+          git checkout -b site-fixes
+          git apply --whitespace=nowarn /tmp/fixes.patch
+          git rm -q .github/site-fixes.patch.b64 .github/workflows/apply-site-fixes.yml
+          git config user.name "site-fixes-bot"
+          git config user.email "actions@github.com"
+          git add -A
+          git commit -m "Sitewide fixes: prijzen incl. BTW, WhatsApp-nummer, typo's, encoding, privacybeleid + algemene voorwaarden"
+          git push origin site-fixes --force
