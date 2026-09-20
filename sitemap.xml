@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://denhartog-wandafwerking.nl/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -362,43 +362,43 @@
   </url>
   <url>
     <loc>https://denhartog-wandafwerking.nl/project-haarlem/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://denhartog-wandafwerking.nl/project-leek/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://denhartog-wandafwerking.nl/project-luttelgeest/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://denhartog-wandafwerking.nl/project-oude-weteringen/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://denhartog-wandafwerking.nl/project-putte/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://denhartog-wandafwerking.nl/project-sneek/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://denhartog-wandafwerking.nl/project-zevenhuizen/</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -437,5 +437,29 @@
     <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/wat-kost-behangen-en-sauzen/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/renovlies-glasvlies-of-stucen/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/stappenplan-nieuwbouw/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://denhartog-wandafwerking.nl/garantie-en-verzekering/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
