@@ -5,11 +5,8 @@
   // Definieer pagina-categorieën en hun relaties
   var diensten = [
     {url: '/renovlies-behangen/', naam: 'Renovlies Behangen'},
-    {url: '/glasvliesbehang/', naam: 'Glasvliesbehang'},
+    {url: '/glasvliesbehang/', naam: 'Glasvezelbehang'},
     {url: '/latex-spuiten/', naam: 'Latex Spuiten'},
-    {url: '/glasvezel-behang/', naam: 'Glasvezel Behang'},
-    {url: '/glasvezelbehanger/', naam: 'Glasvezelbehanger'},
-    {url: '/glasvezelbehang-nieuwbouw/', naam: 'Glasvezelbehang Nieuwbouw'},
     {url: '/renovlies-nieuwbouw/', naam: 'Renovlies Nieuwbouw'},
     {url: '/wandafwerking-nieuwbouw/', naam: 'Wandafwerking Nieuwbouw'},
     {url: '/nieuwbouw-muren-afwerken/', naam: 'Nieuwbouw Muren Afwerken'},
@@ -40,7 +37,6 @@
 
   var info = [
     {url: '/meer-over-renovlies/', naam: 'Meer over Renovlies'},
-    {url: '/meer-over-glasvlies/', naam: 'Meer over Glasvlies'},
     {url: '/meer-over-latex-spuiten/', naam: 'Meer over Latex Spuiten'},
     {url: '/meer-over-wandafwerking/', naam: 'Meer over Wandafwerking'},
     {url: '/meer-over-stucwerk/', naam: 'Meer over Stucwerk'},
@@ -71,7 +67,15 @@
     {url: '/renovlies-alblasserdam/', naam: 'Alblasserdam'},
     {url: '/renovlies-papendrecht/', naam: 'Papendrecht'},
     {url: '/renovlies-sliedrecht/', naam: 'Sliedrecht'},
-    {url: '/renovlies-zwijndrecht/', naam: 'Zwijndrecht'}
+    {url: '/renovlies-zwijndrecht/', naam: 'Zwijndrecht'},
+    {url: '/renovlies-almere/', naam: 'Almere'},
+    {url: '/renovlies-lelystad/', naam: 'Lelystad'},
+    {url: '/renovlies-dronten/', naam: 'Dronten'},
+    {url: '/renovlies-zeewolde/', naam: 'Zeewolde'},
+    {url: '/renovlies-emmeloord/', naam: 'Emmeloord'},
+    {url: '/renovlies-huizen/', naam: 'Huizen'},
+    {url: '/renovlies-hilversum/', naam: 'Hilversum'},
+    {url: '/renovlies-nijkerk/', naam: 'Nijkerk'}
   ];
 
   var projecten = [
@@ -91,7 +95,7 @@
   if (path === '/' || path === '/contact/' || path === '/blog/' || path === '/burenkorting/') return;
 
   // Bepaal paginatype en kies relevante links
-  var isLocatie = path.match(/^\/renovlies-(utrecht|rotterdam|den-haag|breda|dordrecht|leiden|amersfoort|delft|gouda|houten|nieuwegein|woerden|zoetermeer|ijsselstein|gorinchem|alblasserdam|papendrecht|sliedrecht|zwijndrecht)\//);
+  var isLocatie = path.match(/^\/renovlies-(utrecht|rotterdam|den-haag|breda|dordrecht|leiden|amersfoort|delft|gouda|houten|nieuwegein|woerden|zoetermeer|ijsselstein|gorinchem|alblasserdam|papendrecht|sliedrecht|zwijndrecht|almere|lelystad|dronten|zeewolde|emmeloord|huizen|hilversum|nijkerk)\//);
   var isProject = path.indexOf('/project-') === 0;
   var isPrijs = path.indexOf('prijs') > -1 || path.indexOf('kost') > -1 || path.indexOf('goedkoop') > -1 || path.indexOf('kosten') > -1 || path === '/prijscalculator/';
   var isVergelijking = path.indexOf('vs-') > -1 || path.indexOf('-of-') > -1 || path.indexOf('voordelen') > -1 || path.indexOf('nadelen') > -1 || path.indexOf('ervaringen') > -1;

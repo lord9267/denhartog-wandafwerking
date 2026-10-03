@@ -1,427 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glasvliesbehang | Naadloos behang voor perfecte wanden - Den Hartog</title>
-    <meta name="description" content="Glasvliesbehang voor naadloze, strakke wanden. Professioneel aangebracht. Stootvast, brandveilig en voordeliger. Vanaf €15,00/m².">
-    <link rel="canonical" href="https://denhartog-wandafwerking.nl/glasvliesbehang/">
-    <meta property="og:title" content="Glasvliesbehang | Naadloos behang voor perfecte wanden - Den Hartog">
-    <meta property="og:description" content="Glasvliesbehang voor naadloze, strakke wanden. Professioneel aangebracht. Stootvast, brandveilig en voordeliger. Vanaf €15,00/m².">
-    <meta property="og:url" content="https://denhartog-wandafwerking.nl/glasvliesbehang/">
-    <meta property="og:type" content="website">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        :root {
-            --primary: #CD7F32;
-            --primary-dark: #b36b28;
-            --text: #1f2937;
-            --text-light: #6b7280;
-            --bg: #fff;
-            --bg-light: #f9fafb;
-            --bg-dark: #0d0d1a;
-            --bg-dark2: #1a1a2e;
-            --border: #e5e7eb;
-            --success: #10b981;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; font-size: 16px; }
-
-        /* NAVBAR */
-        .navbar { background: rgba(13,13,26,0.97); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
-        .navbar-brand { color: #fff; font-size: 1.25rem; font-weight: 800; text-decoration: none; }
-        .navbar-brand span { color: var(--primary); }
-        .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
-        .nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
-        .nav-links a:hover { color: #fff; }
-        .nav-cta { background: var(--primary) !important; color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 700 !important; }
-
-        /* BREADCRUMB */
-        .breadcrumb { background: var(--bg-light); padding: 0.7rem 2rem; font-size: 0.85rem; color: var(--text-light); border-bottom: 1px solid var(--border); }
-        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
-
-        /* HERO */
-        .hero { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #1a2a1a 100%); color: #fff; padding: 4rem 2rem; text-align: center; }
-        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
-        .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; opacity: 0.85; line-height: 1.7; }
-        .hero-badges { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
-        .hero-badge { background: rgba(255,255,255,.08); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
-
-        /* SECTIONS */
-        .section { padding: 3.5rem 2rem; max-width: 900px; margin: 0 auto; }
-        .section-wide { padding: 3.5rem 2rem; max-width: 1100px; margin: 0 auto; }
-        .section-alt { background: var(--bg-light); }
-        h2 { font-size: 1.9rem; font-weight: 800; color: var(--text); margin-bottom: 1rem; margin-top: 2.5rem; }
-        h2:first-child { margin-top: 0; }
-        h3 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; margin-top: 1.5rem; }
-        p { margin-bottom: 1rem; color: var(--text); }
-
-        .article-content ul { margin: 1rem 0 1.5rem 0; padding: 0; list-style: none; }
-        .article-content li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; }
-        .article-content li::before { content: "\2713"; color: var(--success); font-weight: 700; position: absolute; left: 0; }
-
-        /* HIGHLIGHT BOX */
-        .highlight-box { background: linear-gradient(135deg, rgba(205,127,50,.08), rgba(205,127,50,.04)); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; }
-        .highlight-box strong { color: var(--primary-dark); }
-
-        /* VOORDELEN */
-        .voordelen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .voordeel-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; text-align: center; transition: transform .2s, box-shadow .2s; }
-        .voordeel-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,.06); }
-        .voordeel-icon { font-size: 2rem; margin-bottom: 0.8rem; }
-        .voordeel-card h4 { font-weight: 700; margin-bottom: 0.5rem; font-size: 1.05rem; }
-        .voordeel-card p { font-size: 0.95rem; color: var(--text-light); margin: 0; }
-
-        /* PAKKETTEN */
-        .pakketten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .pakket-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #fff; transition: box-shadow .2s; }
-        .pakket-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,.08); }
-        .pakket-card.featured { border: 2px solid var(--primary); }
-        .pakket-header { background: var(--bg-dark); color: #fff; padding: 1.5rem; text-align: center; }
-        .pakket-card.featured .pakket-header { background: linear-gradient(135deg, #0d0d1a, #1a1a2e); }
-        .pakket-header h3 { color: #fff; margin: 0; font-size: 1.15rem; }
-        .pakket-prijs { font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0; color: var(--primary); }
-        .pakket-prijs small { font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,.6); }
-        .pakket-body { padding: 1.5rem; }
-        .pakket-body ul { list-style: none; padding: 0; margin: 0; }
-        .pakket-body li { padding: 0.45rem 0; border-bottom: 1px solid #f3f4f6; font-size: 0.9rem; }
-        .pakket-body li::before { content: "\2713  "; color: var(--success); font-weight: 700; }
-        .pakket-cta { display: block; text-align: center; background: var(--primary); color: #fff; padding: 0.85rem; text-decoration: none; font-weight: 700; font-size: 1rem; margin: 1rem 1.5rem 1.5rem; border-radius: 8px; transition: background .2s; }
-        .pakket-cta:hover { background: var(--primary-dark); }
-
-        /* WERKGEBIED */
-        .werkgebied-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.3rem; margin-top: 1rem; }
-        .werkgebied-list span { padding: 0.35rem 0; font-size: 0.95rem; }
-        .werkgebied-list span::before { content: "\1F4CD "; }
-
-        /* FAQ */
-        .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.7rem; overflow: hidden; }
-        .faq-question { padding: 1rem 1.2rem; background: #fff; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
-        .faq-question:hover { background: var(--bg-light); }
-        .faq-answer { padding: 0 1.2rem 1rem; display: none; color: var(--text-light); font-size: 0.95rem; }
-        .faq-item.open .faq-answer { display: block; }
-        .faq-arrow { transition: transform .2s; font-size: 0.8rem; }
-        .faq-item.open .faq-arrow { transform: rotate(180deg); }
-
-        /* CTA BANNER */
-        .cta-banner { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #1a2a1a 100%); color: #fff; padding: 3.5rem 2rem; text-align: center; }
-        .cta-banner h2 { color: #fff; margin-top: 0; }
-        .cta-banner p { color: rgba(255,255,255,.8); max-width: 550px; margin: 0 auto 1.5rem; }
-        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .btn-primary { background: var(--primary); color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background .2s; }
-        .btn-primary:hover { background: var(--primary-dark); }
-        .btn-outline { background: transparent; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,.25); transition: background .2s; }
-        .btn-outline:hover { background: rgba(255,255,255,.08); }
-
-        /* KEYWORD FOOTER */
-        .keyword-footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 3rem 2rem; border-top: 1px solid rgba(255,255,255,.08); }
-        .keyword-footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .keyword-footer h4 { font-size: 1.1rem; margin-bottom: 1rem; color: #fff; font-weight: 700; }
-        .keyword-footer ul { list-style: none; padding: 0; }
-        .keyword-footer li { padding: 0.25rem 0; }
-        .keyword-footer a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
-        .keyword-footer a:hover { color: var(--primary); }
-
-        /* MAIN FOOTER */
-        .footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 2rem 2rem; border-top: 1px solid rgba(255,255,255,.06); }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; }
-        .footer a { color: rgba(255,255,255,.5); text-decoration: none; }
-        .footer a:hover { color: var(--primary); }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-links { display: none; }
-            .keyword-footer-inner { grid-template-columns: 1fr; }
-            .pakketten-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WKSG3S5MW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4WKSG3S5MW');</script><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Glasvliesbehang aanbrengen",
-  "name": "Glasvliesbehang aanbrengen",
-  "description": "Glasvliesbehang voor naadloze, strakke wanden. Stootvast en brandveilig.",
-  "url": "https://denhartog-wandafwerking.nl/glasvliesbehang/",
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Den Hartog Wandafwerking",
-    "telephone": "+31640837590",
-    "url": "https://denhartog-wandafwerking.nl/"
-  },
-  "areaServed": "NL"
-}
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glasvezelbehang laten aanbrengen v.a. €19,50/m² | Den Hartog</title>
+<meta name="description" content="Glasvezelbehang laten aanbrengen: 200 gram voorgeschilderd glasvlies + sauzen voor €19,50/m² incl. btw en materiaal. Rekenvoorbeelden, uitleg en offerte binnen 24 uur.">
+<link rel="canonical" href="https://denhartog-wandafwerking.nl/glasvliesbehang/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Glasvezelbehang laten aanbrengen v.a. €19,50/m² | Den Hartog">
+<meta property="og:description" content="Glasvezelbehang laten aanbrengen: 200 gram voorgeschilderd glasvlies + sauzen voor €19,50/m² incl. btw en materiaal. Rekenvoorbeelden, uitleg en offerte binnen 24 uur.">
+<meta property="og:url" content="https://denhartog-wandafwerking.nl/glasvliesbehang/">
+<meta property="og:image" content="https://denhartog-wandafwerking.nl/assets/img/haarlem/haarlem-08-1600.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F5D50">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232F5D50'/%3E%3Cpath d='M11 13h18M11 20h18M11 27h11' stroke='%23F4EFE6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://denhartog-wandafwerking.nl/"}, {"@type": "ListItem", "position": 2, "name": "Diensten", "item": "https://denhartog-wandafwerking.nl/#diensten"}, {"@type": "ListItem", "position": 3, "name": "Glasvezelbehang", "item": "https://denhartog-wandafwerking.nl/glasvliesbehang/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat kost glasvezelbehang per m²?", "acceptedAnswer": {"@type": "Answer", "text": "Bij ons kost glasvezelbehang (200 gram voorgeschilderd glasvlies) inclusief sauzen €19,50 per m² wand, inclusief 21% btw, materiaal, schuren, kitwerk en afvoer. De prijs geldt vanaf 100 m² wand. Voor een tussenwoning met 240 m² wand kom je op €4.680."}}, {"@type": "Question", "name": "Is glasvezelbehang hetzelfde als glasvliesbehang?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Glasvezelbehang, glasvliesbehang, glasvlies en glasweefsel zonder structuur zijn namen voor hetzelfde type behang: een glad vlies van glasvezels dat je na het plakken sauzt. Renovlies lijkt erop, maar is gemaakt van cellulose- en polyestervezels."}}, {"@type": "Question", "name": "Moet voorgeschilderd glasvlies nog gesausd worden?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Voorgeschilderd betekent dat het vlies in de fabriek een grondlaag heeft gekregen. Daardoor zuigt het minder verf op en wordt de eindlaag egaler, maar het is geen afwerking. Wij sauzen het daarna dekkend met schrobklasse 1 muurverf; dat zit in de prijs."}}, {"@type": "Question", "name": "Hoeveel m² is een rol glasvezelbehang van 50 meter?", "acceptedAnswer": {"@type": "Answer", "text": "Een rol van 1 meter breed en 50 meter lang is 50 m². Reken voor snijverlies rond ramen, deuren en in het trapgat op zo’n 10 tot 15% extra. Voor een tussenwoning met 240 m² wand heb je dan ongeveer 6 rollen nodig. Laat je het door ons doen, dan hoef je zelf niets te bestellen: het materiaal zit in de m²-prijs."}}, {"@type": "Question", "name": "Hebben jullie een aanbieding op glasvezelbehang?", "acceptedAnswer": {"@type": "Answer", "text": "Wij werken niet met tijdelijke acties, maar met één vaste prijs. Wel krijg je 5% burenkorting als je samen met een buur uit hetzelfde project boekt. Er komen geen voorrijkosten, parkeerkosten of nacalculatie bij en je betaalt pas na oplevering."}}, {"@type": "Question", "name": "Is 200 gram glasvlies beter dan 150 gram renovlies?", "acceptedAnswer": {"@type": "Answer", "text": "Het is sterker en stootvaster. Glasvlies kies je voor wanden die het zwaar krijgen: de hal, het trapgat, kinderkamers of een verhuurwoning. Voor de meeste nieuwbouwwanden is renovlies 150 gram ook prima en goedkoper. We adviseren per ruimte; combineren mag."}}, {"@type": "Question", "name": "Brengen jullie glasvezelbehang ook op het plafond aan?", "acceptedAnswer": {"@type": "Answer", "text": "Nee, wij werken alleen wanden af. Plafonds tellen ook niet mee in het wandoppervlak van je offerte."}}, {"@type": "Question", "name": "Hoe lang duurt het aanbrengen van glasvezelbehang?", "acceptedAnswer": {"@type": "Answer", "text": "Voor een appartement rekenen we 3 tot 4 werkdagen, een tussenwoning 4 tot 6 en een hoekwoning of 2-onder-1-kap 5 tot 8 werkdagen, inclusief schuren, kitten en sauzen. Je hoeft er niet bij te zijn."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Glasvezelbehang aanbrengen en sauzen", "serviceType": "Glasvliesbehang aanbrengen", "provider": {"@type": "LocalBusiness", "name": "Den Hartog Wandafwerking", "telephone": "+31640837590", "address": {"@type": "PostalAddress", "streetAddress": "Planetenlaan 406", "addressLocality": "Dordrecht", "addressCountry": "NL"}, "url": "https://denhartog-wandafwerking.nl/"}, "areaServed": {"@type": "Country", "name": "Nederland"}, "offers": {"@type": "Offer", "price": "19.50", "priceCurrency": "EUR", "description": "Per m² wand, inclusief btw, 200 g voorgeschilderd glasvlies en sauzen, vanaf 100 m²"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WKSG3S5MW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4WKSG3S5MW');</script>
 </head>
 <body>
-
-<nav class="navbar">
-    <a href="https://denhartog-wandafwerking.nl" class="navbar-brand">Den Hartog <span>Wandafwerking</span></a>
-    <ul class="nav-links">
-        <li><a href="https://denhartog-wandafwerking.nl">Home</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#diensten">Diensten</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#projecten">Projecten</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#over-ons">Over ons</a></li>
-        <li><a href="/burenkorting/">Burenkorting</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#contact" class="nav-cta">Gratis Offerte</a></li>
-    </ul>
-</nav>
-
-<div class="breadcrumb">
-    <a href="https://denhartog-wandafwerking.nl">Home</a> &rsaquo; <strong>Glasvliesbehang</strong>
-</div>
-<section class="hero">
-    <h1><span>Glasvliesbehang</span></h1>
-    <p>De professionele keuze voor naadloze wanden. Glasvliesbehang vakkundig aangebracht door onze specialisten.</p>
-    <div class="hero-badges">
-        <span class="hero-badge">10+ jaar ervaring</span>
-        <span class="hero-badge">Offerte binnen 24 uur</span>
-        <span class="hero-badge">Vanaf &euro;15,00/m&sup2;</span>
-        <span class="hero-badge">Geen aanbetaling</span>
-    </div>
-</section>
-
-<div class="section article-content">
-    <h2>Glasvliesbehang: de professionele keuze</h2>
-    <p>Glasvliesbehang is de professionele benaming voor renovlies op glasvezelbasis. Het is een hoogwaardig wandbekledingsmateriaal dat bestaat uit fijne glasvezels, geperst tot een glad vlies. Na aanbrengen en sauzen levert het een volledig naadloze, strakke wand op.</p>
-    <p>Bij Den Hartog Wandafwerking werken wij uitsluitend met glasvliesbehang op glasvezelbasis. Wij brengen standaard 150 grams glasvlies aan &mdash; het ideale gewicht voor een glad resultaat met optimale sterkte. Het materiaal krimpt niet en zet niet uit, waardoor de naden permanent onzichtbaar blijven.</p>
-    <h2>Waarom glasvliesbehang?</h2>
-    <ul>
-        <li><strong>100% naadloos:</strong> De overgangen zijn na het sauzen volledig onzichtbaar.</li>
-        <li><strong>Op glasvezelbasis:</strong> Krimpt niet, scheurt niet en is extreem sterk.</li>
-        <li><strong>Brandveilig:</strong> Glasvezel is van nature brandvertragend.</li>
-        <li><strong>Scheuroverbruggend:</strong> Ideaal voor nieuwbouw en bestaande bouw.</li>
-        <li><strong>Tientallen jaren meegaand:</strong> Een eenmalige investering voor jarenlang plezier.</li>
-        <li><strong>Overschilderbaar:</strong> Meerdere keren een nieuwe kleur zonder het behang te vervangen.</li>
-    </ul>
-</div>
-
-
-<div class="section-alt">
-    <div class="section-wide">
-        <h2>Onze pakketten</h2>
-        <p>Transparante, vaste prijzen. Inclusief materiaal, arbeid en opruimen. Geen aanbetaling nodig.</p>
-        <div class="pakketten-grid">
-            <div class="pakket-card featured">
-                <div class="pakket-header">
-                    <h3>Alles-in-een Pakket</h3>
-                    <div class="pakket-prijs">&euro;15,00 <small>/m&sup2; incl. BTW</small></div>
-                    <small style="color:rgba(255,255,255,.5)">Vanaf 100m&sup2;</small>
-                </div>
-                <div class="pakket-body">
-                    <ul>
-                        <li>Wanden professioneel schuren</li>
-                        <li>Aanbrengen van 150 grams renovlies</li>
-                        <li>Alle naden en kieren professioneel gekit</li>
-                        <li>Dekkend sauzen in 1 kleur naar keuze</li>
-                        <li>Inclusief materiaal: renovlies + lijm + kit + muurverf</li>
-                        <li>Bouwafval netjes afgevoerd</li>
-                        <li>Geen verborgen kosten (incl. voorrij- en parkeerkosten)</li>
-                        <li>Geen aanbetaling</li>
-                        <li>6 maanden garantie</li>
-                    </ul>
-                    <a href="https://denhartog-wandafwerking.nl/#contact" class="pakket-cta">Offerte aanvragen &rarr;</a>
-                </div>
-            </div>
-            <div class="pakket-card">
-                <div class="pakket-header">
-                    <h3>Premium Plus Pakket</h3>
-                    <div class="pakket-prijs">&euro;17,50 <small>/m&sup2; incl. BTW</small></div>
-                    <small style="color:rgba(255,255,255,.5)">Vanaf 100m&sup2;</small>
-                </div>
-                <div class="pakket-body">
-                    <ul>
-                        <li>Wanden professioneel schuren</li>
-                        <li>Aanbrengen van 150 grams renovlies</li>
-                        <li>Alle naden en kieren professioneel gekit</li>
-                        <li>Dekkend schilderen in alle kleuren naar uw wens</li>
-                        <li>Inclusief materiaal: renovlies + lijm + kit + muurverf</li>
-                        <li>Bouwafval netjes afgevoerd</li>
-                        <li>Geen verborgen kosten (incl. voorrij- en parkeerkosten)</li>
-                        <li>Geen aanbetaling</li>
-                        <li>6 maanden garantie</li>
-                    </ul>
-                    <a href="https://denhartog-wandafwerking.nl/#contact" class="pakket-cta">Offerte aanvragen &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<section class="cta-banner">
-    <h2>Klaar voor strakke muren?</h2>
-    <p>Vraag vandaag nog een gratis, vrijblijvende offerte aan. Wij nemen binnen 24 uur contact op.</p>
-    <div class="cta-buttons">
-        <a href="tel:0640837590" class="btn-primary">Bel 06 408 37 590</a>
-        <a href="https://wa.me/31640837590" class="btn-outline">WhatsApp ons</a>
-        <a href="https://denhartog-wandafwerking.nl/#contact" class="btn-outline">Offerte aanvragen</a>
-    </div>
-</section>
-
-
-<div class="keyword-footer">
-    <div class="keyword-footer-inner">
-        <div>
-            <h4>Je vindt ons onder:</h4>
-            <ul>
-                <li><a href="/renovlies-behang/">Renovlies behang</a></li>
-                <li><a href="/glasvezelbehanger/">Glasvezelbehanger</a></li>
-                <li><a href="/wandafwerking-specialist/">Wandafwerking specialist</a></li>
-                <li><a href="/renovlies-aanbrengen/">Renovlies aanbrengen</a></li>
-                <li><a href="/glasvezel-behang/">Glasvezel behang</a></li>
-                <li><a href="/nieuwbouw-behangen/">Nieuwbouw behangen</a></li>
-                <li><a href="/goedkoop-renovlies/">Goedkoop renovlies</a></li>
-                <li><a href="/voordelen-renovlies/">Voordelen renovlies</a></li>
-                <li><a href="/wandafwerking-nieuwbouw/">Wandafwerking nieuwbouw</a></li>
-                <li><a href="/renovlies-behangservice/">Renovlies behangservice</a></li>
-                <li><a href="/scanbehang/">Scanbehang</a></li>
-                <li><a href="/glasvliesbehang/">Glasvliesbehang</a></li>
-                <li><a href="/renovlies-prijs-per-m2/">Renovlies prijs per m2</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>In de regio:</h4>
-            <ul>
-                <li><a href="/renovlies-utrecht/">Renovlies Utrecht</a></li>
-                <li><a href="/renovlies-rotterdam/">Renovlies Rotterdam</a></li>
-                <li><a href="/renovlies-den-haag/">Renovlies Den Haag</a></li>
-                <li><a href="/renovlies-breda/">Renovlies Breda</a></li>
-                <li><a href="/renovlies-dordrecht/">Renovlies Dordrecht</a></li>
-                <li><a href="/renovlies-leiden/">Renovlies Leiden</a></li>
-                <li><a href="/renovlies-delft/">Renovlies Delft</a></li>
-                <li><a href="/renovlies-gouda/">Renovlies Gouda</a></li>
-                <li><a href="/renovlies-zoetermeer/">Renovlies Zoetermeer</a></li>
-                <li><a href="/renovlies-gorinchem/">Renovlies Gorinchem</a></li>
-                <li><a href="/renovlies-houten/">Renovlies Houten</a></li>
-                <li><a href="/renovlies-nieuwegein/">Renovlies Nieuwegein</a></li>
-                <li><a href="/renovlies-woerden/">Renovlies Woerden</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>Meer over Den Hartog:</h4>
-            <ul>
-                <li><a href="/renovlies-of-stucen/">Renovlies of stucen</a></li>
-                <li><a href="/wat-kost-renovlies/">Wat kost renovlies?</a></li>
-                <li><a href="/renovlies-nieuwbouw/">Renovlies nieuwbouw</a></li>
-                <li><a href="/glasvezelbehang-nieuwbouw/">Glasvezelbehang nieuwbouw</a></li>
-                <li><a href="/nieuwbouw-muren-afwerken/">Nieuwbouw muren afwerken</a></li>
-                <li><a href="/renovlies-vs-stucwerk/">Renovlies vs stucwerk</a></li>
-                <li><a href="/renovlies-ervaringen/">Renovlies ervaringen</a></li>
-                <li><a href="/nadelen-renovlies/">Nadelen renovlies</a></li>
-                <li><a href="/renovlies-behang-prijs/">Renovlies behang prijs</a></li>
-                <li><a href="/nieuwbouwwoning-behangklaar/">Nieuwbouwwoning behangklaar</a></li>
-                <li><a href="/renovlies-op-plafond/">Renovlies op plafond</a></li>
-                <li><a href="/sauzen-na-renovlies/">Sauzen na renovlies</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-
-<footer class="footer">
-    <div class="footer-inner">
-        <div>&copy; 2026 Den Hartog Wandafwerking | <a href="tel:0640837590">06 408 37 590</a> | <a href="mailto:lucd.hartog@gmail.com">lucd.hartog@gmail.com</a></div>
-        <div><a href="/privacybeleid/">Privacybeleid</a> | <a href="/algemene-voorwaarden/">Algemene voorwaarden</a></div>
-    </div>
-</footer>
-
-<script>function toggleFaq(el){el.parentElement.classList.toggle("open");}</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'telefoon_klik', { event_category: 'conversie', event_label: this.href });
-      }
-    });
-  });
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'email_klik', { event_category: 'conversie', event_label: this.href });
-      }
-    });
-  });
-  document.querySelectorAll('button').forEach(function(btn) {
-    if(btn.textContent.includes('Verstuur') || btn.textContent.includes('aanvraag')) {
-      btn.addEventListener('click', function() {
-        if(typeof gtag !== 'undefined') {
-          gtag('event', 'offerte_aanvraag', { event_category: 'conversie', event_label: 'formulier_submit' });
-        }
-      });
-    }
-  });
-  document.querySelectorAll('a[href*="#contact"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'offerte_klik', { event_category: 'conversie', event_label: el.textContent.trim() });
-      }
-    });
-  });
-});
-</script><script>
-(function() {
-  var faqItems = document.querySelectorAll('.faq-item');
-  if (faqItems.length > 0) {
-    var questions = [];
-    faqItems.forEach(function(item) {
-      var q = item.querySelector('.faq-question');
-      var a = item.querySelector('.faq-answer');
-      if (q && a) {
-        questions.push({
-          "@type": "Question",
-          "name": q.textContent.replace(/[\u25BC\u25B2]/g, '').trim(),
-          "acceptedAnswer": { "@type": "Answer", "text": a.textContent.trim() }
-        });
-      }
-    });
-    if (questions.length > 0) {
-      var el = document.createElement('script');
-      el.type = 'application/ld+json';
-      el.textContent = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":questions});
-      document.head.appendChild(el);
-    }
-  }
-  var hasLB = [].slice.call(document.querySelectorAll('script[type="application/ld+json"]')).some(function(s) {
-    try { return JSON.parse(s.textContent)['@type'] === 'LocalBusiness'; } catch(e) { return false; }
-  });
-  if (!hasLB) {
-    var m = window.location.pathname.match(/\/renovlies-([^\/]+)\//);
-    if (m) {
-      var city = m[1].replace(/-/g,' ');
-      city = city.charAt(0).toUpperCase() + city.slice(1);
-      var el2 = document.createElement('script');
-      el2.type = 'application/ld+json';
-      el2.textContent = JSON.stringify({
-        "@context":"https://schema.org",
-        "@type":"LocalBusiness",
-        "name":"Den Hartog Wandafwerking",
-        "image":"https://dhwandafwerking.nl/Images/Untitled%20design%20(7).png",
-        "description":"Specialist in renovlies aanbrengen en wandafwerking in " + city + " en omgeving.",
-        "address":{"@type":"PostalAddress","streetAddress":"Planetenlaan 406","addressLocality":"Dordrecht","postalCode":"3317 GE","addressCountry":"NL"},
-        "telephone":"+31640837590",
-        "email":"lucd.hartog@gmail.com",
-        "priceRange":"\u20AC15,00 - \u20AC17,50",
-        "areaServed":{"@type":"City","name":city},
-        "url":"https://denhartog-wandafwerking.nl" + window.location.pathname,
-        "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}
-      });
-      document.head.appendChild(el2);
-    }
-  }
-})();
-</script><script>
-(function(){
-  var h1 = document.querySelector('h1');
-  if(h1 && window.location.pathname === '/'){
-    var span = h1.querySelector('span');
-    if(span){ span.textContent = 'Behangen Specialist'; }
-    h1.childNodes[0].textContent = 'Renovlies & ';
-  }
-})();
-</script><script src="/internal-links.js"></script></body>
+<div class="topbar"><div class="wrap"><span>Offerte binnen 24 uur</span><span>Vaste prijs per m², geen verrassingen</span><span>Werkzaam door heel Nederland</span></div></div>
+<header class="nav"><div class="wrap">
+  <a href="/" class="logo" aria-label="Den Hartog Wandafwerking, naar de homepage"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span><span class="logo-text"><b>Den Hartog</b><small>Wandafwerking</small></span></a>
+  <nav aria-label="Hoofdmenu"><ul class="menu"><li><a href="/#diensten">Diensten</a></li><li><a href="/#pakketten">Prijzen</a></li><li><a href="/#projecten">Projecten</a></li><li><a href="/#over-ons">Over ons</a></li><li><a href="/burenkorting/">Burenkorting</a></li><li><a href="/blog/">Blog</a></li><li><a href="/prijscalculator/">Prijscalculator</a></li></ul></nav>
+  <a href="tel:+31640837590" class="nav-tel" aria-label="Bel 06 408 37 590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>06 408 37 590</span></a>
+  <a href="/#offerte" class="btn btn-p">Gratis offerte</a>
+  <button type="button" class="burger" aria-label="Menu openen" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main><section class="page-hero"><div class="wrap">
+  <div class="stack" style="gap:18px"><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Home</a> › <a href="/#diensten">Diensten</a> › Glasvezelbehang</nav><h1>Glasvezelbehang laten aanbrengen, voorgeschilderd en direct gesausd</h1><p class="lead">Wij brengen standaard <strong>200 gram voorgeschilderd glasvlies</strong> aan en sauzen het daarna dekkend af. Eén vaste prijs van <strong>€19,50 per m² inclusief btw</strong>, materiaal en afvoer. Geen voorrijkosten, geen aanbetaling, offerte binnen 24 uur.</p></div>
+  <div class="card pad stack" style="border:1px solid var(--line)">
+    <span class="eyebrow">Sneller: plattegrond sturen</span>
+    <p class="muted">App je plattegrond en je krijgt binnen 24 uur een vaste prijs. Meten hoeft niet.</p>
+    <a class="btn btn-s" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>Stuur via WhatsApp</a>
+  </div>
+</div></section><section class="section tight"><div class="wrap stack" style="gap:20px"><h2>Wat kost glasvezelbehang per m²?</h2><div class="table-wrap"><table class="t"><tr><th>Wat</th><th>Wat je krijgt</th><th class="r">Prijs per m² incl. btw</th></tr><tr><td><strong>Glasvlies Premium</strong></td><td>Wanden schuren, 200 g voorgeschilderd glasvlies, naden gekit, dekkend gesausd in schrobklasse 1 muurverf</td><td class="num">€19,50</td></tr><tr><td><strong>Ter vergelijking: Premium Plus</strong></td><td>Renovlies 150 g + sauzen in meerdere kleuren</td><td class="num">€17,50</td></tr><tr><td><strong>Ter vergelijking: Alles-in-één</strong></td><td>Renovlies 150 g + sauzen in één lichte kleur</td><td class="num">€15,00</td></tr></table></div><p class="muted">Prijzen gelden vanaf 100 m² wand. Bekijk ook alle <a href="/wat-kost-behangen-en-sauzen/">prijzen en pakketten</a> of reken het uit met de <a href="/prijscalculator/">prijscalculator</a>.</p></div></section><section class="section tight"><div class="wrap"><div class="grid" style="grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:start" id="gv-grid"><div class="stack" style="gap:20px"><h2>Rekenvoorbeelden glasvezelbehang</h2><div class="table-wrap"><table class="t"><tr><th>Woning</th><th>Wand</th><th class="r">Glasvlies Premium</th><th class="r">Met 5% burenkorting</th></tr><tr><td><strong>Appartement</strong></td><td>180 m²</td><td class="num">€3.510</td><td class="num">€3.334,50</td></tr><tr><td><strong>Tussenwoning</strong></td><td>240 m²</td><td class="num">€4.680</td><td class="num">€4.446</td></tr><tr><td><strong>Hoekwoning / 2-onder-1-kap</strong></td><td>300 m²</td><td class="num">€5.850</td><td class="num">€5.557,50</td></tr></table></div><p class="muted">Bedragen inclusief btw en materiaal. Je exacte wandoppervlak rekenen we uit van je plattegrond.</p></div>
+<div class="card pad stack" style="background:var(--green);color:#fff"><h3 style="color:#fff">Altijd inbegrepen</h3><div class="checks" style="color:#EDE5D7"><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Wanden schuren en stofvrij maken</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Alle materialen: vlies, lijm, kit, schrobklasse 1 muurverf</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Naden en kieren professioneel gekit</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Vloeren en kozijnen afgedekt</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Geen voorrijkosten en geen parkeerkosten</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Geen aanbetaling, betalen binnen 7 dagen na oplevering</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>6 maanden garantie op papier</span></div></div></div>
+</div></div></section>
+<style>@media (max-width:860px){#gv-grid{grid-template-columns:1fr!important}}</style><section class="section tight"><div class="wrap stack" style="gap:20px"><div class="prose"><h2>Wat is glasvezelbehang?</h2>
+<p>Glasvezelbehang, ook glasvliesbehang of kortweg glasvlies genoemd, is een glad vlies van geperste glasvezels. Na het plakken en sauzen zie je het behang niet meer: de wand oogt als strak stucwerk. Omdat glas niet krimpt of uitzet, blijven de naden dicht en vangt het vlies de kleine haarscheurtjes op die in vrijwel elke nieuwbouwwand ontstaan.</p>
+<h2>Waarom wij voorgeschilderd glasvlies gebruiken</h2>
+<p>Voorgeschilderd glasvlies krijgt in de fabriek al een grondlaag. Dat heeft twee voordelen. De muurverf trekt minder diep in het vlies, waardoor de eindlaag egaler en dekkender wordt. En de wand is sneller klaar, omdat we niet eerst zelf een voorstrijklaag hoeven aan te brengen. Daarna sauzen we de wand dekkend in de kleur die je kiest, met schrobklasse 1 muurverf die je later gewoon kunt afnemen.</p>
+<h2>200 gram glasvlies of 150 gram renovlies?</h2>
+<p>Beide geven een strakke, naadloze wand. Het verschil zit in sterkte en prijs. Glasvlies van 200 gram is harder en stootvaster. Renovlies van 150 gram is van cellulose- en polyestervezels, voelt iets zachter aan en is goedkoper. Veel klanten combineren: glasvlies in de hal, het trapgat en de kinderkamers, renovlies in de rest van het huis. Meer weten? Lees <a href="/renovlies-glasvlies-of-stucen/">renovlies, glasvlies of stucen</a>.</p></div><div class="table-wrap"><table class="t"><tr><th></th><th>Glasvlies 200 g (voorgeschilderd)</th><th>Renovlies 150 g</th></tr><tr><td>Materiaal</td><td>Glasvezel</td><td>Cellulose en polyester</td></tr><tr><td>Stootvastheid</td><td>Hoog</td><td>Goed</td></tr><tr><td>Scheuroverbruggend</td><td>Ja</td><td>Ja</td></tr><tr><td>Later overschilderbaar</td><td>Ja, vele keren</td><td>Ja</td></tr><tr><td>Prijs met sauzen</td><td>€19,50 per m²</td><td>€15,00 – €17,50 per m²</td></tr><tr><td>Ideaal voor</td><td>Hal, trapgat, kinderkamer, verhuur</td><td>Woonkamer, slaapkamers, hele woning</td></tr></table></div></div></section><section class="section tight"><div class="wrap stack" style="gap:20px"><h2>Wanneer kies je voor glasvezelbehang?</h2><div class="grid g3"><div class="card pad stack" style="gap:10px"><span class="eyebrow">Drukke ruimtes</span><h3>Hal en trapgat</h3><p class="muted">Waar tassen, kinderwagens en verhuisdozen langs de muur gaan, houdt glasvlies het langer mooi.</p></div><div class="card pad stack" style="gap:10px"><span class="eyebrow">Gezin</span><h3>Kinderkamers en speelhoek</h3><p class="muted">Een stootje of een vlek is geen drama: schrobklasse 1 verf kun je afnemen en het vlies is stevig.</p></div><div class="card pad stack" style="gap:10px"><span class="eyebrow">Verhuur</span><h3>Woningen met wisselende huurders</h3><p class="muted">Bij een nieuwe huurder alleen opnieuw sauzen, niet opnieuw behangen of stucen.</p></div></div></div></section><section class="section tight"><div class="wrap stack" style="gap:20px"><h2>Zo brengen we glasvezelbehang aan</h2><div class="table-wrap"><table class="t"><tr><th>Stap</th><th>Wat we doen</th></tr><tr><td><strong>1. Offerte</strong></td><td>Je stuurt je plattegrond; wij rekenen het wandoppervlak uit en je hebt binnen 24 uur een vaste prijs.</td></tr><tr><td><strong>2. Voorbereiden</strong></td><td>Vloeren en kozijnen afdekken, wanden schuren en stofvrij maken.</td></tr><tr><td><strong>3. Plakken</strong></td><td>Voorgeschilderd glasvlies van 200 gram baan voor baan aanbrengen, strak gesneden langs plafond, plinten en kozijnen.</td></tr><tr><td><strong>4. Kitten</strong></td><td>Hoeken, naden en aansluitingen afkitten, zodat er geen kieren zichtbaar blijven.</td></tr><tr><td><strong>5. Sauzen</strong></td><td>Dekkend sauzen met schrobklasse 1 muurverf in de kleur die je kiest.</td></tr><tr><td><strong>6. Oplevering</strong></td><td>We lopen samen alle wanden na en laten de woning schoon achter. Je betaalt binnen 7 dagen.</td></tr></table></div><p class="muted">Het complete traject voor nieuwbouw lees je in het <a href="/stappenplan-nieuwbouw/">stappenplan nieuwbouw</a>.</p></div></section><section class="section tight"><div class="wrap stack" style="gap:20px"><div class="prose"><h2>Zelf glasvezelbehang aanbrengen of laten doen?</h2>
+<p>Glasvezelbehang wordt meestal verkocht op rollen van 1 meter breed en 50 meter lang, dus 50 m² per rol. Zelf doen scheelt arbeidsloon, maar vraagt een behangtafel, lijmroller, kitspuit en een paar vrije dagen per verdieping. Het lastigste deel is niet het plakken, maar de naden en hoeken zo afwerken dat je ze na het sauzen niet meer ziet. Laat je het ons doen, dan zit het materiaal in de m²-prijs en heb je <a href="/garantie-en-verzekering/">6 maanden garantie</a> op het resultaat.</p></div></div></section><section class="section tight"><div class="wrap split"><h2>Veelgestelde vragen over glasvezelbehang</h2><div class="faq"><details><summary>Wat kost glasvezelbehang per m²?</summary><p>Bij ons kost glasvezelbehang (200 gram voorgeschilderd glasvlies) inclusief sauzen €19,50 per m² wand, inclusief 21% btw, materiaal, schuren, kitwerk en afvoer. De prijs geldt vanaf 100 m² wand. Voor een tussenwoning met 240 m² wand kom je op €4.680.</p></details><details><summary>Is glasvezelbehang hetzelfde als glasvliesbehang?</summary><p>Ja. Glasvezelbehang, glasvliesbehang, glasvlies en glasweefsel zonder structuur zijn namen voor hetzelfde type behang: een glad vlies van glasvezels dat je na het plakken sauzt. Renovlies lijkt erop, maar is gemaakt van cellulose- en polyestervezels.</p></details><details><summary>Moet voorgeschilderd glasvlies nog gesausd worden?</summary><p>Ja. Voorgeschilderd betekent dat het vlies in de fabriek een grondlaag heeft gekregen. Daardoor zuigt het minder verf op en wordt de eindlaag egaler, maar het is geen afwerking. Wij sauzen het daarna dekkend met schrobklasse 1 muurverf; dat zit in de prijs.</p></details><details><summary>Hoeveel m² is een rol glasvezelbehang van 50 meter?</summary><p>Een rol van 1 meter breed en 50 meter lang is 50 m². Reken voor snijverlies rond ramen, deuren en in het trapgat op zo’n 10 tot 15% extra. Voor een tussenwoning met 240 m² wand heb je dan ongeveer 6 rollen nodig. Laat je het door ons doen, dan hoef je zelf niets te bestellen: het materiaal zit in de m²-prijs.</p></details><details><summary>Hebben jullie een aanbieding op glasvezelbehang?</summary><p>Wij werken niet met tijdelijke acties, maar met één vaste prijs. Wel krijg je 5% burenkorting als je samen met een buur uit hetzelfde project boekt. Er komen geen voorrijkosten, parkeerkosten of nacalculatie bij en je betaalt pas na oplevering.</p></details><details><summary>Is 200 gram glasvlies beter dan 150 gram renovlies?</summary><p>Het is sterker en stootvaster. Glasvlies kies je voor wanden die het zwaar krijgen: de hal, het trapgat, kinderkamers of een verhuurwoning. Voor de meeste nieuwbouwwanden is renovlies 150 gram ook prima en goedkoper. We adviseren per ruimte; combineren mag.</p></details><details><summary>Brengen jullie glasvezelbehang ook op het plafond aan?</summary><p>Nee, wij werken alleen wanden af. Plafonds tellen ook niet mee in het wandoppervlak van je offerte.</p></details><details><summary>Hoe lang duurt het aanbrengen van glasvezelbehang?</summary><p>Voor een appartement rekenen we 3 tot 4 werkdagen, een tussenwoning 4 tot 6 en een hoekwoning of 2-onder-1-kap 5 tot 8 werkdagen, inclusief schuren, kitten en sauzen. Je hoeft er niet bij te zijn.</p></details></div></div></section><section class="section tight"><div class="wrap"><div class="cta">
+  <div class="stack" style="gap:8px"><h2>Wat kost glasvezelbehang in jouw woning?</h2><p>Gratis offerte binnen 24 uur. App je plattegrond naar 06 408 37 590.</p></div>
+  <div class="btns"><a class="btn btn-c" href="/#offerte">Gratis offerte aanvragen</a><a class="btn btn-w" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a></div>
+</div></div></section></main><footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div class="col"><span class="brand">Den Hartog Wandafwerking</span><p style="max-width:360px">Behangen en sauzen voor nieuwbouw en renovatie. Twee broers uit Dordrecht, werkzaam door heel Nederland.</p><span>KvK 65078853 · Planetenlaan 406, Dordrecht</span></div>
+    <div class="col"><strong>Diensten</strong><a href="/renovlies-behangen/">Renovlies behangen</a><a href="/glasvliesbehang/">Glasvlies behangen</a><a href="/latex-spuiten/">Sauzen en latex spuiten</a><a href="/wat-kost-behangen-en-sauzen/">Prijzen en pakketten</a><a href="/prijscalculator/">Prijscalculator</a></div>
+    <div class="col"><strong>Informatie</strong><a href="/renovlies-glasvlies-of-stucen/">Renovlies, glasvlies of stucen?</a><a href="/stappenplan-nieuwbouw/">Stappenplan nieuwbouw</a><a href="/garantie-en-verzekering/">Garantie en verzekering</a><a href="/burenkorting/">Burenkorting</a><a href="/blog/">Blog</a></div>
+    <div class="col"><strong>Contact</strong><a href="tel:+31640837590">06 408 37 590</a><a href="https://wa.me/31640837590">WhatsApp</a><a href="mailto:lucd.hartog@gmail.com">lucd.hartog@gmail.com</a><span>Ma–vr 08:00–18:00 · za 09:00–17:00</span><span>Werkzaam in onder meer <a href="/renovlies-dordrecht/">Dordrecht</a>, <a href="/renovlies-rotterdam/">Rotterdam</a>, <a href="/renovlies-utrecht/">Utrecht</a>, <a href="/renovlies-den-haag/">Den Haag</a>, <a href="/renovlies-almere/">Almere</a>, <a href="/renovlies-lelystad/">Lelystad</a>, <a href="/renovlies-amersfoort/">Amersfoort</a> en <a href="/renovlies-breda/">Breda</a></span></div>
+  </div>
+  <div class="bottom"><span>© 2026 Den Hartog Wandafwerking</span><div><a href="/privacybeleid/">Privacybeleid</a><a href="/algemene-voorwaarden/">Algemene voorwaarden</a></div></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-s" href="tel:+31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Bellen</a><a class="btn btn-p" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a></div>
+<script src="/assets/site.js?v=1" defer></script>
+</body>
 </html>
