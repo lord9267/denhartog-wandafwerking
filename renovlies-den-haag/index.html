@@ -1,449 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renovlies Den Haag | Specialist Wandafwerking - Den Hartog</title>
-    <meta name="description" content="Renovlies specialist in Den Haag. Strakke, naadloze wanden voor nieuwbouw en renovatie. Vanaf €15,00/m². Gratis offerte binnen 24 uur. 10+ jaar ervaring.">
-    <link rel="canonical" href="https://denhartog-wandafwerking.nl/renovlies-den-haag/">
-    <meta property="og:title" content="Renovlies Den Haag | Specialist Wandafwerking - Den Hartog">
-    <meta property="og:description" content="Renovlies specialist in Den Haag. Strakke, naadloze wanden voor nieuwbouw en renovatie. Vanaf €15,00/m². Gratis offerte binnen 24 uur. 10+ jaar ervaring.">
-    <meta property="og:url" content="https://denhartog-wandafwerking.nl/renovlies-den-haag/">
-    <meta property="og:type" content="website">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-        :root {
-            --primary: #CD7F32;
-            --primary-dark: #b36b28;
-            --text: #1f2937;
-            --text-light: #6b7280;
-            --bg: #fff;
-            --bg-light: #f9fafb;
-            --bg-dark: #0d0d1a;
-            --bg-dark2: #1a1a2e;
-            --border: #e5e7eb;
-            --success: #10b981;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.6; font-size: 16px; }
-        .navbar { background: rgba(13,13,26,0.97); padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
-        .navbar-brand { color: #fff; font-size: 1.25rem; font-weight: 800; text-decoration: none; }
-        .navbar-brand span { color: var(--primary); }
-        .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
-        .nav-links a { color: rgba(255,255,255,.7); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: color .2s; }
-        .nav-links a:hover { color: #fff; }
-        .nav-cta { background: var(--primary) !important; color: #fff !important; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 700 !important; }
-        .breadcrumb { background: var(--bg-light); padding: 0.7rem 2rem; font-size: 0.85rem; color: var(--text-light); border-bottom: 1px solid var(--border); }
-        .breadcrumb a { color: var(--primary); text-decoration: none; font-weight: 500; }
-        .hero { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #1a2a1a 100%); color: #fff; padding: 4rem 2rem; text-align: center; }
-        .hero h1 { font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
-        .hero h1 span { color: var(--primary); }
-        .hero p { font-size: 1.1rem; max-width: 650px; margin: 0 auto; opacity: 0.85; line-height: 1.7; }
-        .hero-badges { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
-        .hero-badge { background: rgba(255,255,255,.08); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
-        .section { padding: 3.5rem 2rem; max-width: 900px; margin: 0 auto; }
-        .section-wide { padding: 3.5rem 2rem; max-width: 1100px; margin: 0 auto; }
-        .section-alt { background: var(--bg-light); }
-        h2 { font-size: 1.9rem; font-weight: 800; color: var(--text); margin-bottom: 1rem; margin-top: 2.5rem; }
-        h2:first-child { margin-top: 0; }
-        h3 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; margin-top: 1.5rem; }
-        p { margin-bottom: 1rem; color: var(--text); }
-        .article-content ul { margin: 1rem 0 1.5rem 0; padding: 0; list-style: none; }
-        .article-content li { padding: 0.5rem 0 0.5rem 1.5rem; position: relative; }
-        .article-content li::before { content: "\2713"; color: var(--success); font-weight: 700; position: absolute; left: 0; }
-        .highlight-box { background: linear-gradient(135deg, rgba(205,127,50,.08), rgba(205,127,50,.04)); border-left: 4px solid var(--primary); padding: 1.5rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; }
-        .highlight-box strong { color: var(--primary-dark); }
-        .voordelen-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
-        .voordeel-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 1.8rem; text-align: center; transition: transform .2s, box-shadow .2s; }
-        .voordeel-card:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,.06); }
-        .voordeel-icon { font-size: 2rem; margin-bottom: 0.8rem; }
-        .voordeel-card h4 { font-weight: 700; margin-bottom: 0.5rem; font-size: 1.05rem; }
-        .voordeel-card p { font-size: 0.95rem; color: var(--text-light); margin: 0; }
-        .pakketten-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; margin-top: 2rem; }
-        .pakket-card { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: #fff; transition: box-shadow .2s; }
-        .pakket-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,.08); }
-        .pakket-card.featured { border: 2px solid var(--primary); }
-        .pakket-header { background: var(--bg-dark); color: #fff; padding: 1.5rem; text-align: center; }
-        .pakket-card.featured .pakket-header { background: linear-gradient(135deg, #0d0d1a, #1a1a2e); }
-        .pakket-header h3 { color: #fff; margin: 0; font-size: 1.15rem; }
-        .pakket-prijs { font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0; color: var(--primary); }
-        .pakket-prijs small { font-size: 0.85rem; font-weight: 400; color: rgba(255,255,255,.6); }
-        .pakket-body { padding: 1.5rem; }
-        .pakket-body ul { list-style: none; padding: 0; margin: 0; }
-        .pakket-body li { padding: 0.45rem 0; border-bottom: 1px solid #f3f4f6; font-size: 0.9rem; }
-        .pakket-body li::before { content: "\2713  "; color: var(--success); font-weight: 700; }
-        .pakket-cta { display: block; text-align: center; background: var(--primary); color: #fff; padding: 0.85rem; text-decoration: none; font-weight: 700; font-size: 1rem; margin: 1rem 1.5rem 1.5rem; border-radius: 8px; transition: background .2s; }
-        .pakket-cta:hover { background: var(--primary-dark); }
-        .werkgebied-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.3rem; margin-top: 1rem; }
-        .werkgebied-list span { padding: 0.35rem 0; font-size: 0.95rem; }
-        .werkgebied-list span::before { content: "\1F4CD "; }
-        .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 0.7rem; overflow: hidden; }
-        .faq-question { padding: 1rem 1.2rem; background: #fff; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center; font-size: 0.95rem; }
-        .faq-question:hover { background: var(--bg-light); }
-        .faq-answer { padding: 0 1.2rem 1rem; display: none; color: var(--text-light); font-size: 0.95rem; }
-        .faq-item.open .faq-answer { display: block; }
-        .faq-arrow { transition: transform .2s; font-size: 0.8rem; }
-        .faq-item.open .faq-arrow { transform: rotate(180deg); }
-        .cta-banner { background: linear-gradient(135deg, #0d0d1a 0%, #1a1a2e 60%, #1a2a1a 100%); color: #fff; padding: 3.5rem 2rem; text-align: center; }
-        .cta-banner h2 { color: #fff; margin-top: 0; }
-        .cta-banner p { color: rgba(255,255,255,.8); max-width: 550px; margin: 0 auto 1.5rem; }
-        .cta-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-        .btn-primary { background: var(--primary); color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 700; transition: background .2s; }
-        .btn-primary:hover { background: var(--primary-dark); }
-        .btn-outline { background: transparent; color: #fff; padding: 0.85rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid rgba(255,255,255,.25); transition: background .2s; }
-        .btn-outline:hover { background: rgba(255,255,255,.08); }
-        .keyword-footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 3rem 2rem; border-top: 1px solid rgba(255,255,255,.08); }
-        .keyword-footer-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .keyword-footer h4 { font-size: 1.1rem; margin-bottom: 1rem; color: #fff; font-weight: 700; }
-        .keyword-footer ul { list-style: none; padding: 0; }
-        .keyword-footer li { padding: 0.25rem 0; }
-        .keyword-footer a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
-        .keyword-footer a:hover { color: var(--primary); }
-        .footer { background: var(--bg-dark); color: rgba(255,255,255,.7); padding: 2rem 2rem; border-top: 1px solid rgba(255,255,255,.06); }
-        .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; }
-        .footer a { color: rgba(255,255,255,.5); text-decoration: none; }
-        .footer a:hover { color: var(--primary); }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .nav-links { display: none; }
-            .keyword-footer-inner { grid-template-columns: 1fr; }
-            .pakketten-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WKSG3S5MW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4WKSG3S5MW');</script><script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Den Hartog Wandafwerking - Den Haag",
-  "description": "Renovlies specialist in Den Haag. Strakke, naadloze wanden voor nieuwbouw en renovatie.",
-  "url": "https://denhartog-wandafwerking.nl/renovlies-den-haag/",
-  "telephone": "+31640837590",
-  "image": "https://denhartog-wandafwerking.nl/Images/Assets/logo.png",
-  "priceRange": "€€",
-  "areaServed": {
-    "@type": "City",
-    "name": "Den Haag"
-  },
-  "@id": "https://denhartog-wandafwerking.nl/renovlies-den-haag/#business"
-}
-</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renovlies Den Haag | Behangen &amp; sauzen v.a. €15/m²</title>
+<meta name="description" content="Renovlies of glasvezelbehang in Den Haag, inclusief sauzen, vanaf €15/m² incl. btw. Nieuwbouw in Ypenburg en Leidschenveen, renovatie van oudere woningen.">
+<link rel="canonical" href="https://denhartog-wandafwerking.nl/renovlies-den-haag/">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Renovlies Den Haag | Behangen &amp; sauzen v.a. €15/m²">
+<meta property="og:description" content="Renovlies of glasvezelbehang in Den Haag, inclusief sauzen, vanaf €15/m² incl. btw. Nieuwbouw in Ypenburg en Leidschenveen, renovatie van oudere woningen.">
+<meta property="og:url" content="https://denhartog-wandafwerking.nl/renovlies-den-haag/">
+<meta property="og:image" content="https://denhartog-wandafwerking.nl/assets/img/oude-weteringen/oude-weteringen-04-1600.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F5D50">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232F5D50'/%3E%3Cpath d='M11 13h18M11 20h18M11 27h11' stroke='%23F4EFE6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://denhartog-wandafwerking.nl/"}, {"@type": "ListItem", "position": 2, "name": "Werkgebied", "item": "https://denhartog-wandafwerking.nl/#over-ons"}, {"@type": "ListItem", "position": 3, "name": "Renovlies Den Haag", "item": "https://denhartog-wandafwerking.nl/renovlies-den-haag/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Wat kost renovlies met sauzen in Den Haag?", "acceptedAnswer": {"@type": "Answer", "text": "Alles-in-één kost €15 per m² wand inclusief btw, Premium Plus met meerdere kleuren €17,50 en glasvlies met sauzen €19,50, vanaf 100 m² wand."}}, {"@type": "Question", "name": "Kan renovlies over oude wanden in een bestaande woning?", "acceptedAnswer": {"@type": "Answer", "text": "Vaak wel, mits de ondergrond goed hecht. Losse lagen halen we eerst weg. Op basis van foto’s zie je vooraf in de offerte wat nodig is."}}, {"@type": "Question", "name": "Rekenen jullie parkeerkosten?", "acceptedAnswer": {"@type": "Answer", "text": "Voorrijkosten niet. Eventuele parkeerkosten staan vooraf apart in de offerte."}}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Renovlies en sauzen in Den Haag", "serviceType": "Wandafwerking met renovlies en glasvlies", "provider": {"@type": "LocalBusiness", "name": "Den Hartog Wandafwerking", "telephone": "+31640837590", "address": {"@type": "PostalAddress", "streetAddress": "Planetenlaan 406", "addressLocality": "Dordrecht", "addressCountry": "NL"}, "url": "https://denhartog-wandafwerking.nl/"}, "areaServed": {"@type": "City", "name": "Den Haag"}, "offers": {"@type": "Offer", "price": "15.00", "priceCurrency": "EUR", "description": "Per m² wand, inclusief btw, renovlies + sauzen, vanaf 100 m²"}}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WKSG3S5MW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4WKSG3S5MW');</script>
 </head>
 <body>
-<nav class="navbar">
-    <a href="https://denhartog-wandafwerking.nl" class="navbar-brand">Den Hartog <span>Wandafwerking</span></a>
-    <ul class="nav-links">
-        <li><a href="https://denhartog-wandafwerking.nl">Home</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#diensten">Diensten</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#projecten">Projecten</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#over-ons">Over ons</a></li>
-        <li><a href="/burenkorting/">Burenkorting</a></li>
-        <li><a href="https://denhartog-wandafwerking.nl/#contact" class="nav-cta">Gratis Offerte</a></li>
-    </ul>
-</nav>
-<div class="breadcrumb">
-    <a href="https://denhartog-wandafwerking.nl">Home</a> &rsaquo; <strong>Renovlies Den Haag</strong>
-</div>
-<section class="hero">
-    <h1>Renovlies in <span>Den Haag</span></h1>
-    <p>Specialist in renovlies behang en wandafwerking in Den Haag en omgeving. Strakke, naadloze muren voor nieuwbouw en renovatie.</p>
-    <div class="hero-badges">
-        <span class="hero-badge">10+ jaar ervaring</span>
-        <span class="hero-badge">Offerte binnen 24 uur</span>
-        <span class="hero-badge">Vanaf &euro;15,00/m&sup2;</span>
-        <span class="hero-badge">Geen aanbetaling</span>
-    </div>
-</section>
-<div class="section article-content">
-    <h2>Renovlies specialist in Den Haag</h2>
-    <p>Bent u op zoek naar een ervaren renovlies specialist in Den Haag? Den Hartog Wandafwerking is uw vakkundige partner voor het aanbrengen van renovlies behang in Den Haag en de gehele regio. Of het nu gaat om een nieuwbouwwoning, een renovatieproject of een bedrijfspand &mdash; wij zorgen voor strakke, naadloze wanden met een professionele afwerking die u jarenlang plezier geeft.</p>
-    <p>In Den Haag en omgeving hebben wij talloze woningen voorzien van renovlies. De nieuwbouwwijken Ypenburg, Leidschenveen en Wateringse Veld zijn bekende gebieden waar onze vakmensen regelmatig aan het werk zijn.</p>
-    <h3>Volledige wandafwerking in Den Haag</h3>
-    <p>Wij verzorgen het complete traject: van het professioneel schuren van de wanden, het aanbrengen van hoogwaardig 150 grams renovlies, tot het netjes afkitten en dekkend sauzen in de kleur van uw keuze. U hoeft zich nergens zorgen over te maken &mdash; wij regelen alles van A tot Z en leveren pas op als u volledig tevreden bent.</p>
-    <p>Den Haag en de omliggende gemeenten kennen een bloeiende woningmarkt. Of het nu gaat om een statige woning in Wassenaar of een modern appartement in Rijswijk, wij passen onze werkwijze aan elke situatie aan voor het beste resultaat.</p>
-    <div class="highlight-box">
-        <strong>Waarom Den Hartog in Den Haag?</strong> Meer dan 10 jaar ervaring, vaste m&sup2;-prijzen zonder verborgen kosten, geen aanbetaling en 6 maanden garantie. Wij zijn pas tevreden als u dat bent.
-    </div>
-</div>
-<div class="section-alt">
-    <div class="section">
-        <h2>Waarom renovlies in Den Haag?</h2>
-        <div class="voordelen-grid">
-            <div class="voordeel-card">
-                <div class="voordeel-icon">&#9889;</div>
-                <h4>Snelle oplevering</h4>
-                <p>Een tussenwoning is in 4 tot 6 werkdagen klaar. Ideaal bij nieuwbouw met strakke planningen.</p>
-            </div>
-            <div class="voordeel-card">
-                <div class="voordeel-icon">&#128170;</div>
-                <h4>Stoot- en krasvast</h4>
-                <p>Aanzienlijk sterker dan stucwerk. Ideaal voor gezinnen met kinderen of huisdieren.</p>
-            </div>
-            <div class="voordeel-card">
-                <div class="voordeel-icon">&#128176;</div>
-                <h4>Scherpe vaste prijs</h4>
-                <p>Vanaf &euro;15,00/m&sup2; all-in. Geen verborgen kosten, geen verrassingen achteraf.</p>
-            </div>
-            <div class="voordeel-card">
-                <div class="voordeel-icon">&#127912;</div>
-                <h4>Elke kleur mogelijk</h4>
-                <p>Renovlies wordt gesausd in de kleur van uw keuze. Later eenvoudig overschilderen.</p>
-            </div>
-            <div class="voordeel-card">
-                <div class="voordeel-icon">&#128293;</div>
-                <h4>Brandveilig</h4>
-                <p>Glasvezelbehang is brandvertragend en voldoet aan de strengste veiligheidsnormen.</p>
-            </div>
-            <div class="voordeel-card">
-                <div class="voordeel-icon">&#128736;</div>
-                <h4>Scheuroverbruggend</h4>
-                <p>Overbrugt haarscheuren en voorkomt zichtbare scheuren bij nieuwbouw. Zorgeloos wonen.</p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section-alt">
-    <div class="section-wide">
-        <h2>Onze pakketten</h2>
-        <p>Transparante, vaste prijzen. Inclusief materiaal, arbeid en opruimen. Geen aanbetaling nodig.</p>
-        <div class="pakketten-grid">
-            <div class="pakket-card featured">
-                <div class="pakket-header">
-                    <h3>Alles-in-een Pakket</h3>
-                    <div class="pakket-prijs">&euro;15,00 <small>/m&sup2; incl. BTW</small></div>
-                    <small style="color:rgba(255,255,255,.5)">Vanaf 100m&sup2;</small>
-                </div>
-                <div class="pakket-body">
-                    <ul>
-                        <li>Wanden professioneel schuren</li>
-                        <li>Aanbrengen van 150 grams renovlies</li>
-                        <li>Alle naden en kieren professioneel gekit</li>
-                        <li>Dekkend sauzen in één lichte kleur naar keuze</li>
-                        <li>Inclusief materiaal: renovlies + lijm + kit + muurverf</li>
-                        <li>Bouwafval netjes afgevoerd</li>
-                        <li>Geen verborgen kosten (incl. voorrijkosten)</li>
-                        <li>Geen aanbetaling</li>
-                        <li>6 maanden garantie</li>
-                    </ul>
-                    <a href="https://denhartog-wandafwerking.nl/#contact" class="pakket-cta">Offerte aanvragen &rarr;</a>
-                </div>
-            </div>
-            <div class="pakket-card">
-                <div class="pakket-header">
-                    <h3>Premium Plus Pakket</h3>
-                    <div class="pakket-prijs">&euro;17,50 <small>/m&sup2; incl. BTW</small></div>
-                    <small style="color:rgba(255,255,255,.5)">Vanaf 100m&sup2;</small>
-                </div>
-                <div class="pakket-body">
-                    <ul>
-                        <li>Wanden professioneel schuren</li>
-                        <li>Aanbrengen van 150 grams renovlies</li>
-                        <li>Alle naden en kieren professioneel gekit</li>
-                        <li>Dekkend schilderen in alle kleuren naar uw wens</li>
-                        <li>Inclusief materiaal: renovlies + lijm + kit + muurverf</li>
-                        <li>Bouwafval netjes afgevoerd</li>
-                        <li>Geen verborgen kosten (incl. voorrijkosten)</li>
-                        <li>Geen aanbetaling</li>
-                        <li>6 maanden garantie</li>
-                    </ul>
-                    <a href="https://denhartog-wandafwerking.nl/#contact" class="pakket-cta">Offerte aanvragen &rarr;</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="section">
-    <h2>Werkgebied in en rondom Den Haag</h2>
-    <p>Wij zijn werkzaam in heel Den Haag en de omliggende gemeenten:</p>
-    <div class="werkgebied-list"><span>Ypenburg</span><span>Leidschenveen</span><span>Wateringse Veld</span><span>Mariahoeve</span><span>Bezuidenhout</span><span>Loosduinen</span><span>Wassenaar</span><span>Voorburg</span><span>Leidschendam</span><span>Rijswijk</span><span>Nootdorp</span><span>Zoetermeer</span><span>Pijnacker</span></div>
-    <p style="margin-top:1.2rem;">Staat uw locatie er niet bij? Neem gerust contact op. Wij zijn werkzaam door heel Nederland.</p>
-</div>
-<div class="section-alt">
-    <div class="section">
-        <h2>Veelgestelde vragen over renovlies in Den Haag</h2>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">Wat kost renovlies aanbrengen in Den Haag?<span class="faq-arrow">&#9660;</span></div>
-        <div class="faq-answer">Ons Alles-in-een pakket kost &euro;15,00 per m&sup2; (incl. BTW, vanaf 100m&sup2;). Dit is inclusief schuren, renovlies, kitten, sauzen in één lichte kleur en alle materialen. Het Premium Plus pakket met meerdere kleuren kost &euro;17,50 per m&sup2;. Geen verborgen kosten, geen aanbetaling.</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">Hoe snel kunnen jullie starten in Den Haag?<span class="faq-arrow">&#9660;</span></div>
-        <div class="faq-answer">Na uw aanvraag nemen wij binnen 24 uur contact op. Afhankelijk van de planning kunnen wij vaak binnen 1-2 weken starten. Een tussenwoning is meestal in 4 tot 6 werkdagen klaar, een appartement in 3 tot 4.</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">Werken jullie ook voor aannemers in Den Haag?<span class="faq-arrow">&#9660;</span></div>
-        <div class="faq-answer">Ja! Wij zijn vaste partner voor diverse aannemers en bieden speciale projectprijzen voor grotere volumes. Neem contact op om de mogelijkheden te bespreken.</div>
-    </div>
-    <div class="faq-item">
-        <div class="faq-question" onclick="toggleFaq(this)">Waarom kiezen voor Den Hartog in Den Haag?<span class="faq-arrow">&#9660;</span></div>
-        <div class="faq-answer">Met meer dan 10 jaar ervaring, transparante prijzen, 6 maanden garantie en geen aanbetaling bent u bij ons verzekerd van kwaliteit en zekerheid. Wij zijn pas tevreden als u dat bent.</div>
-    </div>
-    </div>
-</div>
-<section class="cta-banner">
-    <h2>Klaar voor strakke muren?</h2>
-    <p>Vraag vandaag nog een gratis, vrijblijvende offerte aan. Wij nemen binnen 24 uur contact op.</p>
-    <div class="cta-buttons">
-        <a href="tel:0640837590" class="btn-primary">Bel 06 408 37 590</a>
-        <a href="https://wa.me/31640837590" class="btn-outline">WhatsApp ons</a>
-        <a href="https://denhartog-wandafwerking.nl/#contact" class="btn-outline">Offerte aanvragen</a>
-    </div>
-</section>
-<div class="keyword-footer">
-    <div class="keyword-footer-inner">
-        <div>
-            <h4>Je vindt ons onder:</h4>
-            <ul>
-                <li><a href="/renovlies-behang/">Renovlies behang</a></li>
-                <li><a href="/wandafwerking-specialist/">Wandafwerking specialist</a></li>
-                <li><a href="/renovlies-aanbrengen/">Renovlies aanbrengen</a></li>
-                <li><a href="/nieuwbouw-behangen/">Nieuwbouw behangen</a></li>
-                <li><a href="/goedkoop-renovlies/">Goedkoop renovlies</a></li>
-                <li><a href="/voordelen-renovlies/">Voordelen renovlies</a></li>
-                <li><a href="/wandafwerking-nieuwbouw/">Wandafwerking nieuwbouw</a></li>
-                <li><a href="/renovlies-behangservice/">Renovlies behangservice</a></li>
-                <li><a href="/scanbehang/">Scanbehang</a></li>
-                <li><a href="/glasvliesbehang/">Glasvliesbehang</a></li>
-                <li><a href="/renovlies-prijs-per-m2/">Renovlies prijs per m2</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>In de regio:</h4>
-            <ul>
-                <li><a href="/renovlies-utrecht/">Renovlies Utrecht</a></li>
-                <li><a href="/renovlies-rotterdam/">Renovlies Rotterdam</a></li>
-                <li><a href="/renovlies-den-haag/">Renovlies Den Haag</a></li>
-                <li><a href="/renovlies-breda/">Renovlies Breda</a></li>
-                <li><a href="/renovlies-dordrecht/">Renovlies Dordrecht</a></li>
-                <li><a href="/renovlies-leiden/">Renovlies Leiden</a></li>
-                <li><a href="/renovlies-delft/">Renovlies Delft</a></li>
-                <li><a href="/renovlies-gouda/">Renovlies Gouda</a></li>
-                <li><a href="/renovlies-zoetermeer/">Renovlies Zoetermeer</a></li>
-                <li><a href="/renovlies-gorinchem/">Renovlies Gorinchem</a></li>
-                <li><a href="/renovlies-houten/">Renovlies Houten</a></li>
-                <li><a href="/renovlies-nieuwegein/">Renovlies Nieuwegein</a></li>
-                <li><a href="/renovlies-woerden/">Renovlies Woerden</a></li>
-                <li><a href="/renovlies-almere/">Renovlies Almere</a></li>
-                <li><a href="/renovlies-lelystad/">Renovlies Lelystad</a></li>
-                <li><a href="/renovlies-amersfoort/">Renovlies Amersfoort</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4>Meer over Den Hartog:</h4>
-            <ul>
-                <li><a href="/renovlies-of-stucen/">Renovlies of stucen</a></li>
-                <li><a href="/wat-kost-renovlies/">Wat kost renovlies?</a></li>
-                <li><a href="/renovlies-nieuwbouw/">Renovlies nieuwbouw</a></li>
-                <li><a href="/nieuwbouw-muren-afwerken/">Nieuwbouw muren afwerken</a></li>
-                <li><a href="/renovlies-vs-stucwerk/">Renovlies vs stucwerk</a></li>
-                <li><a href="/renovlies-ervaringen/">Renovlies ervaringen</a></li>
-                <li><a href="/nadelen-renovlies/">Nadelen renovlies</a></li>
-                <li><a href="/renovlies-behang-prijs/">Renovlies behang prijs</a></li>
-                <li><a href="/nieuwbouwwoning-behangklaar/">Nieuwbouwwoning behangklaar</a></li>
-                <li><a href="/renovlies-op-plafond/">Renovlies op plafond</a></li>
-                <li><a href="/sauzen-na-renovlies/">Sauzen na renovlies</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-<footer class="footer">
-    <div class="footer-inner">
-        <div>&copy; 2026 Den Hartog Wandafwerking | <a href="tel:0640837590">06 408 37 590</a> | <a href="mailto:lucd.hartog@gmail.com">lucd.hartog@gmail.com</a></div>
-        <div><a href="/privacybeleid/">Privacybeleid</a> | <a href="/algemene-voorwaarden/">Algemene voorwaarden</a></div>
-    </div>
-</footer>
-<script>function toggleFaq(el){el.parentElement.classList.toggle("open");}</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'telefoon_klik', { event_category: 'conversie', event_label: this.href });
-      }
-    });
-  });
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'email_klik', { event_category: 'conversie', event_label: this.href });
-      }
-    });
-  });
-  document.querySelectorAll('button').forEach(function(btn) {
-    if(btn.textContent.includes('Verstuur') || btn.textContent.includes('aanvraag')) {
-      btn.addEventListener('click', function() {
-        if(typeof gtag !== 'undefined') {
-          gtag('event', 'offerte_aanvraag', { event_category: 'conversie', event_label: 'formulier_submit' });
-        }
-      });
-    }
-  });
-  document.querySelectorAll('a[href*="#contact"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'offerte_klik', { event_category: 'conversie', event_label: el.textContent.trim() });
-      }
-    });
-  });
-});
-</script><script>
-(function() {
-  var faqItems = document.querySelectorAll('.faq-item');
-  if (faqItems.length > 0) {
-    var questions = [];
-    faqItems.forEach(function(item) {
-      var q = item.querySelector('.faq-question');
-      var a = item.querySelector('.faq-answer');
-      if (q && a) {
-        questions.push({
-          "@type": "Question",
-          "name": q.textContent.replace(/[\u25BC\u25B2]/g, '').trim(),
-          "acceptedAnswer": { "@type": "Answer", "text": a.textContent.trim() }
-        });
-      }
-    });
-    if (questions.length > 0) {
-      var el = document.createElement('script');
-      el.type = 'application/ld+json';
-      el.textContent = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":questions});
-      document.head.appendChild(el);
-    }
-  }
-  var hasLB = [].slice.call(document.querySelectorAll('script[type="application/ld+json"]')).some(function(s) {
-    try { return JSON.parse(s.textContent)['@type'] === 'LocalBusiness'; } catch(e) { return false; }
-  });
-  if (!hasLB) {
-    var m = window.location.pathname.match(/\/renovlies-([^\/]+)\//);
-    if (m) {
-      var city = m[1].replace(/-/g,' ');
-      city = city.charAt(0).toUpperCase() + city.slice(1);
-      var el2 = document.createElement('script');
-      el2.type = 'application/ld+json';
-      el2.textContent = JSON.stringify({
-        "@context":"https://schema.org",
-        "@type":"LocalBusiness",
-        "name":"Den Hartog Wandafwerking",
-        "image":"https://dhwandafwerking.nl/Images/Untitled%20design%20(7).png",
-        "description":"Specialist in renovlies aanbrengen en wandafwerking in " + city + " en omgeving.",
-        "address":{"@type":"PostalAddress","streetAddress":"Planetenlaan 406","addressLocality":"Dordrecht","postalCode":"3317 GE","addressCountry":"NL"},
-        "telephone":"+31640837590",
-        "email":"lucd.hartog@gmail.com",
-        "priceRange":"\u20AC15,00 - \u20AC17,50",
-        "areaServed":{"@type":"City","name":city},
-        "url":"https://denhartog-wandafwerking.nl" + window.location.pathname,
-        "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}
-      });
-      document.head.appendChild(el2);
-    }
-  }
-})();
-</script><script>
-(function(){
-  var h1 = document.querySelector('h1');
-  if(h1 && window.location.pathname === '/'){
-    var span = h1.querySelector('span');
-    if(span){ span.textContent = 'Behangen Specialist'; }
-    h1.childNodes[0].textContent = 'Renovlies & ';
-  }
-})();
-</script><script src="/internal-links.js"></script></body>
+<div class="topbar"><div class="wrap"><span>Offerte binnen 24 uur</span><span>Vaste prijs per m², geen verrassingen</span><span>Werkzaam door heel Nederland</span></div></div>
+<header class="nav"><div class="wrap">
+  <a href="/" class="logo" aria-label="Den Hartog Wandafwerking, naar de homepage"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span><span class="logo-text"><b>Den Hartog</b><small>Wandafwerking</small></span></a>
+  <nav aria-label="Hoofdmenu"><ul class="menu"><li><a href="/#diensten">Diensten</a></li><li><a href="/#pakketten">Prijzen</a></li><li><a href="/#projecten">Projecten</a></li><li><a href="/#over-ons">Over ons</a></li><li><a href="/burenkorting/">Burenkorting</a></li><li><a href="/blog/">Blog</a></li><li><a href="/prijscalculator/">Prijscalculator</a></li></ul></nav>
+  <a href="tel:+31640837590" class="nav-tel" aria-label="Bel 06 408 37 590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>06 408 37 590</span></a>
+  <a href="/#offerte" class="btn btn-p">Gratis offerte</a>
+  <button type="button" class="burger" aria-label="Menu openen" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main><section class="page-hero"><div class="wrap">
+  <div class="stack" style="gap:18px"><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Home</a> › <a href="/#over-ons">Werkgebied</a> › Renovlies Den Haag</nav><h1>Renovlies en sauzen in Den Haag</h1><p class="lead">Nieuwbouw in Ypenburg, Leidschenveen of de Binckhorst, of een oudere woning in de stad? Wij leveren strakke, gesausde wanden met renovlies of glasvlies. Vaste prijs vanaf <strong>€15 per m² inclusief btw</strong>.</p><a href="https://search.google.com/local/reviews?placeid=ChIJZUY36AI5soQRoqrPCOxbk_4" target="_blank" rel="noopener" style="display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--ink);text-decoration:none"><span style="color:#E8A838;letter-spacing:2px" aria-hidden="true">★★★★★</span><span>5,0 uit 18 Google-reviews</span></a></div>
+  <div class="card pad stack" style="border:1px solid var(--line)">
+    <span class="eyebrow">Sneller: plattegrond sturen</span>
+    <p class="muted">App je plattegrond en je krijgt binnen 24 uur een vaste prijs. Meten hoeft niet.</p>
+    <a class="btn btn-s" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>Stuur via WhatsApp</a>
+  </div>
+</div></section><section class="section tight"><div class="wrap"><div class="grid city-grid" style="grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:start"><div class="prose"><h2>Nieuwbouw in Den Haag</h2>
+<p>In Ypenburg, Leidschenveen, Wateringse Veld en de Binckhorst worden veel woningen behangklaar opgeleverd. Wij maken die wanden glad en gesausd in één opdracht: schuren, renovlies of glasvlies, kitten en dekkend sauzen. We plannen in de week na je sleuteloverdracht, zodat de wanden klaar zijn voordat de vloer erin gaat.</p>
+<h2>Oudere woningen en appartementen</h2>
+<p>Den Haag heeft veel karakteristieke woningen en appartementen met wanden die een opknapbeurt nodig hebben: oude behanglagen, craquelé of scheurtjes. Met renovlies of <a href="/glasvliesbehang/">voorgeschilderd glasvlies</a> krijg je weer een strakke wand zonder te stucen. Bekijk bijvoorbeeld ons <a href="/project-oude-weteringen/">appartement in Oude Weteringen</a>, afgewerkt in twee kleuren.</p>
+<h2>Goed om te weten</h2>
+<p>Voorrijkosten rekenen we niet, ook niet in Den Haag. Eventuele parkeerkosten staan vooraf apart in de offerte. Stuur bij een bestaande woning een paar foto’s mee, dan staat de voorbereiding vooraf in de vaste prijs.</p></div>
+<figure class="card pad stack" style="gap:12px;margin:0"><img src="/assets/img/oude-weteringen/oude-weteringen-04-800.webp" alt="Kamer met balkondeuren tijdens de wandafwerking, project Oude Weteringen" width="800" height="600" loading="lazy" style="width:100%;height:auto;border-radius:14px"><figcaption class="muted">Voorbeeld van ons werk: <a href="/project-oude-weteringen/">Project Oude Weteringen · twee kleuren</a></figcaption></figure>
+</div></div></section><section class="section tight"><div class="wrap stack" style="gap:20px"><h2>Werkgebied in en rond Den Haag</h2><div class="chips"><span>Ypenburg</span><span>Leidschenveen</span><span>Wateringse Veld</span><span>Binckhorst</span><span>Bezuidenhout</span><span>Loosduinen</span><span>Rijswijk</span><span>Voorburg</span><span>Leidschendam</span></div><p class="muted">Staat jouw plaats er niet bij? We werken door heel Nederland, zonder voorrijkosten.</p></div></section><section class="section tight"><div class="wrap stack" style="gap:20px"><h2>Waarom Den Hartog in Den Haag?</h2><div class="grid g3"><div class="card pad stack" style="gap:10px"><span class="eyebrow">Nieuwbouw</span><h3>Ypenburg en Leidschenveen</h3><p class="muted">Behangklare wanden glad en gesausd, klaar vóór de vloer en de keuken.</p></div><div class="card pad stack" style="gap:10px"><span class="eyebrow">Renovatie</span><h3>Oudere woningen</h3><p class="muted">Renovlies of glasvlies over oude ondergronden, zonder stucwerk.</p></div><div class="card pad stack" style="gap:10px"><span class="eyebrow">Kleur</span><h3>Premium Plus €17,50</h3><p class="muted">Meerdere kleuren en accentwanden, met kleuradvies op locatie.</p></div></div></div></section><section class="section tight"><div class="wrap"><div class="grid city-grid" style="grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:start"><div class="stack" style="gap:20px"><h2>Prijzen in Den Haag</h2><div class="table-wrap"><table class="t"><tr><th>Pakket</th><th>Wat je krijgt</th><th class="r">Prijs per m² incl. btw</th></tr><tr><td><strong>Alles-in-één</strong></td><td>Renovlies 150 g, naden gekit, gesausd in één lichte kleur</td><td class="num">€15,00</td></tr><tr><td><strong>Premium Plus</strong></td><td>Renovlies 150 g + sauzen in meerdere kleuren, accentwanden, kleuradvies</td><td class="num">€17,50</td></tr><tr><td><strong>Glasvlies Premium</strong></td><td>Voorgeschilderd glasvlies 200 g + sauzen, extra stootvast</td><td class="num">€19,50</td></tr><tr><td><strong>Alleen renovlies</strong></td><td>Renovlies aanbrengen, zonder sauzen</td><td class="num">€10,00</td></tr></table></div><p class="muted">Prijzen per m² wand, inclusief btw, vanaf 100 m². Lees meer over <a href="/wat-kost-behangen-en-sauzen/">wat behangen en sauzen kost</a> of over <a href="/glasvliesbehang/">glasvezelbehang</a>.</p></div>
+<div class="card pad stack" style="background:var(--green);color:#fff"><h3 style="color:#fff">Altijd inbegrepen</h3><div class="checks" style="color:#EDE5D7"><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Wanden schuren en stofvrij maken</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Alle materialen: vlies, lijm, kit, schrobklasse 1 muurverf</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Naden en kieren professioneel gekit</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Vloeren en kozijnen afgedekt</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Geen voorrijkosten, ook niet buiten de regio Dordrecht</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Geen aanbetaling, betalen binnen 7 dagen na oplevering</span></div><div class="chk" style="color:#EDE5D7"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FC1AE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>6 maanden garantie op papier</span></div></div></div></div></div></section>
+<style>@media (max-width:860px){.city-grid{grid-template-columns:1fr!important}}</style><section class="section tight"><div class="wrap split"><h2>Veelgestelde vragen over renovlies in Den Haag</h2><div class="faq"><details><summary>Wat kost renovlies met sauzen in Den Haag?</summary><p>Alles-in-één kost €15 per m² wand inclusief btw, Premium Plus met meerdere kleuren €17,50 en glasvlies met sauzen €19,50, vanaf 100 m² wand.</p></details><details><summary>Kan renovlies over oude wanden in een bestaande woning?</summary><p>Vaak wel, mits de ondergrond goed hecht. Losse lagen halen we eerst weg. Op basis van foto’s zie je vooraf in de offerte wat nodig is.</p></details><details><summary>Rekenen jullie parkeerkosten?</summary><p>Voorrijkosten niet. Eventuele parkeerkosten staan vooraf apart in de offerte.</p></details></div></div></section><section class="section tight"><div class="wrap stack" style="gap:20px"><h2>Ook actief in de buurt</h2><div class="btns" style="flex-wrap:wrap;gap:10px"><a class="btn btn-s" href="/renovlies-delft/">Renovlies Delft</a><a class="btn btn-s" href="/renovlies-zoetermeer/">Renovlies Zoetermeer</a><a class="btn btn-s" href="/renovlies-leiden/">Renovlies Leiden</a><a class="btn btn-s" href="/renovlies-rotterdam/">Renovlies Rotterdam</a></div></div></section><section class="section tight"><div class="wrap"><div class="cta">
+  <div class="stack" style="gap:8px"><h2>Strakke wanden in Den Haag?</h2><p>Gratis offerte binnen 24 uur. App je plattegrond naar 06 408 37 590.</p></div>
+  <div class="btns"><a class="btn btn-c" href="/#offerte">Gratis offerte aanvragen</a><a class="btn btn-w" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a></div>
+</div></div></section></main><footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div class="col"><span class="brand">Den Hartog Wandafwerking</span><p style="max-width:360px">Behangen en sauzen voor nieuwbouw en renovatie. Twee broers uit Dordrecht, werkzaam door heel Nederland.</p><span>KvK 65078853 · Planetenlaan 406, Dordrecht</span></div>
+    <div class="col"><strong>Diensten</strong><a href="/renovlies-behangen/">Renovlies behangen</a><a href="/glasvliesbehang/">Glasvlies behangen</a><a href="/latex-spuiten/">Sauzen en latex spuiten</a><a href="/wat-kost-behangen-en-sauzen/">Prijzen en pakketten</a><a href="/prijscalculator/">Prijscalculator</a></div>
+    <div class="col"><strong>Informatie</strong><a href="/renovlies-glasvlies-of-stucen/">Renovlies, glasvlies of stucen?</a><a href="/stappenplan-nieuwbouw/">Stappenplan nieuwbouw</a><a href="/garantie-en-verzekering/">Garantie en verzekering</a><a href="/burenkorting/">Burenkorting</a><a href="/blog/">Blog</a></div>
+    <div class="col"><strong>Contact</strong><a href="tel:+31640837590">06 408 37 590</a><a href="https://wa.me/31640837590">WhatsApp</a><a href="mailto:lucd.hartog@gmail.com">lucd.hartog@gmail.com</a><span>Ma–vr 08:00–18:00 · za 09:00–17:00</span><span>Werkzaam in onder meer <a href="/renovlies-dordrecht/">Dordrecht</a>, <a href="/renovlies-rotterdam/">Rotterdam</a>, <a href="/renovlies-utrecht/">Utrecht</a>, <a href="/renovlies-den-haag/">Den Haag</a>, <a href="/renovlies-almere/">Almere</a>, <a href="/renovlies-lelystad/">Lelystad</a>, <a href="/renovlies-amersfoort/">Amersfoort</a> en <a href="/renovlies-breda/">Breda</a></span></div>
+  </div>
+  <div class="bottom"><span>© 2026 Den Hartog Wandafwerking</span><div><a href="/privacybeleid/">Privacybeleid</a><a href="/algemene-voorwaarden/">Algemene voorwaarden</a></div></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-s" href="tel:+31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Bellen</a><a class="btn btn-p" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a></div>
+<script src="/assets/site.js?v=1" defer></script>
+</body>
 </html>

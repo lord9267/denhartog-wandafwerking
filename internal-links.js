@@ -18,17 +18,13 @@
   ];
 
   var prijzen = [
-    {url: '/renovlies-prijs-per-m2/', naam: 'Renovlies Prijs per m\u00B2'},
-    {url: '/renovlies-behang-prijs/', naam: 'Renovlies Behang Prijs'},
-    {url: '/wat-kost-renovlies/', naam: 'Wat Kost Renovlies?'},
-    {url: '/goedkoop-renovlies/', naam: 'Goedkoop Renovlies'},
     {url: '/stucwerk-kosten/', naam: 'Stucwerk Kosten'},
+    {url: '/wat-kost-behangen-en-sauzen/', naam: 'Prijzen en Pakketten'},
     {url: '/prijscalculator/', naam: 'Prijscalculator'}
   ];
 
   var vergelijkingen = [
-    {url: '/renovlies-vs-stucwerk/', naam: 'Renovlies vs Stucwerk'},
-    {url: '/renovlies-of-stucen/', naam: 'Renovlies of Stucen'},
+    {url: '/renovlies-glasvlies-of-stucen/', naam: 'Renovlies, Glasvlies of Stucen?'},
     {url: '/stucwerk-of-behangen/', naam: 'Stucwerk of Behangen'},
     {url: '/voordelen-renovlies/', naam: 'Voordelen Renovlies'},
     {url: '/nadelen-renovlies/', naam: 'Nadelen Renovlies'},
