@@ -80,6 +80,8 @@
 
   var projecten = [
     {url: '/project-haarlem/', naam: 'Project Haarlem'},
+    {url: '/project-houten/', naam: 'Project Houten'},
+    {url: '/project-lelystad/', naam: 'Project Lelystad'},
     {url: '/project-sneek/', naam: 'Project Sneek'},
     {url: '/project-leek/', naam: 'Project Leek'},
     {url: '/project-luttelgeest/', naam: 'Project Luttelgeest'},
