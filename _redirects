@@ -6,7 +6,7 @@ https://www.denhartog-wandafwerking.nl/*   https://denhartog-wandafwerking.nl/:s
 # Legacy en foute URL's naar canonieke varianten
 /renovlies-behangen.html    /renovlies-behangen/    301!
 /offerte-aanvragen/         /contact/               301!
-/meer-over-renovlies/       /renovlies-behang/      301!
+/meer-over-renovlies/       /renovlies-behangen/    301!
 
 # Samengevoegde glasvlies/glasvezel-pagina's (okt 2026)
 /glasvezel-behang/    /glasvliesbehang/    301!
@@ -33,3 +33,51 @@ https://www.denhartog-wandafwerking.nl/*   https://denhartog-wandafwerking.nl/:s
 /renovlies-of-stucen    /renovlies-glasvlies-of-stucen/    301!
 /blog/renovlies-vs-stucwerk/    /renovlies-glasvlies-of-stucen/    301!
 /blog/renovlies-vs-stucwerk    /renovlies-glasvlies-of-stucen/    301!
+
+# Oude themapagina's samengevoegd (okt 2026)
+/renovlies-behang/    /renovlies-behangen/    301!
+/renovlies-behang    /renovlies-behangen/    301!
+/renovlies-aanbrengen/    /renovlies-behangen/    301!
+/renovlies-aanbrengen    /renovlies-behangen/    301!
+/renovlies-behangservice/    /renovlies-behangen/    301!
+/renovlies-behangservice    /renovlies-behangen/    301!
+/wandafwerking-specialist/    /renovlies-behangen/    301!
+/wandafwerking-specialist    /renovlies-behangen/    301!
+/renovlies-op-plafond/    /renovlies-behangen/    301!
+/renovlies-op-plafond    /renovlies-behangen/    301!
+/nieuwbouw-behangen/    /stappenplan-nieuwbouw/    301!
+/nieuwbouw-behangen    /stappenplan-nieuwbouw/    301!
+/nieuwbouw-muren-afwerken/    /stappenplan-nieuwbouw/    301!
+/nieuwbouw-muren-afwerken    /stappenplan-nieuwbouw/    301!
+/wandafwerking-nieuwbouw/    /stappenplan-nieuwbouw/    301!
+/wandafwerking-nieuwbouw    /stappenplan-nieuwbouw/    301!
+/renovlies-nieuwbouw/    /stappenplan-nieuwbouw/    301!
+/renovlies-nieuwbouw    /stappenplan-nieuwbouw/    301!
+/meer-over-latex-spuiten/    /latex-spuiten/    301!
+/meer-over-latex-spuiten    /latex-spuiten/    301!
+/meer-over-sauzen/    /latex-spuiten/    301!
+/meer-over-sauzen    /latex-spuiten/    301!
+/sauzen-na-renovlies/    /latex-spuiten/    301!
+/sauzen-na-renovlies    /latex-spuiten/    301!
+/renovlies-schilderen/    /latex-spuiten/    301!
+/renovlies-schilderen    /latex-spuiten/    301!
+/meer-over-stucwerk/    /renovlies-glasvlies-of-stucen/    301!
+/meer-over-stucwerk    /renovlies-glasvlies-of-stucen/    301!
+/stucwerk-kosten/    /renovlies-glasvlies-of-stucen/    301!
+/stucwerk-kosten    /renovlies-glasvlies-of-stucen/    301!
+/stucwerk-of-behangen/    /renovlies-glasvlies-of-stucen/    301!
+/stucwerk-of-behangen    /renovlies-glasvlies-of-stucen/    301!
+/voordelen-renovlies/    /nadelen-renovlies/    301!
+/voordelen-renovlies    /nadelen-renovlies/    301!
+/blog/waarom-renovlies/    /nadelen-renovlies/    301!
+/blog/waarom-renovlies    /nadelen-renovlies/    301!
+/scanbehang/    /glasvliesbehang/    301!
+/scanbehang    /glasvliesbehang/    301!
+/sausklaar-opleveren/    /nieuwbouwwoning-behangklaar/    301!
+/sausklaar-opleveren    /nieuwbouwwoning-behangklaar/    301!
+/meer-over-wandafwerking/    /    301!
+/meer-over-wandafwerking    /    301!
+/blog/renovlies-dordrecht/    /renovlies-dordrecht/    301!
+/blog/renovlies-dordrecht    /renovlies-dordrecht/    301!
+/blog/renovlies-utrecht/    /renovlies-utrecht/    301!
+/blog/renovlies-utrecht    /renovlies-utrecht/    301!

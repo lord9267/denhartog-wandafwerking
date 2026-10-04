@@ -1,626 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Prijscalculator | Den Hartog Wandafwerking</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prijscalculator renovlies en sauzen | Den Hartog</title>
+<meta name="description" content="Bereken direct wat renovlies, glasvlies en sauzen kost voor jouw woning. Prijzen inclusief btw en materiaal, met burenkorting.">
 <link rel="canonical" href="https://denhartog-wandafwerking.nl/prijscalculator/">
-<meta property="og:title" content="Prijscalculator | Den Hartog Wandafwerking" />
-<meta property="og:description" content="Bereken direct een richtprijs voor renovlies en wandafwerking. Kies uw pakket, voer het aantal m² in en ontvang een prijsindicatie." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://denhartog-wandafwerking.nl/prijscalculator/" />
-<meta property="og:image" content="https://denhartog-wandafwerking.nl/Images/Assets/logo.png" />
-<meta property="og:locale" content="nl_NL" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Prijscalculator | Den Hartog Wandafwerking" />
-<meta name="twitter:description" content="Bereken direct een richtprijs voor renovlies en wandafwerking. Kies uw pakket, voer het aantal m² in en ontvang een prijsindicatie." />
-<meta name="twitter:image" content="https://denhartog-wandafwerking.nl/Images/Assets/logo.png" />
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:title" content="Prijscalculator renovlies en sauzen | Den Hartog">
+<meta property="og:description" content="Bereken direct wat renovlies, glasvlies en sauzen kost voor jouw woning. Prijzen inclusief btw en materiaal, met burenkorting.">
 <meta property="og:url" content="https://denhartog-wandafwerking.nl/prijscalculator/">
-<meta name="description" content="Bereken direct een richtprijs voor renovlies en wandafwerking. Kies uw pakket, voer het aantal m² in en ontvang een prijsindicatie.">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --primary:#CD7F32;
-  --primary-dark:#b36b28;
-  --primary-light:rgba(205,127,50,0.1);
-  --dark:#1a1a2e;
-  --darker:#0d0d1a;
-  --text:#1f2937;
-  --text-light:#6b7280;
-  --bg:#fff;
-  --bg-gray:#f9fafb;
-  --bg-dark:#111827;
-  --border:#e5e7eb;
-  --success:#10b981;
-  --radius:12px;
-  --shadow:0 4px 20px rgba(0,0,0,.08);
-  --shadow-lg:0 10px 40px rgba(0,0,0,.15);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-
-/* Header - matches site */
-header{background:var(--darker);padding:1rem 2rem;position:fixed;width:100%;top:0;z-index:1000;border-bottom:1px solid rgba(255,255,255,0.05)}
-.header-content{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start}
-.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
-.logo img{height:40px}
-.logo span{font-size:1.1rem;font-weight:700;color:#fff}
-nav{display:flex;gap:1.25rem;align-items:center}
-nav a{color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.85rem;font-weight:500;transition:color 0.3s}
-nav a:hover{color:var(--primary)}
-nav a.active{color:var(--primary);font-weight:600}
-.nav-cta{background:var(--primary);color:#fff!important;padding:0.5rem 1.2rem;border-radius:8px;font-weight:600;transition:background 0.3s}
-.nav-cta:hover{background:var(--primary-dark)}
-
-/* Mobile menu */
-.mobile-menu-btn{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
-@media(max-width:768px){
-  .mobile-menu-btn{display:block}
-  nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--darker);flex-direction:column;padding:1rem 2rem;gap:1rem;border-top:1px solid rgba(255,255,255,0.05)}
-  nav.open{display:flex}
-  .nav-cta{text-align:center}
-}
-
-/* Hero */
-.hero{padding:7rem 2rem 3rem;text-align:center;background:linear-gradient(135deg,var(--darker) 0%,var(--dark) 100%);color:#fff}
-.hero-badge{display:inline-block;background:var(--primary-light);color:var(--primary);padding:0.4rem 1rem;border-radius:20px;font-size:0.85rem;font-weight:600;margin-bottom:1rem;border:1px solid rgba(205,127,50,0.2)}
-.hero h1{font-size:2.5rem;font-weight:800;margin-bottom:0.75rem}
-.hero p{color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:550px;margin:0 auto}
-@media(max-width:768px){.hero h1{font-size:1.8rem}.hero{padding:6.5rem 1.5rem 2rem}}
-
-/* Calculator */
-.calc-container{max-width:920px;margin:-2rem auto 0;padding:0 2rem 4rem;position:relative;z-index:1}
-.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem}
-@media(max-width:768px){.calc-grid{grid-template-columns:1fr}.calc-container{margin-top:-1rem;padding:0 1rem 3rem}}
-
-/* Left panel */
-.calc-inputs{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow)}
-.input-group{margin-bottom:1.5rem}
-.input-group:last-child{margin-bottom:0}
-.input-group>label{display:block;font-weight:600;margin-bottom:0.5rem;font-size:0.95rem;color:var(--text)}
-.input-group .hint{color:var(--text-light);font-size:0.8rem;margin-top:0.3rem}
-
-/* Package cards */
-.package-options{display:flex;flex-direction:column;gap:0.75rem}
-.package-card{border:2px solid var(--border);border-radius:var(--radius);padding:1rem 1.2rem;cursor:pointer;transition:all 0.3s;position:relative;background:var(--bg)}
-.package-card:hover{border-color:var(--primary);box-shadow:0 2px 12px rgba(205,127,50,0.12)}
-.package-card.selected{border-color:var(--primary);background:rgba(205,127,50,0.03)}
-.package-card.selected::after{content:'✓';position:absolute;top:0.75rem;right:0.75rem;width:24px;height:24px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700}
-.pkg-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.3rem}
-.pkg-name{font-weight:700;font-size:1rem}
-.pkg-price-area{display:flex;flex-direction:column;align-items:flex-end}.pkg-price{font-weight:700;color:var(--primary);font-size:1.1rem}.pkg-btw{display:block;font-size:0.7rem;color:var(--text-light);font-weight:400;margin-top:0.1rem}
-.pkg-desc{color:var(--text-light);font-size:0.8rem;line-height:1.5}
-.pkg-badge{display:inline-block;background:linear-gradient(135deg,var(--primary),var(--primary-dark));color:#fff;font-size:0.7rem;padding:0.15rem 0.6rem;border-radius:4px;font-weight:700;margin-bottom:0.4rem;letter-spacing:0.5px}
-
-/* Area input */
-.area-input-wrap{display:flex;align-items:center;border:2px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color 0.3s}
-.area-input-wrap:focus-within{border-color:var(--primary)}
-.area-btn{width:46px;height:46px;border:none;background:var(--bg-gray);cursor:pointer;font-size:1.3rem;font-weight:700;color:var(--text);transition:background 0.2s;display:flex;align-items:center;justify-content:center}
-.area-btn:hover{background:var(--border)}
-.area-input{flex:1;border:none;text-align:center;font-size:1.1rem;font-weight:600;padding:0.5rem;outline:none;background:transparent;font-family:inherit;-moz-appearance:textfield}
-.area-input::-webkit-outer-spin-button,.area-input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
-.area-unit{color:var(--text-light);font-size:0.9rem;padding-right:0.75rem;font-weight:500}
-
-/* Minimum warning */
-.area-warning{color:#dc2626;font-size:0.8rem;margin-top:0.3rem;display:none}
-.area-warning.visible{display:block}
-
-/* Radio options */
-.radio-options{display:flex;gap:0.75rem;flex-wrap:wrap}
-.radio-opt{flex:1;min-width:90px}
-.radio-opt input{display:none}
-.radio-opt label{display:block;text-align:center;padding:0.65rem 0.5rem;border:2px solid var(--border);border-radius:var(--radius);cursor:pointer;font-size:0.85rem;font-weight:500;transition:all 0.3s;background:var(--bg)}
-.radio-opt input:checked+label{border-color:var(--primary);background:rgba(205,127,50,0.05);color:var(--primary-dark);font-weight:600}
-
-/* Right panel */
-.calc-result{position:sticky;top:5.5rem}
-.result-card{background:linear-gradient(135deg,var(--darker),var(--dark));color:#fff;border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow-lg)}
-.result-label{font-size:0.85rem;color:rgba(255,255,255,0.5);margin-bottom:0.25rem}
-.result-price{font-size:2.8rem;font-weight:800;margin-bottom:0.2rem;line-height:1.1;color:var(--primary)}
-.result-sub{font-size:0.85rem;color:rgba(255,255,255,0.4);margin-bottom:1.5rem}
-.result-breakdown{border-top:1px solid rgba(255,255,255,0.08);padding-top:1rem;margin-bottom:1.5rem}
-.breakdown-row{display:flex;justify-content:space-between;padding:0.35rem 0;font-size:0.88rem}
-.breakdown-row .label{color:rgba(255,255,255,0.5)}
-.breakdown-row .value{font-weight:600;color:rgba(255,255,255,0.9)}
-.breakdown-row.total{border-top:1px solid rgba(255,255,255,0.08);padding-top:0.6rem;margin-top:0.3rem}
-.breakdown-row.total .label{color:#fff;font-weight:600}
-.breakdown-row.total .value{font-size:1.05rem}
-.breakdown-row.total-incl .label{color:var(--primary);font-weight:600}
-.breakdown-row.total-incl .value{color:var(--primary);font-size:1.05rem}
-
-.result-disclaimer{background:rgba(255,255,255,0.06);border-radius:8px;padding:0.75rem;font-size:0.78rem;color:rgba(255,255,255,0.4);margin-bottom:1.5rem;line-height:1.5}
-
-.result-cta{display:block;width:100%;padding:0.85rem;border:none;border-radius:var(--radius);background:var(--primary);color:#fff;font-size:1rem;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;transition:background 0.3s;font-family:inherit}
-.result-cta:hover{background:var(--primary-dark)}
-.result-cta-secondary{display:block;width:100%;padding:0.7rem;border:2px solid rgba(255,255,255,0.15);border-radius:var(--radius);background:transparent;color:rgba(255,255,255,0.8);font-size:0.9rem;font-weight:600;cursor:pointer;text-align:center;text-decoration:none;margin-top:0.75rem;transition:all 0.3s}
-.result-cta-secondary:hover{border-color:rgba(255,255,255,0.3);background:rgba(255,255,255,0.05);color:#fff}
-
-@media(max-width:768px){
-  .result-price{font-size:2.2rem}
-  .calc-inputs,.result-card{padding:1.5rem}
-}
-
-/* Features */
-.features{max-width:920px;margin:0 auto;padding:2rem 2rem 4rem}
-.features h2{text-align:center;font-size:1.8rem;font-weight:700;margin-bottom:0.5rem}
-.features>p{text-align:center;color:var(--text-light);margin-bottom:2rem}
-.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-@media(max-width:768px){.features-grid{grid-template-columns:1fr}}
-.feature-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:1.5rem;text-align:center;transition:box-shadow 0.3s}
-.feature-card:hover{box-shadow:var(--shadow)}
-.feature-icon{width:48px;height:48px;margin:0 auto 0.75rem;background:var(--primary-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
-.feature-card h3{font-size:0.95rem;margin-bottom:0.3rem;font-weight:600}
-.feature-card p{color:var(--text-light);font-size:0.83rem;line-height:1.5}
-
-/* FAQ */
-.faq{max-width:700px;margin:0 auto;padding:0 2rem 4rem}
-.faq h2{text-align:center;font-size:1.8rem;font-weight:700;margin-bottom:1.5rem}
-.faq-item{border:1px solid var(--border);border-radius:var(--radius);margin-bottom:0.75rem;overflow:hidden}
-.faq-q{width:100%;padding:1rem 1.25rem;background:var(--bg);border:none;cursor:pointer;font-size:0.93rem;font-weight:600;text-align:left;display:flex;justify-content:space-between;align-items:flex-start;color:var(--text);transition:background 0.2s;font-family:inherit}
-.faq-q:hover{background:var(--bg-gray)}
-.faq-q .arrow{transition:transform 0.3s;font-size:0.75rem;color:var(--text-light)}
-.faq-q.open .arrow{transform:rotate(180deg)}
-.faq-q.open{color:var(--primary-dark)}
-.faq-a{padding:0 1.25rem;max-height:0;overflow:hidden;transition:all 0.3s ease;color:var(--text-light);font-size:0.88rem;line-height:1.7}
-.faq-a.open{padding:0.75rem 1.25rem 1rem;max-height:200px}
-
-/* Footer - matches site */
-footer{background:var(--darker);color:rgba(255,255,255,0.5);padding:2rem;text-align:center;font-size:0.85rem}
-footer a{color:var(--primary);text-decoration:none}
-footer a:hover{text-decoration:underline}
-
-/* Animations */
-@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-.calc-inputs{animation:fadeUp 0.5s ease}
-.result-card{animation:fadeUp 0.5s ease 0.1s both}
-</style>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WKSG3S5MW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4WKSG3S5MW');</script></head>
+<meta property="og:image" content="https://denhartog-wandafwerking.nl/assets/img/haarlem/haarlem-08-1600.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F5D50">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%232F5D50'/%3E%3Cpath d='M11 13h18M11 20h18M11 27h11' stroke='%23F4EFE6' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="/assets/site.css?v=1">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://denhartog-wandafwerking.nl/"}, {"@type": "ListItem", "position": 2, "name": "Prijzen", "item": "https://denhartog-wandafwerking.nl/wat-kost-behangen-en-sauzen/"}, {"@type": "ListItem", "position": 3, "name": "Prijscalculator", "item": "https://denhartog-wandafwerking.nl/prijscalculator/"}]}</script><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Hoe weet ik hoeveel m² wand ik heb?", "acceptedAnswer": {"@type": "Answer", "text": "Kies een woningtype als richtlijn, of app je plattegrond: wij rekenen het wandoppervlak voor je uit. Plafonds tellen niet mee."}}, {"@type": "Question", "name": "Is de uitkomst de definitieve prijs?", "acceptedAnswer": {"@type": "Answer", "text": "Het is een richtprijs op basis van jouw invoer. De exacte prijs rekenen we uit van je plattegrond; die staat vast in de offerte en is gelijk aan de factuur."}}, {"@type": "Question", "name": "Wat als mijn woning minder dan 100 m² wand heeft?", "acceptedAnswer": {"@type": "Answer", "text": "Onze prijzen per m² gelden vanaf 100 m² wand. Voor kleinere klussen maken we een prijs op maat; neem contact op."}}, {"@type": "Question", "name": "Hoeveel garantie krijg ik?", "acceptedAnswer": {"@type": "Answer", "text": "6 maanden garantie op papier, vanaf de opleverdatum."}}]}</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4WKSG3S5MW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4WKSG3S5MW');</script>
+</head>
 <body>
-
-<header>
-<div class="header-content">
-<a href="/" class="logo">
-<img src="https://denhartog-wandafwerking.nl/Images/Untitled%20design%20(7).png" alt="Den Hartog Wandafwerking">
-</a>
-<button class="mobile-menu-btn" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
-<nav>
-<a href="/#home">Home</a>
-<a href="/#diensten">Diensten</a>
-<a href="/#projecten">Projecten</a>
-<a href="/#over-ons">Over ons</a>
-<a href="/burenkorting/">Burenkorting</a>
-<a href="/prijscalculator/" class="active">Prijscalculator</a>
-<a href="/#contact" class="nav-cta">Gratis Offerte</a>
-</nav>
+<div class="topbar"><div class="wrap"><span>Offerte binnen 24 uur</span><span>Vaste prijs per m², geen verrassingen</span><span>Werkzaam door heel Nederland</span></div></div>
+<header class="nav"><div class="wrap">
+  <a href="/" class="logo" aria-label="Den Hartog Wandafwerking, naar de homepage"><span class="logo-mark"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4EFE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16M4 12h16M4 19h10"/></svg></span><span class="logo-text"><b>Den Hartog</b><small>Wandafwerking</small></span></a>
+  <nav aria-label="Hoofdmenu"><ul class="menu"><li><a href="/#diensten">Diensten</a></li><li><a href="/#pakketten">Prijzen</a></li><li><a href="/#projecten">Projecten</a></li><li><a href="/#over-ons">Over ons</a></li><li><a href="/burenkorting/">Burenkorting</a></li><li><a href="/blog/">Blog</a></li><li><a href="/prijscalculator/">Prijscalculator</a></li></ul></nav>
+  <a href="tel:+31640837590" class="nav-tel" aria-label="Bel 06 408 37 590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span>06 408 37 590</span></a>
+  <a href="/#offerte" class="btn btn-p">Gratis offerte</a>
+  <button type="button" class="burger" aria-label="Menu openen" aria-expanded="false"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</div></header>
+<main><section class="page-hero"><div class="wrap">
+  <div class="stack" style="gap:18px"><nav class="crumbs" aria-label="Kruimelpad"><a href="/">Home</a> › <a href="/wat-kost-behangen-en-sauzen/">Prijzen</a> › Prijscalculator</nav><h1>Prijscalculator: wat kosten jouw wanden?</h1><p class="lead">Kies een pakket en vul het wandoppervlak in. Je ziet direct de prijs <strong>inclusief btw en materiaal</strong>. Weet je het aantal m² niet? Kies een woningtype of app je plattegrond.</p><a href="https://search.google.com/local/reviews?placeid=ChIJZUY36AI5soQRoqrPCOxbk_4" target="_blank" rel="noopener" style="display:inline-flex;gap:8px;align-items:center;font-weight:600;color:var(--ink);text-decoration:none"><span style="color:#E8A838;letter-spacing:2px" aria-hidden="true">★★★★★</span><span>5,0 uit 18 Google-reviews</span></a></div>
+  <div class="card pad stack" style="border:1px solid var(--line)">
+    <span class="eyebrow">Sneller: plattegrond sturen</span>
+    <p class="muted">App je plattegrond en je krijgt binnen 24 uur een vaste prijs. Meten hoeft niet.</p>
+    <a class="btn btn-s" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>Stuur via WhatsApp</a>
+  </div>
+</div></section><style>.pc{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:start}@media(max-width:860px){.pc{grid-template-columns:1fr}}
+.pc-opt{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer}.pc-opt input{margin-top:5px}
+.pc-opt:has(input:checked){border-color:var(--green);box-shadow:0 0 0 2px var(--green) inset}.pc-in{display:flex;gap:8px;align-items:center}.pc-in input[type=number]{font:inherit;font-size:20px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;width:160px}
+.pc-total{font-family:Fraunces,serif;font-size:44px;line-height:1.1;color:#fff}.pc-row{display:flex;justify-content:space-between;gap:12px;color:#EDE5D7}.pc-warn{color:var(--clay);font-weight:600;display:none}</style><section class="section tight"><div class="wrap"><div class="pc">
+<div class="stack" style="gap:22px">
+<div class="stack" style="gap:10px"><h2>1. Kies je pakket</h2><label class="pc-opt"><input type="radio" name="pk" value="alles" data-price="15,0" data-name="Alles-in-één"><span><strong>Alles-in-één</strong> · €15,00 per m²<br><small class="muted">Renovlies 150 g + sauzen in één lichte kleur</small></span></label><label class="pc-opt"><input type="radio" name="pk" value="premium" data-price="17,5" data-name="Premium Plus" checked><span><strong>Premium Plus</strong> · €17,50 per m²<br><small class="muted">Renovlies + sauzen in meerdere kleuren, accentwanden</small></span></label><label class="pc-opt"><input type="radio" name="pk" value="glasvlies" data-price="19,5" data-name="Glasvlies Premium"><span><strong>Glasvlies Premium</strong> · €19,50 per m²<br><small class="muted">Voorgeschilderd glasvlies 200 g + sauzen</small></span></label><label class="pc-opt"><input type="radio" name="pk" value="renovlies" data-price="10,0" data-name="Alleen renovlies"><span><strong>Alleen renovlies</strong> · €10,00 per m²<br><small class="muted">Renovlies aanbrengen, zonder sauzen</small></span></label></div>
+<div class="stack" style="gap:10px"><h2>2. Wandoppervlak</h2>
+<div class="chips"><button type="button" class="btn btn-s" data-m2="180">Appartement · 180 m²</button><button type="button" class="btn btn-s" data-m2="240">Tussenwoning · 240 m²</button><button type="button" class="btn btn-s" data-m2="300">Hoekwoning · 300 m²</button></div>
+<div class="pc-in"><input type="number" id="pcM2" min="0" max="3000" step="1" placeholder="bijv. 240" inputmode="numeric"><span>m² wand</span></div>
+<p class="pc-warn" id="pcWarn">Onze prijzen per m² gelden vanaf 100 m² wand. Neem contact op voor een prijs op maat.</p>
+<label style="display:flex;gap:10px;align-items:center"><input type="checkbox" id="pcBuren"> Ik boek samen met mijn buren (5% <a href="/burenkorting/">burenkorting</a>)</label></div>
 </div>
-</header>
-
-<!-- Hero -->
-<section class="hero">
-<span class="hero-badge">Vrijblijvende prijsindicatie</span>
-<h1>Bereken uw richtprijs</h1>
-<p>Kies uw pakket, voer het aantal m² in en ontvang direct een prijsindicatie voor uw project.</p>
-</section>
-
-<!-- Calculator -->
-<section class="calc-container">
-<div class="calc-grid">
-
-<!-- Left: Inputs -->
-<div class="calc-inputs">
-
-<div class="input-group">
-<label>Kies uw pakket</label>
-<div class="package-options">
-
-<div class="package-card selected" data-package="alles" data-price="15.00" onclick="selectPackage(this)">
-<div class="pkg-header">
-<span class="pkg-name">Alles-in-één Pakket</span>
-<div class="pkg-price-area"><span class="pkg-price">&euro;15,00/m&sup2;</span><span class="pkg-btw">incl. BTW</span></div>
-</div>
-<div class="pkg-desc">Renovlies + schuren + kitten + schilderen in 1 of 2 kleuren. Inclusief materiaal, 12 mnd garantie.</div>
-</div>
-
-<div class="package-card" data-package="premium" data-price="17.50" onclick="selectPackage(this)">
-<div class="pkg-badge">POPULAIR</div>
-<div class="pkg-header">
-<span class="pkg-name">Premium Plus</span>
-<div class="pkg-price-area"><span class="pkg-price">&euro;17,50/m&sup2;</span><span class="pkg-btw">incl. BTW</span></div>
-</div>
-<div class="pkg-desc">Premium afwerking met schilderwerk in 1 tot 3 kleuren naar wens. Perfect voor nieuwbouw met maximale uitstraling.</div>
-</div>
-
-</div>
-<p class="hint">Incl. BTW | Vanaf 100 m&sup2;</p>
-<div class="package-card" data-package="glasvlies" data-price="19.50" onclick="selectPackage(this)">
-<div class="pkg-header">
-<span class="pkg-name">Glasvlies Premium</span>
-<div class="pkg-price-area"><span class="pkg-price">&euro;19,50/m&sup2;</span><span class="pkg-btw">incl. BTW</span></div>
-</div>
-<div class="pkg-desc">200 grams glasvlies + schuren + kitten + 2x latex muurverf in 3 kleuren. Inclusief materiaal, 12 mnd garantie.</div>
-</div>
-
-</div>
-
-<div class="input-group">
-<label>Oppervlakte (m&sup2;)</label>
-<div class="area-input-wrap">
-<button class="area-btn" type="button" onclick="changeArea(-10)">&minus;</button>
-<input type="number" class="area-input" id="areaInput" value="" min="10" max="2000" placeholder="bijv. 150" oninput="calculate()">
-<span class="area-unit">m&sup2;</span>
-<button class="area-btn" type="button" onclick="changeArea(10)">+</button>
-</div>
-<p class="hint">Gemiddelde nieuwbouwwoning: 120&ndash;200 m&sup2;</p>
-<p class="area-warning" id="areaWarning">Onze pakketten zijn vanaf 100 m&sup2;. Neem contact op voor een maatwerkofferte.</p>
-</div>
-
-<div class="input-group" id="kleurGroup">
-<label>Aantal kleuren</label>
-<div class="radio-options" id="kleurOptions">
-<div class="radio-opt">
-<input type="radio" name="kleur" id="kleur1" value="1" checked onchange="calculate()">
-<label for="kleur1">1 kleur</label>
-</div>
-<div class="radio-opt">
-<input type="radio" name="kleur" id="kleur2" value="2" onchange="calculate()">
-<label for="kleur2">2 kleuren</label>
-</div>
-</div>
-<p class="hint" id="kleurHint">Meer kleuren nodig? Kies het Premium Plus pakket voor tot 3 kleuren.</p>
-</div>
-
-</div>
-
-<!-- Right: Result -->
-<div class="calc-result">
-<div class="result-card">
-
-<div class="result-label">Geschatte richtprijs</div>
-<div class="result-price" id="totalPrice">&mdash;</div>
-<div class="result-sub">incl. BTW &bull; inclusief materiaal</div>
-
-<div class="result-breakdown">
-<div class="breakdown-row">
-<span class="label">Pakket</span>
-<span class="value" id="pkgName">Alles-in-een</span>
-</div>
-<div class="breakdown-row">
-<span class="label">Prijs per m&sup2;</span>
-<span class="value" id="pkgPrice">&euro;15,00</span>
-</div>
-<div class="breakdown-row">
-<span class="label">Oppervlakte</span>
-<span class="value" id="pkgArea">&mdash;</span>
-</div>
-<div class="breakdown-row">
-<span class="label">Kleuren</span>
-<span class="value" id="pkgKleuren">1 kleur</span>
-</div>
-<div class="breakdown-row total">
-<span class="label">Totaal excl. BTW</span>
-<span class="value" id="pkgTotal">&mdash;</span>
-</div>
-<div class="breakdown-row">
-<span class="label">BTW (21%)</span>
-<span class="value" id="pkgBTW">&mdash;</span>
-</div>
-<div class="breakdown-row total-incl">
-<span class="label">Totaal incl. BTW</span>
-<span class="value" id="pkgTotalBTW">&mdash;</span>
-</div>
-</div>
-
-<div class="result-disclaimer">
-Dit is een vrijblijvende richtprijs. De definitieve prijs wordt bepaald na een gratis inmeting en adviesgesprek op locatie. Geen verborgen kosten, geen aanbetaling.
-</div>
-
-<a href="https://wa.me/31640837590?text=Hallo%2C%20ik%20heb%20de%20prijscalculator%20gebruikt%20en%20wil%20graag%20een%20offerte%20aanvragen." class="result-cta" id="whatsappLink" target="_blank">
-WhatsApp voor offerte
-</a>
-<a href="/#contact" class="result-cta-secondary">
-Offerte aanvragen via mail
-</a>
-
-</div>
-</div>
-
-</div>
-</section>
-
-<!-- Features -->
-<section class="features">
-<h2>Wat zit er in de prijs?</h2>
-<p>Bij beide pakketten krijgt u een complete wandafwerking zonder verrassingen.</p>
-<div class="features-grid">
-<div class="feature-card">
-<div class="feature-icon">🛠️</div>
-<h3>Inclusief materiaal</h3>
-<p>Renovlies, lijm, kit en schrobklasse 1 muurverf — alles inbegrepen.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🚗</div>
-<h3>Geen voorrijkosten</h3>
-<p>Werkzaam door heel Nederland, zonder verborgen kosten.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🛡️</div>
-<h3>6 maanden garantie</h3>
-<p>Op al het geleverde werk. Geen aanbetaling — betaling na oplevering.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🏗️</div>
-<h3>Professioneel schuren</h3>
-<p>Wanden machinaal geschuurd voor een perfect gladde ondergrond.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">🎨</div>
-<h3>Dekkend schilderwerk</h3>
-<p>Strak schilderwerk door professionele schilders met hoogwaardige verf.</p>
-</div>
-<div class="feature-card">
-<div class="feature-icon">♻️</div>
-<h3>Bouwafval afgevoerd</h3>
-<p>Wij laten uw woning netjes achter. Bouwafval wordt meegenomen.</p>
-</div>
-</div>
-</section>
-
-<!-- FAQ -->
-<section class="faq">
-<h2>Veelgestelde vragen</h2>
-
-<div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Is de prijsindicatie vrijblijvend?<span class="arrow">▼</span></button>
-<div class="faq-a">Ja, de calculator geeft een vrijblijvende richtprijs. Na een gratis inmeting op locatie ontvangt u een definitieve offerte zonder verplichtingen.</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Wat is het verschil tussen de twee pakketten?<span class="arrow">▼</span></button>
-<div class="faq-a">Het Alles-in-één pakket bevat schilderwerk in 1 of 2 kleuren naar keuze. Het Premium Plus pakket biedt schilderwerk in 1 tot 3 kleuren naar uw wens, ideaal voor wie meer kleurvariatie wil.</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Wat als mijn woning minder dan 100 m² heeft?<span class="arrow">▼</span></button>
-<div class="faq-a">Voor projecten onder de 100 m² hanteren wij een minimumtarief. Neem contact op voor een maatwerkofferte — we denken graag mee.</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Hoe snel kunnen jullie starten?<span class="arrow">▼</span></button>
-<div class="faq-a">Na akkoord kunnen wij doorgaans binnen 1-2 weken starten. Bij spoedprojecten overleggen wij graag over de mogelijkheden.</div>
-</div>
-
-<div class="faq-item">
-<button class="faq-q" onclick="toggleFaq(this)">Is er aanbetaling nodig?<span class="arrow">▼</span></button>
-<div class="faq-a">Nee, wij vragen geen aanbetaling. U betaalt pas na oplevering wanneer u tevreden bent met het resultaat.</div>
-</div>
-
-</section>
-
-<footer>
-<p>&copy; <script>document.write(new Date().getFullYear())</script> Den Hartog Wandafwerking. Alle rechten voorbehouden. | <a href="/#contact">Contact</a></p>
-</footer>
-
-<script>
-let selectedPrice = 13.00;
-let selectedName = 'Alles-in-één';
-let selectedPackage = 'alles';
-
-function selectPackage(el) {
-  document.querySelectorAll('.package-card').forEach(c => c.classList.remove('selected'));
-  el.classList.add('selected');
-  selectedPrice = parseFloat(el.dataset.price);
-  selectedPackage = el.dataset.package;
-  selectedName = selectedPackage === 'alles' ? 'Alles-in-één' : (selectedPackage === 'glasvlies' ? 'Glasvlies Premium' : 'Premium Plus');
-  updateColorOptions(selectedPackage);
-  calculate();
-}
-
-function updateColorOptions(pkg) {
-  const container = document.getElementById('kleurOptions');
-  const hint = document.getElementById('kleurHint');
-
-  if (pkg === 'premium' || pkg === 'glasvlies') {
-    container.innerHTML =
-      '<div class="radio-opt">' +
-        '<input type="radio" name="kleur" id="kleur1" value="1" checked onchange="calculate()">' +
-        '<label for="kleur1">1 kleur</label>' +
-      '</div>' +
-      '<div class="radio-opt">' +
-        '<input type="radio" name="kleur" id="kleur2" value="2" onchange="calculate()">' +
-        '<label for="kleur2">2 kleuren</label>' +
-      '</div>' +
-      '<div class="radio-opt">' +
-        '<input type="radio" name="kleur" id="kleur3" value="3" onchange="calculate()">' +
-        '<label for="kleur3">3 kleuren</label>' +
-      '</div>';
-    hint.textContent = 'Premium Plus: kies tot 3 kleuren naar uw wens.';
-  } else {
-    container.innerHTML =
-      '<div class="radio-opt">' +
-        '<input type="radio" name="kleur" id="kleur1" value="1" checked onchange="calculate()">' +
-        '<label for="kleur1">1 kleur</label>' +
-      '</div>' +
-      '<div class="radio-opt">' +
-        '<input type="radio" name="kleur" id="kleur2" value="2" onchange="calculate()">' +
-        '<label for="kleur2">2 kleuren</label>' +
-      '</div>';
-    hint.textContent = 'Meer kleuren nodig? Kies het Premium Plus pakket voor tot 3 kleuren.';
-  }
-}
-
-function changeArea(delta) {
-  const input = document.getElementById('areaInput');
-  let val = parseInt(input.value) || 0;
-  val = Math.max(10, Math.min(2000, val + delta));
-  input.value = val;
-  calculate();
-}
-
-function calculate() {
-  const area = parseInt(document.getElementById('areaInput').value) || 0;
-  const kleurRadio = document.querySelector('input[name="kleur"]:checked');
-  const aantalKleuren = kleurRadio ? kleurRadio.value : '1';
-
-  // Show warning for < 100m²
-  const warning = document.getElementById('areaWarning');
-  if (area > 0 && area < 100) {
-    warning.classList.add('visible');
-  } else {
-    warning.classList.remove('visible');
-  }
-
-  const total = area * selectedPrice; // incl. BTW
-  const totalExcl = total / 1.21;
-  const btw = total - totalExcl;
-
-  // Update display
-  document.getElementById('pkgName').textContent = selectedName;
-  document.getElementById('pkgPrice').textContent = '\u20AC' + selectedPrice.toFixed(2).replace('.', ',');
-  document.getElementById('pkgKleuren').textContent = aantalKleuren === '1' ? '1 kleur' : aantalKleuren + ' kleuren';
-
-  if (area > 0) {
-    document.getElementById('totalPrice').textContent = formatCurrency(total);
-    document.getElementById('pkgArea').textContent = area + ' m\u00B2';
-    document.getElementById('pkgTotal').textContent = formatCurrency(totalExcl);
-    document.getElementById('pkgBTW').textContent = formatCurrency(btw);
-    document.getElementById('pkgTotalBTW').textContent = formatCurrency(total);
-  } else {
-    document.getElementById('totalPrice').textContent = '\u2014';
-    document.getElementById('pkgArea').textContent = '\u2014';
-    document.getElementById('pkgTotal').textContent = '\u2014';
-    document.getElementById('pkgBTW').textContent = '\u2014';
-    document.getElementById('pkgTotalBTW').textContent = '\u2014';
-  }
-
-  // Update WhatsApp link
-  if (area > 0) {
-    var kleurTekst = aantalKleuren === '1' ? '1 kleur' : aantalKleuren + ' kleuren';
-    var msg = encodeURIComponent(
-      'Hallo, ik heb de prijscalculator gebruikt.\n\n' +
-      'Pakket: ' + selectedName + '\n' +
-      'Oppervlakte: ' + area + ' m\u00B2\n' +
-      'Aantal kleuren: ' + kleurTekst + '\n' +
-      'Richtprijs: ' + formatCurrency(total) + ' incl. BTW\n\n' +
-      'Ik ontvang graag een offerte.'
-    );
-    document.getElementById('whatsappLink').href = 'https://wa.me/31640837590?text=' + msg;
-  }
-}
-
-function formatCurrency(amount) {
-  var parts = amount.toFixed(2).split('.');
-  var intPart = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-  return '\u20AC ' + intPart + ',' + parts[1];
-}
-
-function toggleFaq(btn) {
-  var answer = btn.nextElementSibling;
-  var isOpen = answer.classList.contains('open');
-  document.querySelectorAll('.faq-a').forEach(function(a) { a.classList.remove('open'); });
-  document.querySelectorAll('.faq-q').forEach(function(q) { q.classList.remove('open'); });
-  if (!isOpen) {
-    answer.classList.add('open');
-    btn.classList.add('open');
-  }
-}
-
-// Initial state - empty, waiting for user input
-calculate();
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href^="tel:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'telefoon_klik', { event_category: 'conversie', event_label: this.href });
-      }
-    });
-  });
-  document.querySelectorAll('a[href^="mailto:"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'email_klik', { event_category: 'conversie', event_label: this.href });
-      }
-    });
-  });
-  document.querySelectorAll('button').forEach(function(btn) {
-    if(btn.textContent.includes('Verstuur') || btn.textContent.includes('aanvraag')) {
-      btn.addEventListener('click', function() {
-        if(typeof gtag !== 'undefined') {
-          gtag('event', 'offerte_aanvraag', { event_category: 'conversie', event_label: 'formulier_submit' });
-        }
-      });
-    }
-  });
-  document.querySelectorAll('a[href*="#contact"]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      if(typeof gtag !== 'undefined') {
-        gtag('event', 'offerte_klik', { event_category: 'conversie', event_label: el.textContent.trim() });
-      }
-    });
-  });
-});
-</script><script>
-(function() {
-  var faqItems = document.querySelectorAll('.faq-item');
-  if (faqItems.length > 0) {
-    var questions = [];
-    faqItems.forEach(function(item) {
-      var q = item.querySelector('.faq-question');
-      var a = item.querySelector('.faq-answer');
-      if (q && a) {
-        questions.push({
-          "@type": "Question",
-          "name": q.textContent.replace(/[\u25BC\u25B2]/g, '').trim(),
-          "acceptedAnswer": { "@type": "Answer", "text": a.textContent.trim() }
-        });
-      }
-    });
-    if (questions.length > 0) {
-      var el = document.createElement('script');
-      el.type = 'application/ld+json';
-      el.textContent = JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":questions});
-      document.head.appendChild(el);
-    }
-  }
-  var hasLB = [].slice.call(document.querySelectorAll('script[type="application/ld+json"]')).some(function(s) {
-    try { return JSON.parse(s.textContent)['@type'] === 'LocalBusiness'; } catch(e) { return false; }
-  });
-  if (!hasLB) {
-    var m = window.location.pathname.match(/\/renovlies-([^\/]+)\//);
-    if (m) {
-      var city = m[1].replace(/-/g,' ');
-      city = city.charAt(0).toUpperCase() + city.slice(1);
-      var el2 = document.createElement('script');
-      el2.type = 'application/ld+json';
-      el2.textContent = JSON.stringify({
-        "@context":"https://schema.org",
-        "@type":"LocalBusiness",
-        "name":"Den Hartog Wandafwerking",
-        "image":"https://dhwandafwerking.nl/Images/Untitled%20design%20(7).png",
-        "description":"Specialist in renovlies aanbrengen en wandafwerking in " + city + " en omgeving.",
-        "address":{"@type":"PostalAddress","streetAddress":"Planetenlaan 406","addressLocality":"Dordrecht","postalCode":"3317 GE","addressCountry":"NL"},
-        "telephone":"+31640837590",
-        "email":"lucd.hartog@gmail.com",
-        "priceRange":"\u20AC15,00 - \u20AC19,50",
-        "areaServed":{"@type":"City","name":city},
-        "url":"https://denhartog-wandafwerking.nl" + window.location.pathname,
-        "openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"07:00","closes":"19:00"}
-      });
-      document.head.appendChild(el2);
-    }
-  }
-})();
-</script><script>
-(function(){
-  var h1 = document.querySelector('h1');
-  if(h1 && window.location.pathname === '/'){
-    var span = h1.querySelector('span');
-    if(span){ span.textContent = 'Behangen Specialist'; }
-    h1.childNodes[0].textContent = 'Renovlies & ';
-  }
-})();
-</script><script src="/internal-links.js"></script></body>
+<div class="card pad stack" style="background:var(--green);color:#fff;gap:14px">
+<span class="eyebrow" style="color:#A9D4C3">Jouw prijs</span>
+<div class="pc-total" id="pcTotal">—</div>
+<div class="muted" style="color:#EDE5D7">inclusief btw, materiaal, schuren en kitwerk</div>
+<div class="pc-row"><span>Pakket</span><strong id="pcName">Premium Plus</strong></div>
+<div class="pc-row"><span>Prijs per m²</span><strong id="pcPrice">€17,50</strong></div>
+<div class="pc-row"><span>Oppervlakte</span><strong id="pcArea">—</strong></div>
+<div class="pc-row" id="pcDiscRow" style="display:none"><span>Burenkorting</span><strong id="pcDisc">—</strong></div>
+<a class="btn btn-c" id="pcWa" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>Stuur via WhatsApp</a>
+<a class="btn btn-w" href="/#offerte">Offerte aanvragen</a>
+<small style="color:#EDE5D7">De exacte prijs rekenen we uit van je plattegrond. Offerte = factuur: geen nacalculatie, geen voorrijkosten, geen aanbetaling.</small>
+</div></div></div></section>
+<script>(function(){var m=document.getElementById('pcM2'),b=document.getElementById('pcBuren');
+function eur(x){return '€'+x.toFixed(2).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.').replace(/,00$/,'')}
+function calc(){var r=document.querySelector('input[name=pk]:checked'),p=parseFloat(r.dataset.price),n=r.dataset.name,a=parseInt(m.value)||0;
+document.getElementById('pcName').textContent=n;document.getElementById('pcPrice').textContent='€'+p.toFixed(2).replace('.',',');
+document.getElementById('pcWarn').style.display=(a>0&&a<100)?'block':'none';
+var t=a*p,d=b.checked?t*0.05:0;document.getElementById('pcDiscRow').style.display=b.checked&&a?'flex':'none';document.getElementById('pcDisc').textContent='− '+eur(d);
+document.getElementById('pcArea').textContent=a?a+' m²':'—';document.getElementById('pcTotal').textContent=a?eur(t-d):'—';
+var msg='Hallo, ik heb de prijscalculator gebruikt.\nPakket: '+n+(a?'\nWandoppervlak: '+a+' m²\nRichtprijs: '+eur(t-d)+' incl. btw':'')+(b.checked?'\nWe boeken samen met de buren.':'')+'\nIk ontvang graag een offerte.';
+document.getElementById('pcWa').href='https://wa.me/31640837590?text='+encodeURIComponent(msg);}
+document.querySelectorAll('input[name=pk]').forEach(function(e){e.addEventListener('change',calc)});m.addEventListener('input',calc);b.addEventListener('change',calc);
+document.querySelectorAll('[data-m2]').forEach(function(e){e.addEventListener('click',function(){m.value=e.dataset.m2;calc()})});calc();})();</script><section class="section tight"><div class="wrap split"><h2>Veelgestelde vragen over de prijscalculator</h2><div class="faq"><details><summary>Hoe weet ik hoeveel m² wand ik heb?</summary><p>Kies een woningtype als richtlijn, of app je plattegrond: wij rekenen het wandoppervlak voor je uit. Plafonds tellen niet mee.</p></details><details><summary>Is de uitkomst de definitieve prijs?</summary><p>Het is een richtprijs op basis van jouw invoer. De exacte prijs rekenen we uit van je plattegrond; die staat vast in de offerte en is gelijk aan de factuur.</p></details><details><summary>Wat als mijn woning minder dan 100 m² wand heeft?</summary><p>Onze prijzen per m² gelden vanaf 100 m² wand. Voor kleinere klussen maken we een prijs op maat; neem contact op.</p></details><details><summary>Hoeveel garantie krijg ik?</summary><p>6 maanden garantie op papier, vanaf de opleverdatum.</p></details></div></div></section></main><footer class="footer"><div class="wrap">
+  <div class="cols">
+    <div class="col"><span class="brand">Den Hartog Wandafwerking</span><p style="max-width:360px">Behangen en sauzen voor nieuwbouw en renovatie. Twee broers uit Dordrecht, werkzaam door heel Nederland.</p><span>KvK 65078853 · Planetenlaan 406, Dordrecht</span></div>
+    <div class="col"><strong>Diensten</strong><a href="/renovlies-behangen/">Renovlies behangen</a><a href="/glasvliesbehang/">Glasvlies behangen</a><a href="/latex-spuiten/">Sauzen en latex spuiten</a><a href="/wat-kost-behangen-en-sauzen/">Prijzen en pakketten</a><a href="/prijscalculator/">Prijscalculator</a></div>
+    <div class="col"><strong>Informatie</strong><a href="/renovlies-glasvlies-of-stucen/">Renovlies, glasvlies of stucen?</a><a href="/stappenplan-nieuwbouw/">Stappenplan nieuwbouw</a><a href="/garantie-en-verzekering/">Garantie en verzekering</a><a href="/burenkorting/">Burenkorting</a><a href="/blog/">Blog</a></div>
+    <div class="col"><strong>Contact</strong><a href="tel:+31640837590">06 408 37 590</a><a href="https://wa.me/31640837590">WhatsApp</a><a href="mailto:lucd.hartog@gmail.com">lucd.hartog@gmail.com</a><span>Ma–vr 08:00–18:00 · za 09:00–17:00</span><span>Werkzaam in onder meer <a href="/renovlies-dordrecht/">Dordrecht</a>, <a href="/renovlies-rotterdam/">Rotterdam</a>, <a href="/renovlies-utrecht/">Utrecht</a>, <a href="/renovlies-den-haag/">Den Haag</a>, <a href="/renovlies-almere/">Almere</a>, <a href="/renovlies-lelystad/">Lelystad</a>, <a href="/renovlies-amersfoort/">Amersfoort</a> en <a href="/renovlies-breda/">Breda</a></span></div>
+  </div>
+  <div class="bottom"><span>© 2026 Den Hartog Wandafwerking</span><div><a href="/privacybeleid/">Privacybeleid</a><a href="/algemene-voorwaarden/">Algemene voorwaarden</a></div></div>
+</div></footer>
+<div class="mbar"><a class="btn btn-s" href="tel:+31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Bellen</a><a class="btn btn-p" href="https://wa.me/31640837590"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 21l2.2-5.4A8.5 8.5 0 1 1 21 11.5z"/></svg>WhatsApp</a></div>
+<script src="/assets/site.js?v=1" defer></script>
+</body>
 </html>
