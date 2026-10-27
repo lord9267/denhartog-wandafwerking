@@ -75,6 +75,7 @@
   ];
 
   var projecten = [
+    {url: '/project-utrecht/', naam: 'Project Utrecht Leidsche Rijn'},
     {url: '/project-haarlem/', naam: 'Project Haarlem'},
     {url: '/project-houten/', naam: 'Project Houten'},
     {url: '/project-lelystad/', naam: 'Project Lelystad'},
